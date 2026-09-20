@@ -5,7 +5,7 @@
 <br/>
 
 <p align="center">
-  <img src="https://scribesvg.vercel.app/api/render?lines=Prakhar%20Gupta;Backend%20Architect%20%E2%80%A2%20Full-Stack%20Engineer%20%E2%80%A2%203x%20Hackathon%20Winner;Building%20systems%20that%20ship%20from%20schema%20to%20deploy;Currently%3A%20LeafLine%2C%20railmind%2C%20Samadhaan-setu&layout=terminal&theme=tokyonight&font=JetBrains+Mono&size=17&speed=45&pause=1400&attribution=false" alt="Typing" />
+  <img src="typing.svg" width="100%" alt="Typing" />
 </p>
 
 <p align="center">

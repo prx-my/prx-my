@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="140" viewBox="0 0 600 140" fill="none">
+  <defs>
+    <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#7abcff" />
+      <stop offset="100%" stop-color="#bb9af7" />
+    </linearGradient>
+
+    <clipPath id="clip-0">
+      <rect class="clip-rect-0" x="16.0" y="86.0" width="549.0" height="25.0" />
+    </clipPath>
+    <clipPath id="clip-1">
+      <rect class="clip-rect-1" x="16.0" y="86.0" width="432.0" height="25.0" />
+    </clipPath>
+    <clipPath id="clip-2">
+      <rect class="clip-rect-2" x="16.0" y="86.0" width="387.0" height="25.0" />
+    </clipPath>
+
+    <style>
+      @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(data:font/woff2;base64,d09GMgABAAAAAASEAA8AAAAACOwAAAQpAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbHhwoBmA/U1RBVF4AdBEICoRkhAILIAABNgIkAzoEIAWFAAeBFBtlBygeg23z6Ujkknzz7Xoktp2xxpEIqjF07/4DJQYH6BAs205ddFpJpAyQYzaqLtP/+Trt/VgFPFlHM4U8kSZcG7c9iad2j8W1YQy4Zl1kkqe/d9rYlEAP20AFFHG0h61B2VgTKIM98HuXjQWywLIiyiB3LwVexNSy4E4EBgJC6BBCIAT6myge2lxZ3w4cFVoEINDfbJlofZ6VnSVDXhBB7+U1u9F2HWRvdgPYVRkdxwELHCDpJ+XMLvhDOwvgiUF1tPRNfaL0ofypgO7//Qpydn7DVEwhdEuMRMdMtAs2ewgBp066kRjCbCosRciQAAQKMhhoO/kACVPiOEA8o81cWEMZle8znASGk6BLg0xFOO5pJONaHW0NtBCv1hF+mvq/PWlnGtHQLnLSxE7d6NBVpQ/RGgyBeQiYDFKv4CNmFhT2IVhCOE5RuHT+6w5R6XQOVyzmcmX9uPIq4jOFDKOQaXYJ+EP8AV4nr72P33ny0+jdn6by6b38ngNHlPvux/Xxu2nkxk9RVnwdcOmz7Pn0qXPT5wge9Hw+zEcrvvTv/aQbT8JCIHmSBWa/aV8GZ9YdOAANtw/N7t0Pi8ZvXzSBIwYsf6jkb0vbfzr87fS3YyX5GkMkb04+YA+/X3z89UjRi5+5LoTw/po/kWEd8fFSN6U85fv7ge159z+Mifp3f0veAIqWQl4/I+Uz1uQNlJFDqSGwwQEMb9ToyvA1Y2twfZm+e+y4rlSjIVNwyOuHD2LYILGHwAZ4FxwfUKv78b24eiRObYDpu2VNZOGGMsPkxAwD0mvmmC1h6tbtl7P657nnnV+aArDs/H1byN2Hodw2aFOuYxPp3QTDn2dUdzURVVmR7Bxx1jbCPwSs2RA6DZpMcIOZO6EWN/VjFWA5yNnlbgU+I3pVfrOx1Wc8P+iLtxDI1XXWg8OXh8Tafxw6fQR+fjh7EPDzx8cxaa0+p5e76JQgeDa6PNgH939aC0jqGZzd0FuoxgroNHhvtbYCBzh8FuCTywJDzEQ3BX1+ZcJVA11TROUCD6IQgDAxZCANDgYoNnoPqoUOgw7jrQSd5usmDbZaKhkCA40GDBgcDCCGgfrvSoKH3SgeJK8aISQ3B5MuFg42dqHC/Yf4BM1RpEiQSYCDT0hQoSAHt0KUAJsiTSrVq2URUiqA5OAV1IDiRSnQysImzI0U0MkiMJeg17uSYQphSpQEbTJjlywd21Y0apXS7CMXFb92ZhmKzwKBOxLsWllcMCZrxzBLKbv//WYBFCcLk5BkhLAQO0pAULLsezfbOPq9L8yokAnFo2itZotO7s5Bk3LbLDAg7GEIZvoQCRuDjhiIiViIDSU4iIt4iM8ijH8LSGKHvY7iaURFhVAxiw/RlYGzmTbS4yHR08VEMa2sVUSawiHLOzwE3/FQCNrN6uIZDgAAAA==) format('woff2');
+    }
+      /* Base styles */
+      text {
+        user-select: none;
+        white-space: pre;
+      }
+
+    @keyframes clip-line-0 {
+      0% { transform: scaleX(0); }
+      0.000% { transform: scaleX(0); animation-timing-function: steps(61, end); }
+      14.73% { transform: scaleX(1); animation-timing-function: linear; }
+      22.24% { transform: scaleX(1); animation-timing-function: steps(61, end); }
+      38.60% { transform: scaleX(0); animation-timing-function: linear; }
+      100% { transform: scaleX(0); }
+    }
+    .clip-rect-0 {
+      transform-origin: 0px 0px;
+      transform: scaleX(0);
+      animation: clip-line-0 18.64s infinite;
+    }
+
+      @keyframes cursor-line-0 {
+        0% { opacity: 0; transform: translateX(0); }
+        0.000% { opacity: 1; transform: translateX(0); animation-timing-function: steps(61, end); }
+        14.73% { opacity: 1; transform: translateX(549px); animation-timing-function: linear; }
+        22.24% { opacity: 1; transform: translateX(549px); animation-timing-function: steps(61, end); }
+        38.60% { opacity: 0; transform: translateX(0); animation-timing-function: linear; }
+        100% { opacity: 0; transform: translateX(0); }
+      }
+      .cursor-rect-0 {
+        opacity: 0;
+        transform: translateX(0);
+        animation: cursor-line-0 18.64s infinite, cursor-blink-anim 0.8s infinite step-end;
+      }
+
+    @keyframes clip-line-1 {
+      0% { transform: scaleX(0); }
+      38.60% { transform: scaleX(0); }
+      38.60% { transform: scaleX(0); animation-timing-function: steps(48, end); }
+      50.19% { transform: scaleX(1); animation-timing-function: linear; }
+      57.70% { transform: scaleX(1); animation-timing-function: steps(48, end); }
+      70.58% { transform: scaleX(0); animation-timing-function: linear; }
+      100% { transform: scaleX(0); }
+    }
+    .clip-rect-1 {
+      transform-origin: 0px 0px;
+      transform: scaleX(0);
+      animation: clip-line-1 18.64s infinite;
+    }
+
+      @keyframes cursor-line-1 {
+        0% { opacity: 0; transform: translateX(0); }
+        38.60% { opacity: 0; transform: translateX(0); }
+        38.60% { opacity: 1; transform: translateX(0); animation-timing-function: steps(48, end); }
+        50.19% { opacity: 1; transform: translateX(432px); animation-timing-function: linear; }
+        57.70% { opacity: 1; transform: translateX(432px); animation-timing-function: steps(48, end); }
+        70.58% { opacity: 0; transform: translateX(0); animation-timing-function: linear; }
+        100% { opacity: 0; transform: translateX(0); }
+      }
+      .cursor-rect-1 {
+        opacity: 0;
+        transform: translateX(0);
+        animation: cursor-line-1 18.64s infinite, cursor-blink-anim 0.8s infinite step-end;
+      }
+
+    @keyframes clip-line-2 {
+      0% { transform: scaleX(0); }
+      70.58% { transform: scaleX(0); }
+      70.58% { transform: scaleX(0); animation-timing-function: steps(43, end); }
+      80.96% { transform: scaleX(1); animation-timing-function: linear; }
+      88.47% { transform: scaleX(1); animation-timing-function: steps(43, end); }
+      100% { transform: scaleX(0); }
+    }
+    .clip-rect-2 {
+      transform-origin: 0px 0px;
+      transform: scaleX(0);
+      animation: clip-line-2 18.64s infinite;
+    }
+
+      @keyframes cursor-line-2 {
+        0% { opacity: 0; transform: translateX(0); }
+        70.58% { opacity: 0; transform: translateX(0); }
+        70.58% { opacity: 1; transform: translateX(0); animation-timing-function: steps(43, end); }
+        80.96% { opacity: 1; transform: translateX(387px); animation-timing-function: linear; }
+        88.47% { opacity: 1; transform: translateX(387px); animation-timing-function: steps(43, end); }
+        100% { opacity: 0; transform: translateX(0); }
+      }
+      .cursor-rect-2 {
+        opacity: 0;
+        transform: translateX(0);
+        animation: cursor-line-2 18.64s infinite, cursor-blink-anim 0.8s infinite step-end;
+      }
+
+    @keyframes cursor-blink-anim {
+      0%, 100% { fill: #ff9e64; }
+      50% { fill: transparent; }
+    }
+    </style>
+  </defs>
+
+  <rect width="600" height="140" fill="#1a1b26" rx="8" />
+  <!-- Terminal Header Bar -->
+  <rect width="600" height="30" fill="#181a23" rx="8" />
+  <!-- Window buttons -->
+  <circle cx="16" cy="15" r="6" fill="#ff5f56" />
+  <circle cx="36" cy="15" r="6" fill="#ffbd2e" />
+  <circle cx="56" cy="15" r="6" fill="#27c93f" />
+  <!-- Terminal Title -->
+  <text x="300" y="20" fill="#8a91b4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500" text-anchor="middle">prakhar@prx-my: ~</text>
+  <!-- Inner border -->
+  <rect x="0.5" y="0.5" width="599" height="139" rx="7.5" fill="none" stroke="#3a3d4d" stroke-opacity="0.7" />
+
+  <!-- Static name line (always visible) -->
+  <text x="16" y="56" fill="url(#name-grad)" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" letter-spacing="0">Prakhar Gupta</text>
+  <text x="16" y="74" fill="#565f89" font-family="'JetBrains Mono', monospace" font-size="11">~ ──────────────────────────────────────────────────────</text>
+
+  <!-- Animated taglines -->
+  <g clip-path="url(#clip-0)">
+    <text x="16" y="101.5" fill="#a9b1d6" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400">Backend Architect • Full-Stack Engineer • 3x Hackathon Winner</text>
+  </g>
+  <rect class="cursor-rect-0" x="16" y="87.5" width="2" height="17.25" fill="#ff9e64" />
+
+  <g clip-path="url(#clip-1)">
+    <text x="16" y="101.5" fill="#a9b1d6" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400">Building systems that ship from schema to deploy</text>
+  </g>
+  <rect class="cursor-rect-1" x="16" y="87.5" width="2" height="17.25" fill="#ff9e64" />
+
+  <g clip-path="url(#clip-2)">
+    <text x="16" y="101.5" fill="#a9b1d6" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400">Currently: LeafLine, railmind, Samadhaan-setu</text>
+  </g>
+  <rect class="cursor-rect-2" x="16" y="87.5" width="2" height="17.25" fill="#ff9e64" />
+</svg>
