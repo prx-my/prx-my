@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://prakhargupta.me"><img src="https://img.shields.io/badge/Portfolio-prakhargupta.me-2563eb?style=flat-square" alt="Portfolio"/></a>
   <a href="https://linkedin.com/in/Prakharrdev"><img src="https://img.shields.io/badge/LinkedIn-Prakharrdev-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://x.com/prakharbuildss"><img src="https://img.shields.io/badge/X-@prakharbuildss-000000?style=flat-square&logo=x&logoColor=white" alt="X"/></a>
+  <a href="https://x.com/_prxmy"><img src="https://img.shields.io/badge/X-@_prxmy-000000?style=flat-square&logo=x&logoColor=white" alt="X"/></a>
   <a href="mailto:Prakhar06.work@gmail.com"><img src="https://img.shields.io/badge/Email-Prakhar06.work-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
@@ -61,7 +61,7 @@ I'm a **Full Stack Engineer & Backend Architect** from **Jaipur, India** ðŸ‡®ðŸ‡
 <p align="center">
   <a href="https://prakhargupta.me"><img src="https://img.shields.io/badge/Portfolio-prakhargupta.me-2563eb?style=for-the-badge" alt="Portfolio"/></a>
   <a href="https://linkedin.com/in/Prakharrdev"><img src="https://img.shields.io/badge/LinkedIn-Prakharrdev-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://x.com/prakharbuildss"><img src="https://img.shields.io/badge/@prakharbuildss-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
+  <a href="https://x.com/_prxmy"><img src="https://img.shields.io/badge/@_prxmy-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
   <a href="mailto:Prakhar06.work@gmail.com"><img src="https://img.shields.io/badge/Hire%20Me-Prakhar06.work-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
