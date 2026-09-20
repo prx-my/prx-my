@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 317" width="560" height="317" role="img" aria-label="railmind: Planner Performance (Delhi–Kanpur corridor, 50 scenarios)">
+  <title>railmind: Planner Performance (Delhi–Kanpur corridor, 50 scenarios)</title>
+  <desc>Benchmark of FCFS baseline, Greedy, and Beam search configurations on mean delay cost and decision latency.</desc>
+  <rect width="558" height="315" x="1" y="1" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="24" y="30" fill="#e6edf3" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="bold" text-anchor="start">RAILMIND / CORRIDOR DISPATCH BENCHMARK</text>
+  <text x="24" y="48" fill="#8b949e" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="start">Mean Passenger Delay Cost (Lower is better)</text>
+  <text x="430" y="48" fill="#8b949e" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="end">Cost / Imp%</text>
+  <text x="536" y="48" fill="#8b949e" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="end">Latency</text>
+  <line x1="24" y1="56" x2="536" y2="56" stroke="#30363d" stroke-width="1"/>
+  <text x="24" y="75" fill="#e6edf3" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="start">FCFS (baseline)</text>
+  <text x="430" y="75" fill="#e6edf3" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="end">298,435.5</text>
+  <text x="536" y="75" fill="#8b949e" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="end">—</text>
+  <rect x="24.0" y="83.0" width="512.0" height="10.0" rx="3" fill="#21262d"/>
+  <rect x="24.0" y="83.0" width="512.0" height="10.0" rx="3" fill="#8b949e"/>
+  <text x="24" y="127" fill="#e6edf3" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="start">Greedy (D=1, W=1)</text>
+  <text x="430" y="127" fill="#e6edf3" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="end">293,690.4 (-1.6%)</text>
+  <text x="536" y="127" fill="#8b949e" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="end">0.33 ms</text>
+  <rect x="24.0" y="135.0" width="512.0" height="10.0" rx="3" fill="#21262d"/>
+  <rect x="24.0" y="135.0" width="503.9" height="10.0" rx="3" fill="#8b949e"/>
+  <text x="24" y="179" fill="#e6edf3" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="start">Beam (D=4, W=8)</text>
+  <text x="430" y="179" fill="#e6edf3" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="end">268,562.1 (-10.0%)</text>
+  <text x="536" y="179" fill="#8b949e" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="end">148.5 ms</text>
+  <rect x="24.0" y="187.0" width="512.0" height="10.0" rx="3" fill="#21262d"/>
+  <rect x="24.0" y="187.0" width="460.7" height="10.0" rx="3" fill="#8b949e"/>
+  <text x="24" y="231" fill="#2563eb" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="bold" text-anchor="start">Beam (D=2, W=4)  ★ OPTIMAL</text>
+  <text x="430" y="231" fill="#2563eb" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="bold" text-anchor="end">268,377.9 (-10.1%)</text>
+  <text x="536" y="231" fill="#8b949e" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="end">23.08 ms</text>
+  <rect x="24.0" y="239.0" width="512.0" height="10.0" rx="3" fill="#21262d"/>
+  <rect x="24.0" y="239.0" width="460.4" height="10.0" rx="3" fill="#2563eb"/>
+  <line x1="24" y1="275" x2="536" y2="275" stroke="#30363d" stroke-width="1"/>
+  <text x="24" y="297" fill="#8b949e" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="normal" text-anchor="start">provenance: simulated · 50 scenarios · metric: passenger delay cost</text>
+</svg>
