@@ -24,9 +24,7 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_analysis_timeout: 20
           plugin_languages_categories: markup, programming
-          plugin_achievements: yes
-          plugin_achievements_threshold: C
-          plugin_achievements_display: compact
+          plugin_achievements: no
           plugin_notable: yes
           plugin_notable_repositories: yes
           plugin_activity: yes
