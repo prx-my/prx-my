@@ -21,7 +21,7 @@
 
 I'm a **just a kid** from **Jaipur, India** , who perhaps know some stuff and dont know alot of stuff (always open to learning)
 
--  **1st Place — LeafLine** at NSUT avinya'26 (2024)
+-  **1st Place - LeafLine** at NSUT avinya'26 
 
 
 <br/>
