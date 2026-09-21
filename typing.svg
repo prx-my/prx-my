@@ -141,17 +141,17 @@
 
   <!-- Animated taglines -->
   <g clip-path="url(#clip-0)">
-    <text x="16" y="101.5" fill="#a9b1d6" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400">Backend Architect • Full-Stack Engineer • 3x Hackathon Winner</text>
+    <text x="16" y="101.5" fill="#a9b1d6" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400"> 3x Hackathon Winner</text>
   </g>
   <rect class="cursor-rect-0" x="16" y="87.5" width="2" height="17.25" fill="#ff9e64" />
 
   <g clip-path="url(#clip-1)">
-    <text x="16" y="101.5" fill="#a9b1d6" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400">Building systems that ship from schema to deploy</text>
+    <text x="16" y="101.5" fill="#a9b1d6" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400"> Learning from OS community</text>
   </g>
   <rect class="cursor-rect-1" x="16" y="87.5" width="2" height="17.25" fill="#ff9e64" />
 
   <g clip-path="url(#clip-2)">
-    <text x="16" y="101.5" fill="#a9b1d6" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400">Currently: LeafLine, railmind, Samadhaan-setu</text>
+    <text x="16" y="101.5" fill="#a9b1d6" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="400">scroll down perhaps</text>
   </g>
   <rect class="cursor-rect-2" x="16" y="87.5" width="2" height="17.25" fill="#ff9e64" />
 </svg>
