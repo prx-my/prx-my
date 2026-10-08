@@ -26,6 +26,17 @@ I'm a **just a kid** from **Jaipur, India** , who perhaps know some stuff and do
 
 <br/>
 
+## 🔧 Things I've Built
+
+Real tools, shipped and used — the hard parts aren't CRUD.
+
+| Project | The hard part | Stack |
+|---|---|---|
+| **[nptel-quiz](https://github.com/prx-my/nptel-quiz)** | Solves image-based NPTEL quizzes by OCR'ing the question images **on-device** — Apple Vision compiled via `swiftc` on macOS, `Windows.Media.Ocr` on Windows — then answers through an AI agent or Gemini. Reuses the login session via Playwright and ships an installable agent skill. | `Node` · `Playwright` · `Swift` |
+| **[oracle-academy](https://github.com/prx-my/oracle-academy)** | Drives Oracle's APEX Student Hub from the terminal. Keeps one signed-in browser alive over CDP, imports cookies from your default browser (DPAPI + App-Bound-Encryption handling), and falls back to Docker + noVNC because Oracle blocks headless Chromium. | `Node` · `Playwright` · `Docker` |
+
+<br/>
+
 ## Recent PRs & Activity
 
 <p align="center">
