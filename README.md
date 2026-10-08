@@ -13,7 +13,7 @@
   <a href="https://linkedin.com/in/Prakharrdev"><img src="https://img.shields.io/badge/LinkedIn-Prxmy-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://x.com/_prxmy"><img src="https://img.shields.io/badge/X-@_prxmy-000000?style=flat-square&logo=x&logoColor=white" alt="X"/></a>
   <a href="mailto:Prakhar06.work@gmail.com"><img src="https://img.shields.io/badge/Email-Prakhar06.work-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
-  <img src="https://komarev.com/ghpvc/?username=prx-my&label=Profile%20Views&color=2563eb&style=flat-square" alt="Profile Views"/>
+  <img src="https://komarev.com/ghpvc/?username=prx-my&label=Profile%20Views&color=2563eb&style=flat-square&base=5620" alt="Profile Views"/>
 </p>
 
 <br/>
