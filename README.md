@@ -37,6 +37,47 @@ I'm a **just a kid** from **Jaipur, India** , who perhaps know some stuff and do
 </p>
 
 
+## 🌍 Open Source Contributions
+
+Merged work in real projects — reviewed, tested, and shipped upstream.
+
+<p align="center">
+  <a href="https://github.com/sugarlabs/musicblocks-v4/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/Sugar_Labs-5_merged_PRs-FF7A00?style=for-the-badge" alt="Sugar Labs merged PRs"/></a>
+  &nbsp;
+  <a href="https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/OWASP-8_merged_PRs-00549E?style=for-the-badge" alt="OWASP merged PRs"/></a>
+</p>
+
+<br/>
+
+### 🍬 Sugar Labs · [musicblocks-v4](https://github.com/sugarlabs/musicblocks-v4)
+<sub>Blocks-based music programming environment · TypeScript · React · Zustand</sub>
+
+| PR | Change | Area |
+|:--:|---|---|
+| [#942](https://github.com/sugarlabs/musicblocks-v4/pull/942) | Share the drag trailing-click suppression guard across three call sites | `refactor` · `masonry` |
+| [#919](https://github.com/sugarlabs/musicblocks-v4/pull/919) | Clear and toggle brick selection on press | `fix` · `masonry` |
+| [#871](https://github.com/sugarlabs/musicblocks-v4/pull/871) | Separate drag and click selection so drags stop leaving bricks selected | `fix` · `masonry` |
+| [#850](https://github.com/sugarlabs/musicblocks-v4/pull/850) | Duplicate a brick and its subtree as an independent tower | `feat` · `masonry` |
+| [#646](https://github.com/sugarlabs/musicblocks-v4/pull/646) | Correct tail step width bleed for `strokeWidth > 2` | `fix` · `geometry` |
+
+<br/>
+
+### 🛡️ OWASP · [cve-lite-cli](https://github.com/OWASP/cve-lite-cli)
+<sub>Dependency CVE scanner &amp; override-hygiene CLI · TypeScript · Node.js</sub>
+
+| PR | Change | Area |
+|:--:|---|---|
+| [#1231](https://github.com/OWASP/cve-lite-cli/pull/1231) | Disclose compact-mode finding and command-group truncation | `fix` · `output` |
+| [#1230](https://github.com/OWASP/cve-lite-cli/pull/1230) | Extract CLI flag literals into named constants | `refactor` · `cli` |
+| [#1229](https://github.com/OWASP/cve-lite-cli/pull/1229) | De-duplicate flag-conflict error messages | `refactor` · `cli` |
+| [#1228](https://github.com/OWASP/cve-lite-cli/pull/1228) | Add braces to remaining single-line `if` statements | `style` · `cli` |
+| [#1202](https://github.com/OWASP/cve-lite-cli/pull/1202) | Surface the 5000-file scan cap so `--only-used` can't drop findings | `fix` · `security` |
+| [#1200](https://github.com/OWASP/cve-lite-cli/pull/1200) | Document the OA010 override-hygiene rule | `docs` · `rules` |
+| [#1183](https://github.com/OWASP/cve-lite-cli/pull/1183) | Apply the `0.x` caret rule in `satisfiesRange` | `fix` · `semver` |
+| [#1181](https://github.com/OWASP/cve-lite-cli/pull/1181) | Correct OA008 pluralization and order copies by version | `fix` · `overrides` |
+
+<br/>
+
 ##  Tech Stack
 
 <p align="center">
