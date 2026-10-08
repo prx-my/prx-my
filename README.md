@@ -27,7 +27,7 @@ I'm a **just a kid** from **Jaipur, India** , who perhaps know some stuff and do
 
 <br/>
 
-## 🔧 Things I've Built
+## Things I've Built
 
 Real tools, shipped and used. The hard parts aren't CRUD.
 
@@ -49,7 +49,7 @@ Real tools, shipped and used. The hard parts aren't CRUD.
 </p>
 
 
-## 🌍 Open Source Contributions
+## Open Source Contributions
 
 Merged work in real projects: reviewed, tested, and shipped upstream.
 
@@ -61,7 +61,7 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 
 <br/>
 
-### 🍬 Sugar Labs · [musicblocks-v4](https://github.com/sugarlabs/musicblocks-v4)
+### Sugar Labs · [musicblocks-v4](https://github.com/sugarlabs/musicblocks-v4)
 <sub>Blocks-based music programming environment · TypeScript · React · Zustand</sub>
 
 | PR | Change | Area |
@@ -74,7 +74,7 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 
 <br/>
 
-### 🛡️ OWASP · [cve-lite-cli](https://github.com/OWASP/cve-lite-cli)
+### OWASP · [cve-lite-cli](https://github.com/OWASP/cve-lite-cli)
 <sub>Dependency CVE scanner &amp; override-hygiene CLI · TypeScript · Node.js</sub>
 
 | PR | Change | Area |
