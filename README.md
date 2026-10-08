@@ -13,6 +13,7 @@
   <a href="https://linkedin.com/in/Prakharrdev"><img src="https://img.shields.io/badge/LinkedIn-Prxmy-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://x.com/_prxmy"><img src="https://img.shields.io/badge/X-@_prxmy-000000?style=flat-square&logo=x&logoColor=white" alt="X"/></a>
   <a href="mailto:Prakhar06.work@gmail.com"><img src="https://img.shields.io/badge/Email-Prakhar06.work-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+  <img src="https://komarev.com/ghpvc/?username=prx-my&label=Profile%20Views&color=2563eb&style=flat-square" alt="Profile Views"/>
 </p>
 
 <br/>
@@ -28,11 +29,11 @@ I'm a **just a kid** from **Jaipur, India** , who perhaps know some stuff and do
 
 ## 🔧 Things I've Built
 
-Real tools, shipped and used — the hard parts aren't CRUD.
+Real tools, shipped and used. The hard parts aren't CRUD.
 
 | Project | The hard part | Stack |
 |---|---|---|
-| **[nptel-quiz](https://github.com/prx-my/nptel-quiz)** | Solves image-based NPTEL quizzes by OCR'ing the question images **on-device** — Apple Vision compiled via `swiftc` on macOS, `Windows.Media.Ocr` on Windows — then answers through an AI agent or Gemini. Reuses the login session via Playwright and ships an installable agent skill. | `Node` · `Playwright` · `Swift` |
+| **[nptel-quiz](https://github.com/prx-my/nptel-quiz)** | Solves image-based NPTEL quizzes by OCR'ing the question images **on-device** (Apple Vision compiled via `swiftc` on macOS, `Windows.Media.Ocr` on Windows), then answers through an AI agent or Gemini. Reuses the login session via Playwright and ships an installable agent skill. | `Node` · `Playwright` · `Swift` |
 | **[oracle-academy](https://github.com/prx-my/oracle-academy)** | Drives Oracle's APEX Student Hub from the terminal. Keeps one signed-in browser alive over CDP, imports cookies from your default browser (DPAPI + App-Bound-Encryption handling), and falls back to Docker + noVNC because Oracle blocks headless Chromium. | `Node` · `Playwright` · `Docker` |
 
 <br/>
@@ -50,7 +51,7 @@ Real tools, shipped and used — the hard parts aren't CRUD.
 
 ## 🌍 Open Source Contributions
 
-Merged work in real projects — reviewed, tested, and shipped upstream.
+Merged work in real projects: reviewed, tested, and shipped upstream.
 
 <p align="center">
   <a href="https://github.com/sugarlabs/musicblocks-v4/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/Sugar_Labs-5_merged_PRs-FF7A00?style=for-the-badge" alt="Sugar Labs merged PRs"/></a>
