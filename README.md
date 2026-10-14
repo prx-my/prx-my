@@ -23,6 +23,8 @@
 I'm a **just a kid** from **Jaipur, India** , who perhaps know some stuff and dont know alot of stuff (always open to learning)
 
 -  **1st Place - LeafLine** at NSUT avinya'26 
+-  **Winner** - Claude Impact Labs Hackthon Bhopal '26
+-  **Winner** - India Innovate '26 at Bharat Mandapam
 
 
 <br/>
