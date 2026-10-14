@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=prx-my&theme=tokyonight&animation=wave&shape=square&show_legend=true" alt="Contribution motion"/>
+  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=prx-my&theme=tokyonight&animation=wave&shape=square&show_legend=true&v=2" alt="Contribution motion"/>
 </p>
 
 <br/>
