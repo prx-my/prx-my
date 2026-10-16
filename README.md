@@ -55,10 +55,11 @@ Real tools, shipped and used. The hard parts aren't CRUD.
 
 Merged work in real projects: reviewed, tested, and shipped upstream.
 
+<!-- CONTRIBUTIONS:START -->
 <p align="center">
   <a href="https://github.com/sugarlabs/musicblocks-v4/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/Sugar_Labs-5_merged_PRs-FF7A00?style=for-the-badge" alt="Sugar Labs merged PRs"/></a>
   &nbsp;
-  <a href="https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/OWASP-8_merged_PRs-00549E?style=for-the-badge" alt="OWASP merged PRs"/></a>
+  <a href="https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/OWASP-10_merged_PRs-00549E?style=for-the-badge" alt="OWASP merged PRs"/></a>
 </p>
 
 <br/>
@@ -81,14 +82,17 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 
 | PR | Change | Area |
 |:--:|---|---|
-| [#1231](https://github.com/OWASP/cve-lite-cli/pull/1231) | Disclose compact-mode finding and command-group truncation | `fix` · `output` |
-| [#1230](https://github.com/OWASP/cve-lite-cli/pull/1230) | Extract CLI flag literals into named constants | `refactor` · `cli` |
+| [#1273](https://github.com/OWASP/cve-lite-cli/pull/1273) | Ignore `.claude/` so the rule travels with the repo | `fix` · `gitignore` |
+| [#1271](https://github.com/OWASP/cve-lite-cli/pull/1271) | Emit HTML override fix commands relative to the scanned project | `fix` · `report` |
+| [#1202](https://github.com/OWASP/cve-lite-cli/pull/1202) | Surface the 5000-file scan cap so `--only-used` can't drop findings | `fix` · `security` |
 | [#1229](https://github.com/OWASP/cve-lite-cli/pull/1229) | De-duplicate flag-conflict error messages | `refactor` · `cli` |
 | [#1228](https://github.com/OWASP/cve-lite-cli/pull/1228) | Add braces to remaining single-line `if` statements | `style` · `cli` |
-| [#1202](https://github.com/OWASP/cve-lite-cli/pull/1202) | Surface the 5000-file scan cap so `--only-used` can't drop findings | `fix` · `security` |
+| [#1231](https://github.com/OWASP/cve-lite-cli/pull/1231) | Disclose compact-mode finding and command-group truncation | `fix` · `output` |
+| [#1230](https://github.com/OWASP/cve-lite-cli/pull/1230) | Extract CLI flag literals into named constants | `refactor` · `cli` |
+| [#1181](https://github.com/OWASP/cve-lite-cli/pull/1181) | Correct OA008 pluralization and order copies by version | `fix` · `overrides` |
 | [#1200](https://github.com/OWASP/cve-lite-cli/pull/1200) | Document the OA010 override-hygiene rule | `docs` · `rules` |
 | [#1183](https://github.com/OWASP/cve-lite-cli/pull/1183) | Apply the `0.x` caret rule in `satisfiesRange` | `fix` · `semver` |
-| [#1181](https://github.com/OWASP/cve-lite-cli/pull/1181) | Correct OA008 pluralization and order copies by version | `fix` · `overrides` |
+<!-- CONTRIBUTIONS:END -->
 
 <br/>
 
