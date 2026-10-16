@@ -35,8 +35,8 @@ Real tools, shipped and used. The hard parts aren't CRUD.
 
 | Project | The hard part | Stack |
 |---|---|---|
-| **[nptel-quiz](https://github.com/prx-my/nptel-quiz)** | Solves image-based NPTEL quizzes by OCR'ing the question images **on-device** (Apple Vision compiled via `swiftc` on macOS, `Windows.Media.Ocr` on Windows), then answers through an AI agent or Gemini. Reuses the login session via Playwright and ships an installable agent skill. | `Node` · `Playwright` · `Swift` |
-| **[oracle-academy](https://github.com/prx-my/oracle-academy)** | Drives Oracle's APEX Student Hub from the terminal. Keeps one signed-in browser alive over CDP, imports cookies from your default browser (DPAPI + App-Bound-Encryption handling), and falls back to Docker + noVNC because Oracle blocks headless Chromium. | `Node` · `Playwright` · `Docker` |
+| **[Bhumi Vikas Sahayak](https://github.com/AWS-env/bhumi-vikas-sahayak)** | Answers building-permission questions from the 108-page MP Bhumi Vikas Rules by grounding every reply in the exact rule number, rule text, and PDF page, in English, Hindi, or Hinglish, and saying so when the rules are silent. Ships a Next.js web app and an Apple Watch client. | `Python` · `Next.js` · `Swift` |
+| **[Ecoaudit](https://github.com/AWS-env/environmental-hacks)** | Audits source and config for compute-waste patterns (repeated queries, serial I/O, oversized builds) **without executing the code**, then cites evidence with a detection confidence and keeps static findings separate from any carbon-savings claim. | `Python` · `TypeScript` · `AWS CDK` |
 
 <br/>
 
