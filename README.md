@@ -59,7 +59,7 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 <p align="center">
   <a href="https://github.com/sugarlabs/musicblocks-v4/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/Sugar_Labs-5_merged_PRs-FF7A00?style=for-the-badge" alt="Sugar Labs merged PRs"/></a>
   &nbsp;
-  <a href="https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/OWASP-11_merged_PRs-00549E?style=for-the-badge" alt="OWASP merged PRs"/></a>
+  <a href="https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/OWASP-12_merged_PRs-00549E?style=for-the-badge" alt="OWASP merged PRs"/></a>
 </p>
 
 <br/>
@@ -82,6 +82,7 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 
 | PR | Change | Area |
 |:--:|---|---|
+| [#1285](https://github.com/OWASP/cve-lite-cli/pull/1285) | replace em dashes in source and output strings | `chore` |
 | [#1269](https://github.com/OWASP/cve-lite-cli/pull/1269) | cover positionAgainstRange's MAX_SAFE_INTEGER boundary | `test` · `version` |
 | [#1273](https://github.com/OWASP/cve-lite-cli/pull/1273) | Ignore `.claude/` so the rule travels with the repo | `fix` · `gitignore` |
 | [#1271](https://github.com/OWASP/cve-lite-cli/pull/1271) | Emit HTML override fix commands relative to the scanned project | `fix` · `report` |
