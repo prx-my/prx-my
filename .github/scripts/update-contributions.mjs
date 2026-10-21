@@ -87,6 +87,32 @@ const OVERRIDES = {
     "Emit HTML override fix commands relative to the scanned project",
 };
 
+// PRs worth leading with. Rank 1 is the most impactful. The generator puts
+// highlighted PRs first and keeps the rest in merge order, so the section
+// answers "what mattered" before "what landed recently".
+const HIGHLIGHTS = {
+  "OWASP/cve-lite-cli#1202": {
+    rank: 1,
+    note:
+      "A repo past the 5,000-file usage cap could scan green with an empty SARIF report. Findings now survive, --fail-on still gates, and the truncation is disclosed.",
+  },
+  "OWASP/cve-lite-cli#1231": {
+    rank: 2,
+    note:
+      "Compact mode was showing 3 of 109 findings and calling the plan complete. Both withheld findings and command groups are now disclosed.",
+  },
+  "OWASP/cve-lite-cli#1183": {
+    rank: 3,
+    note:
+      "Corrected npm's 0.x caret semantics in satisfiesRange, which decides which versions an override admits and feeds OA010.",
+  },
+  "OWASP/cve-lite-cli#1271": {
+    rank: 4,
+    note:
+      "HTML fix commands were relative to the process cwd, so they did not run. They now resolve against the scanned project.",
+  },
+};
+
 async function api(path) {
   const res = await fetch(`https://api.github.com${path}`, {
     headers: {
@@ -154,24 +180,55 @@ function badge(repo, count) {
   return `  <a href="${query}"><img src="https://img.shields.io/badge/${label}?style=for-the-badge" alt="${repo.heading} merged PRs"/></a>`;
 }
 
+function describe(repo, pr) {
+  const parsed = parseTitle(pr.title);
+  const override = OVERRIDES[`${repo.owner}/${repo.repo}#${pr.number}`];
+  return {
+    change:
+      (typeof override === "string" ? override : override?.change) ??
+      parsed.subject,
+    area: (typeof override === "object" && override?.area) || areaFor(parsed),
+  };
+}
+
+function highlightFor(repo, pr) {
+  return HIGHLIGHTS[`${repo.owner}/${repo.repo}#${pr.number}`];
+}
+
+function orderedPullRequests(repo, prs) {
+  return [...prs].sort((a, b) => {
+    const rankA = highlightFor(repo, a)?.rank ?? Number.POSITIVE_INFINITY;
+    const rankB = highlightFor(repo, b)?.rank ?? Number.POSITIVE_INFINITY;
+    if (rankA !== rankB) return rankA - rankB;
+    return a.mergedAt < b.mergedAt ? 1 : -1;
+  });
+}
+
 function repoSection(repo, prs) {
+  const ordered = orderedPullRequests(repo, prs);
+  const highlights = ordered.filter((pr) => highlightFor(repo, pr));
+
   const lines = [
     `### ${repo.heading} · [${repo.repo}](https://github.com/${repo.owner}/${repo.repo})`,
     `<sub>${repo.subtitle}</sub>`,
-    "",
-    "| PR | Change | Area |",
-    "|:--:|---|---|",
   ];
-  for (const pr of prs) {
-    const parsed = parseTitle(pr.title);
-    const override = OVERRIDES[`${repo.owner}/${repo.repo}#${pr.number}`];
-    const change =
-      (typeof override === "string" ? override : override?.change) ??
-      parsed.subject;
-    const area =
-      (typeof override === "object" && override?.area) || areaFor(parsed);
+
+  if (highlights.length) {
+    lines.push("", "**Impact highlights**", "");
+    for (const pr of highlights) {
+      const { change } = describe(repo, pr);
+      lines.push(
+        `- [#${pr.number}](${pr.url}) - **${cell(change)}**: ${highlightFor(repo, pr).note}`,
+      );
+    }
+  }
+
+  lines.push("", "| PR | Change | Area |", "|:--:|---|---|");
+  for (const pr of ordered) {
+    const { change, area } = describe(repo, pr);
+    const marker = highlightFor(repo, pr) ? "★ " : "";
     lines.push(
-      `| [#${pr.number}](${pr.url}) | ${cell(change)} | ${area} |`,
+      `| ${marker}[#${pr.number}](${pr.url}) | ${cell(change)} | ${area} |`,
     );
   }
   return lines.join("\n");
