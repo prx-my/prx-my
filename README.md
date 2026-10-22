@@ -1,12 +1,18 @@
-<p align="center">
-  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=prx-my&theme=tokyonight&animation=wave&shape=square&show_legend=true&v=20261022" alt="Contribution motion"/>
-</p>
+# Prakhar Gupta
 
-<br/>
+**Backend & security tooling in TypeScript and Python. Open to software engineering internships (any term), actively looking.**
 
-<p align="center">
-  <img src="typing.svg" width="100%" alt="Typing" />
-</p>
+I look for the places where a dev tool says "all clear" but isn't.
+
+<!-- PROOF:START -->
+Selected fixes (13 in [OWASP cve-lite-cli](https://github.com/OWASP/cve-lite-cli), 5 in [Sugar Labs musicblocks-v4](https://github.com/sugarlabs/musicblocks-v4)):
+
+- [#1202](https://github.com/OWASP/cve-lite-cli/pull/1202) A repo past 5,000 files could scan green with an empty report; a truncated scan is now distinguishable from a clean one, findings survive `--only-used`, and the cut is disclosed.
+- [#1231](https://github.com/OWASP/cve-lite-cli/pull/1231) Compact mode showed 3 of 54 findings and called the plan complete; both finding and command-group truncation are now disclosed.
+- [#1183](https://github.com/OWASP/cve-lite-cli/pull/1183) Fixed npm's `0.x` caret semantics in the semver oracle that decides which override versions a CVE report admits.
+<!-- PROOF:END -->
+
+<sub>3x hackathon winner: 1st Place LeafLine (NSUT Avinya '26) · Claude Impact Labs Bhopal '26 · India Innovate '26</sub>
 
 <p align="center">
   <a href="https://prxmy.in"><img src="https://img.shields.io/badge/Portfolio-prxmy.in-2563eb?style=flat-square" alt="Portfolio"/></a>
@@ -15,17 +21,6 @@
   <a href="mailto:Prakhar06.work@gmail.com"><img src="https://img.shields.io/badge/Email-Prakhar06.work-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
   <img src="https://visitor-badge.laobi.icu/badge?page_id=prx-my.prx-my&left_text=Profile%20Views" alt="Profile Views"/>
 </p>
-
-<br/>
-
-##  About Me
-
-I'm a **just a kid** from **Jaipur, India** , who perhaps know some stuff and dont know alot of stuff (always open to learning)
-
--  **1st Place - LeafLine** at NSUT avinya'26 
--  **Winner** - Claude Impact Labs Hackthon Bhopal '26
--  **Winner** - India Innovate '26 at Bharat Mandapam
-
 
 <br/>
 
@@ -39,17 +34,6 @@ Real tools, shipped and used. The hard parts aren't CRUD.
 | **[Ecoaudit](https://github.com/AWS-env/environmental-hacks)** | Audits source and config for compute-waste patterns (repeated queries, serial I/O, oversized builds) **without executing the code**, then cites evidence with a detection confidence and keeps static findings separate from any carbon-savings claim. | `Python` · `TypeScript` · `AWS CDK` |
 
 <br/>
-
-## Recent PRs & Activity
-
-<p align="center">
-  <img src="metrics.svg?v=20261022" width="70%" alt="GitHub Activity"/>
-</p>
-
-<p align="center">
-  <img src="streak.svg?v=20261022" width="45%" alt="GitHub Streak"/>
-</p>
-
 
 ## Open Source Contributions
 
@@ -76,6 +60,26 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 
 <br/>
 
+## Activity
+
+<p align="center">
+  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=prx-my&theme=tokyonight&animation=wave&shape=square&show_legend=true&v=20261022" alt="Contribution motion"/>
+</p>
+
+<p align="center">
+  <img src="typing.svg" width="100%" alt="Typing" />
+</p>
+
+<p align="center">
+  <img src="metrics.svg?v=20261022" width="70%" alt="GitHub Activity"/>
+</p>
+
+<p align="center">
+  <img src="streak.svg?v=20261022" width="45%" alt="GitHub Streak"/>
+</p>
+
+<br/>
+
 ##  Tech Stack
 
 <p align="center">
@@ -87,7 +91,7 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 ##  Let's Connect
 
 <p align="center">
-  <a href="https://prakhargupta.me"><img src="https://img.shields.io/badge/Portfolio-prakhargupta.me-2563eb?style=for-the-badge" alt="Portfolio"/></a>
+  <a href="https://prxmy.in"><img src="https://img.shields.io/badge/Portfolio-prxmy.in-2563eb?style=for-the-badge" alt="Portfolio"/></a>
   <a href="https://www.linkedin.com/in/prxmy/"><img src="https://img.shields.io/badge/LinkedIn-Prxmy-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://x.com/_prxmy"><img src="https://img.shields.io/badge/@_prxmy-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
   <a href="mailto:Prakhar06.work@gmail.com"><img src="https://img.shields.io/badge/Hire%20Me-Prakhar06.work-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>

@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 // Regenerates the "Open Source Contributions" section of README.md from the
-// merged pull requests authored by GH_USER in each tracked repository.
+// merged pull requests authored by GH_USER in each tracked repository, plus the
+// proof block at the top of the README.
 //
 // Run: GITHUB_TOKEN=... node .github/scripts/update-contributions.mjs
-// The section is delimited by the CONTRIBUTIONS:START / CONTRIBUTIONS:END
-// markers so the rest of the README stays untouched.
+// The sections are delimited by the CONTRIBUTIONS:START / CONTRIBUTIONS:END and
+// PROOF:START / PROOF:END markers so the rest of the README stays untouched.
 
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -22,6 +23,11 @@ const README = resolve(
 
 const START = "<!-- CONTRIBUTIONS:START -->";
 const END = "<!-- CONTRIBUTIONS:END -->";
+const PROOF_START = "<!-- PROOF:START -->";
+const PROOF_END = "<!-- PROOF:END -->";
+
+// How many highlighted PRs to surface above the fold.
+const PROOF_LIMIT = 3;
 
 // Repos surfaced in the section, in display order.
 const REPOS = [
@@ -93,16 +99,22 @@ const OVERRIDES = {
 const HIGHLIGHTS = {
   "OWASP/cve-lite-cli#1202": {
     rank: 1,
+    proof:
+      "A repo past 5,000 files could scan green with an empty report; a truncated scan is now distinguishable from a clean one, findings survive `--only-used`, and the cut is disclosed.",
     note:
       "A repo past the 5,000-file usage cap could scan green with an empty SARIF report. Findings now survive, --fail-on still gates, and the truncation is disclosed.",
   },
   "OWASP/cve-lite-cli#1231": {
     rank: 2,
+    proof:
+      "Compact mode showed 3 of 54 findings and called the plan complete; both finding and command-group truncation are now disclosed.",
     note:
       "Compact mode was showing 3 of 109 findings and calling the plan complete. Both withheld findings and command groups are now disclosed.",
   },
   "OWASP/cve-lite-cli#1183": {
     rank: 3,
+    proof:
+      "Fixed npm's `0.x` caret semantics in the semver oracle that decides which override versions a CVE report admits.",
     note:
       "Corrected npm's 0.x caret semantics in satisfiesRange, which decides which versions an override admits and feeds OA010.",
   },
@@ -245,6 +257,53 @@ function render(sections) {
   return parts.join("\n");
 }
 
+// Top-of-profile proof block: the highlighted PRs in rank order, plus the
+// merged-PR counts for every tracked repo, so the headline claims never drift
+// from what is actually merged.
+function renderProof(sections) {
+  const highlighted = [];
+  for (const { repo, prs } of sections) {
+    for (const pr of prs) {
+      const highlight = highlightFor(repo, pr);
+      if (highlight) highlighted.push({ repo, pr, highlight });
+    }
+  }
+  highlighted.sort((a, b) =>
+    a.highlight.rank === b.highlight.rank
+      ? a.pr.number - b.pr.number
+      : a.highlight.rank - b.highlight.rank,
+  );
+
+  const counts = [...sections]
+    .sort((a, b) => b.prs.length - a.prs.length)
+    .map(
+      ({ repo, prs }) =>
+        `${prs.length} in [${repo.heading} ${repo.repo}](https://github.com/${repo.owner}/${repo.repo})`,
+    )
+    .join(", ");
+
+  if (!highlighted.length) {
+    return `Merged upstream so far: ${counts}.`;
+  }
+
+  const lines = [`Selected fixes (${counts}):`, ""];
+  for (const { repo, pr, highlight } of highlighted.slice(0, PROOF_LIMIT)) {
+    const { change } = describe(repo, pr);
+    const summary = highlight.proof ?? `${change}: ${highlight.note}`;
+    lines.push(`- [#${pr.number}](${pr.url}) ${cell(summary)}`);
+  }
+  return lines.join("\n");
+}
+
+function replaceBlock(text, start, end, body) {
+  const startIdx = text.indexOf(start);
+  const endIdx = text.indexOf(end);
+  if (startIdx === -1 || endIdx === -1 || endIdx < startIdx) {
+    throw new Error(`README.md is missing ${start} / ${end} markers`);
+  }
+  return `${text.slice(0, startIdx + start.length)}\n${body}\n${text.slice(endIdx)}`;
+}
+
 async function main() {
   const sections = [];
   for (const repo of REPOS) {
@@ -260,9 +319,12 @@ async function main() {
     throw new Error(`README.md is missing ${START} / ${END} markers`);
   }
   const updated =
-    readme.slice(0, startIdx) +
-    generated +
-    readme.slice(endIdx + END.length);
+    replaceBlock(
+      readme.slice(0, startIdx) + generated + readme.slice(endIdx + END.length),
+      PROOF_START,
+      PROOF_END,
+      renderProof(sections),
+    );
 
   if (updated === readme) {
     console.log("Contributions already up to date.");
