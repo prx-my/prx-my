@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=prx-my&theme=tokyonight&animation=wave&shape=square&show_legend=true&v=2" alt="Contribution motion"/>
+  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=prx-my&theme=tokyonight&animation=wave&shape=square&show_legend=true&v=20261022" alt="Contribution motion"/>
 </p>
 
 <br/>
@@ -43,11 +43,11 @@ Real tools, shipped and used. The hard parts aren't CRUD.
 ## Recent PRs & Activity
 
 <p align="center">
-  <img src="metrics.svg" width="70%" alt="GitHub Activity"/>
+  <img src="metrics.svg?v=20261022" width="70%" alt="GitHub Activity"/>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=prx-my&theme=github-dark&hide_border=true&background=0d1117&stroke=30363d&ring=2563eb&fire=2563eb&currStreakLabel=38bdf8&dates=8b949e&sideNums=e2e8f0" width="45%" alt="GitHub Streak"/>
+  <img src="https://streak-stats.demolab.com?user=prx-my&theme=github-dark&hide_border=true&background=0d1117&stroke=30363d&ring=2563eb&fire=2563eb&currStreakLabel=38bdf8&dates=8b949e&sideNums=e2e8f0&v=20261022" width="45%" alt="GitHub Streak"/>
 </p>
 
 
