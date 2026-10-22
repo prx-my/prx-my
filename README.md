@@ -58,8 +58,6 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 <!-- CONTRIBUTIONS:START -->
 <p align="center">
   <a href="https://github.com/sugarlabs/musicblocks-v4/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/Sugar_Labs-5_merged_PRs-FF7A00?style=for-the-badge" alt="Sugar Labs merged PRs"/></a>
-  &nbsp;
-  <a href="https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="https://img.shields.io/badge/OWASP-13_merged_PRs-00549E?style=for-the-badge" alt="OWASP merged PRs"/></a>
 </p>
 
 <br/>
@@ -74,34 +72,6 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 | [#871](https://github.com/sugarlabs/musicblocks-v4/pull/871) | Separate drag and click selection so drags stop leaving bricks selected | `fix` · `masonry` |
 | [#850](https://github.com/sugarlabs/musicblocks-v4/pull/850) | Duplicate a brick and its subtree as an independent tower | `feat` · `masonry` |
 | [#646](https://github.com/sugarlabs/musicblocks-v4/pull/646) | Correct tail step width bleed for `strokeWidth > 2` | `fix` · `geometry` |
-
-<br/>
-
-### OWASP · [cve-lite-cli](https://github.com/OWASP/cve-lite-cli)
-<sub>Dependency CVE scanner &amp; override-hygiene CLI · TypeScript · Node.js</sub>
-
-**Impact highlights**
-
-- [#1202](https://github.com/OWASP/cve-lite-cli/pull/1202) - **Surface the 5000-file scan cap so `--only-used` can't drop findings**: A repo past the 5,000-file usage cap could scan green with an empty SARIF report. Findings now survive, --fail-on still gates, and the truncation is disclosed.
-- [#1231](https://github.com/OWASP/cve-lite-cli/pull/1231) - **Disclose compact-mode finding and command-group truncation**: Compact mode was showing 3 of 109 findings and calling the plan complete. Both withheld findings and command groups are now disclosed.
-- [#1183](https://github.com/OWASP/cve-lite-cli/pull/1183) - **Apply the `0.x` caret rule in `satisfiesRange`**: Corrected npm's 0.x caret semantics in satisfiesRange, which decides which versions an override admits and feeds OA010.
-- [#1271](https://github.com/OWASP/cve-lite-cli/pull/1271) - **Emit HTML override fix commands relative to the scanned project**: HTML fix commands were relative to the process cwd, so they did not run. They now resolve against the scanned project.
-
-| PR | Change | Area |
-|:--:|---|---|
-| ★ [#1202](https://github.com/OWASP/cve-lite-cli/pull/1202) | Surface the 5000-file scan cap so `--only-used` can't drop findings | `fix` · `security` |
-| ★ [#1231](https://github.com/OWASP/cve-lite-cli/pull/1231) | Disclose compact-mode finding and command-group truncation | `fix` · `output` |
-| ★ [#1183](https://github.com/OWASP/cve-lite-cli/pull/1183) | Apply the `0.x` caret rule in `satisfiesRange` | `fix` · `semver` |
-| ★ [#1271](https://github.com/OWASP/cve-lite-cli/pull/1271) | Emit HTML override fix commands relative to the scanned project | `fix` · `report` |
-| [#1284](https://github.com/OWASP/cve-lite-cli/pull/1284) | replace the trailing positional parameters with an options object | `refactor` · `sarif` |
-| [#1285](https://github.com/OWASP/cve-lite-cli/pull/1285) | replace em dashes in source and output strings | `chore` |
-| [#1269](https://github.com/OWASP/cve-lite-cli/pull/1269) | cover positionAgainstRange's MAX_SAFE_INTEGER boundary | `test` · `version` |
-| [#1273](https://github.com/OWASP/cve-lite-cli/pull/1273) | Ignore `.claude/` so the rule travels with the repo | `fix` · `gitignore` |
-| [#1229](https://github.com/OWASP/cve-lite-cli/pull/1229) | De-duplicate flag-conflict error messages | `refactor` · `cli` |
-| [#1228](https://github.com/OWASP/cve-lite-cli/pull/1228) | Add braces to remaining single-line `if` statements | `style` · `cli` |
-| [#1230](https://github.com/OWASP/cve-lite-cli/pull/1230) | Extract CLI flag literals into named constants | `refactor` · `cli` |
-| [#1181](https://github.com/OWASP/cve-lite-cli/pull/1181) | Correct OA008 pluralization and order copies by version | `fix` · `overrides` |
-| [#1200](https://github.com/OWASP/cve-lite-cli/pull/1200) | Document the OA010 override-hygiene rule | `docs` · `rules` |
 <!-- CONTRIBUTIONS:END -->
 
 <br/>
