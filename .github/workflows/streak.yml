@@ -29,8 +29,8 @@ jobs:
 
       - name: Regenerate streak.svg
         env:
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           GH_USER: prx-my
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node .github/scripts/update-streak.mjs
 
       - name: Commit changes

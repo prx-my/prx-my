@@ -47,7 +47,7 @@ Real tools, shipped and used. The hard parts aren't CRUD.
 </p>
 
 <p align="center">
-  <img src="streak.svg" width="45%" alt="GitHub Streak"/>
+  <img src="streak.svg?v=20261022" width="45%" alt="GitHub Streak"/>
 </p>
 
 
