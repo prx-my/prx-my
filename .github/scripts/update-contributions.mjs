@@ -140,7 +140,12 @@ async function api(path) {
 }
 
 // All merged PRs authored by USER in one repo, newest merge first.
-async function mergedPullRequests({ owner, repo }) {
+//
+// The search API occasionally returns an empty result set for a repo that does
+// have merged PRs (indexing lag). Treating that as "no PRs" silently deletes
+// the repo's section and its top-of-profile proof, so retry before accepting an
+// empty answer, and fail the run if it never resolves.
+async function mergedPullRequests({ owner, repo }, attempts = 3) {
   const q = `repo:${owner}/${repo} is:pr is:merged author:${USER}`;
   const params = new URLSearchParams({
     q,
@@ -148,16 +153,28 @@ async function mergedPullRequests({ owner, repo }) {
     sort: "created",
     order: "desc",
   });
-  const data = await api(`/search/issues?${params}`);
-  return data.items
-    .map((item) => ({
-      number: item.number,
-      title: item.title,
-      mergedAt: item.pull_request?.merged_at ?? "",
-      url: item.html_url,
-    }))
-    .filter((pr) => pr.mergedAt)
-    .sort((a, b) => (a.mergedAt < b.mergedAt ? 1 : -1));
+
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    const data = await api(`/search/issues?${params}`);
+    const prs = data.items
+      .map((item) => ({
+        number: item.number,
+        title: item.title,
+        mergedAt: item.pull_request?.merged_at ?? "",
+        url: item.html_url,
+      }))
+      .filter((pr) => pr.mergedAt)
+      .sort((a, b) => (a.mergedAt < b.mergedAt ? 1 : -1));
+
+    if (prs.length) return prs;
+    if (attempt < attempts) {
+      await new Promise((resolve) => setTimeout(resolve, 2000 * attempt));
+    }
+  }
+
+  throw new Error(
+    `No merged PRs found for ${owner}/${repo} after ${attempts} attempts; refusing to drop its section.`,
+  );
 }
 
 // "fix(masonry): do the thing (#42)" -> { type, scope, subject }
