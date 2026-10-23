@@ -1,8 +1,9 @@
-# Prakhar Gupta
-
-**Backend & security tooling in TypeScript and Python. Open to software engineering internships (any term), actively looking.**
-
-I look for the places where a dev tool says "all clear" but isn't.
+<p align="center">
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/hero-phone.svg">
+    <img src="assets/hero.svg" width="100%" alt="Prakhar Gupta — backend and security tooling in TypeScript and Python. Open to software engineering internships, any term. Includes a diagram of pull request 1202: a scan that stopped at 5,000 files still surfaced a finding.">
+  </picture>
+</p>
 
 <!-- PROOF:START -->
 Selected fixes (13 in [OWASP cve-lite-cli](https://github.com/OWASP/cve-lite-cli), 5 in [Sugar Labs musicblocks-v4](https://github.com/sugarlabs/musicblocks-v4)):
@@ -12,14 +13,12 @@ Selected fixes (13 in [OWASP cve-lite-cli](https://github.com/OWASP/cve-lite-cli
 - [#1183](https://github.com/OWASP/cve-lite-cli/pull/1183) Fixed npm's `0.x` caret semantics in the semver oracle that decides which override versions a CVE report admits.
 <!-- PROOF:END -->
 
-<sub>3x hackathon winner: 1st Place LeafLine (NSUT Avinya '26) · Claude Impact Labs Bhopal '26 · India Innovate '26</sub>
+<p align="center">
+  <sub><a href="https://prxmy.in">prxmy.in</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/prxmy">LinkedIn</a> &nbsp;·&nbsp; <a href="https://x.com/_prxmy">X</a> &nbsp;·&nbsp; <a href="mailto:Prakhar06.work@gmail.com">Email</a></sub>
+</p>
 
 <p align="center">
-  <a href="https://prxmy.in"><img src="https://img.shields.io/badge/Portfolio-prxmy.in-2563eb?style=flat-square" alt="Portfolio"/></a>
-  <a href="https://linkedin.com/in/prxmy"><img src="https://img.shields.io/badge/LinkedIn-Prxmy-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://x.com/_prxmy"><img src="https://img.shields.io/badge/X-@_prxmy-000000?style=flat-square&logo=x&logoColor=white" alt="X"/></a>
-  <a href="mailto:Prakhar06.work@gmail.com"><img src="https://img.shields.io/badge/Email-Prakhar06.work-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=prx-my.prx-my&left_text=Profile%20Views" alt="Profile Views"/>
+  <sub>1st Place LeafLine (NSUT Avinya '26) · Claude Impact Labs '26 · India Innovate '26</sub>
 </p>
 
 <br/>
@@ -93,19 +92,10 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 ## Activity
 
 <p align="center">
-  <img src="https://gh-motion-card.vercel.app/api/github-motion?username=prx-my&theme=tokyonight&animation=wave&shape=square&show_legend=true&v=20261022" alt="Contribution motion"/>
-</p>
-
-<p align="center">
-  <img src="typing.svg" width="100%" alt="Typing" />
-</p>
-
-<p align="center">
-  <img src="metrics.svg?v=20261022" width="70%" alt="GitHub Activity"/>
-</p>
-
-<p align="center">
-  <img src="streak.svg?v=20261022" width="45%" alt="GitHub Streak"/>
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/activity-phone.svg">
+    <img src="assets/activity.svg" width="100%" alt="Contribution signal over the last 52 weeks, showing total contributions, active days, and longest streak.">
+  </picture>
 </p>
 
 <br/>
@@ -121,8 +111,5 @@ Merged work in real projects: reviewed, tested, and shipped upstream.
 ##  Let's Connect
 
 <p align="center">
-  <a href="https://prxmy.in"><img src="https://img.shields.io/badge/Portfolio-prxmy.in-2563eb?style=for-the-badge" alt="Portfolio"/></a>
-  <a href="https://www.linkedin.com/in/prxmy/"><img src="https://img.shields.io/badge/LinkedIn-Prxmy-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://x.com/_prxmy"><img src="https://img.shields.io/badge/@_prxmy-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/></a>
-  <a href="mailto:Prakhar06.work@gmail.com"><img src="https://img.shields.io/badge/Hire%20Me-Prakhar06.work-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://prxmy.in">Portfolio</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/prxmy/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://x.com/_prxmy">X</a> &nbsp;·&nbsp; <a href="mailto:Prakhar06.work@gmail.com">Email</a>
 </p>
