@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(max-width: 640px)" srcset="assets/hero-phone.svg">
-    <img src="assets/hero.svg" width="100%" alt="Prakhar Gupta — backend and security tooling in TypeScript and Python. Open to software engineering internships, any term. Includes a diagram of pull request 1202: a scan that stopped at 5,000 files still surfaced a finding.">
+    <img src="assets/hero.svg" width="100%" alt="Prakhar Gupta — backend and security tooling in TypeScript and Python. Open to software engineering internships, any term. Includes a 365-day contribution ring, an orbit of merged upstream pull requests, and a diagram of pull request 1202: a scan that stopped at 5,000 files still surfaced a finding.">
   </picture>
 </p>
 
