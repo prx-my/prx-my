@@ -52,9 +52,13 @@ LIGHT = {
 
 
 def remap(svg, mapping):
-    for src, dst in mapping.items():
-        svg = svg.replace(src, dst)
-    return svg
+    # Single pass, so a mapped output can't be remapped again (that turned the
+    # dark name into light gray through the city's tile-stroke rule).
+    return re.sub(
+        r"#[0-9a-fA-F]{6}",
+        lambda match: mapping.get(match.group(0).lower(), match.group(0)),
+        svg,
+    )
 
 
 def light_cleanup(svg):
@@ -66,6 +70,8 @@ def light_cleanup(svg):
     svg = svg.replace('fill="#b5179e" opacity=".75"', 'fill="#b5179e" opacity="0"')
     svg = svg.replace('fill="#0969da" opacity=".85"', 'fill="#0969da" opacity="0"')
     svg = svg.replace('fill="#000" fill-opacity=".2"', 'fill="#000" fill-opacity=".05"')
+    svg = svg.replace('fill="url(#scan)"', 'fill="none"')
+    svg = svg.replace('.name{animation:flicker .9s linear 1.1s both}', '.name{}')
     return svg
 W, M = 880, 16            # slice width, transparent side margin (room for the glow)
 FL, FR = M, W - M         # frame left / right
