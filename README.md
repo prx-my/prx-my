@@ -17,5 +17,3 @@
 <img src="./assets/stack.svg" width="100%" align="top" alt="Tech stack. languages: Python, TypeScript, JavaScript, SQL. backend: Node.js, FastAPI, PostgreSQL, Redis. front-end: React, Next.js, Tailwind CSS. cloud: AWS, Docker, Linux, GitHub Actions. security: SARIF, CVE triage, semver.">
 <img src="./assets/footer.svg" width="100%" align="top" alt="Connection closed.">
 </p>
-
-<p align="center"><sub>Regenerated daily from live GitHub data. Console design and contribution city by <a href="https://github.com/georgekobaidze">Giorgi Kobaidze</a> (<a href="https://dev.to/georgekobaidze/i-turned-my-github-profile-into-a-cyberpunk-console-with-a-city-built-from-my-contributions-h4c">how he built it</a>), used under MIT. Layout inspired by <a href="https://github.com/jdx">jdx</a>.</sub></p>
