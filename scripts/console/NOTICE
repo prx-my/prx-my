@@ -1,0 +1,10 @@
+The console design, slice layout, contribution city, and the data/render/readme
+scripts in this directory are adapted from Giorgi Kobaidze's profile generator:
+
+  https://github.com/georgekobaidze/georgekobaidze (tools/profile)
+
+which is distributed under the MIT License (see LICENSE in this directory).
+The overall profile layout is inspired by jdx's profile (https://github.com/jdx).
+
+JetBrains Mono (embedded, subset, in the generated SVGs) is distributed under
+the SIL Open Font License 1.1 (see fonts/OFL.txt).

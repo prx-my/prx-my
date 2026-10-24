@@ -1,0 +1,129 @@
+"""Writes README.md as the console's image stack, with alt text carrying the data.
+
+Adapted from Giorgi Kobaidze's readme.py (MIT; see LICENSE and NOTICE).
+"""
+
+import datetime
+import html
+import json
+import pathlib
+
+from render import LINKS, MERGE_SEARCH, PROJECTS
+
+HERE = pathlib.Path(__file__).resolve().parent
+ROOT = HERE.parent.parent
+DATA = HERE / "data"
+README = ROOT / "README.md"
+CREDIT = (
+    'Console design and contribution city by '
+    '<a href="https://github.com/georgekobaidze">Giorgi Kobaidze</a> '
+    '(<a href="https://dev.to/georgekobaidze/i-turned-my-github-profile-into-a-cyberpunk-console-with-a-city-built-from-my-contributions-h4c">how he built it</a>), '
+    'used under MIT. Layout inspired by <a href="https://github.com/jdx">jdx</a>.'
+)
+
+
+def esc(value):
+    return html.escape(str(value), quote=True)
+
+
+def stats_alt(data):
+    since = datetime.date.fromisoformat(data["created_at"][:10])
+    languages = sorted(data["languages"].items(), key=lambda item: -item[1])[:5]
+    parts = [
+        f'{data["contributions_year"]:,} contributions in {data["year"]}, {data["contributions_all"]:,} all time',
+        f'{data["prs"]:,} pull requests ({data["prs_merged"]:,} merged)',
+        f'{data.get("upstream_merged", 0)} merged upstream in OWASP and Sugar Labs',
+        f'current streak {data["streak_current"]} days, longest {data["streak_longest"]} days',
+        f'{data["followers"]:,} followers',
+        f'{data.get("public_repos", data.get("repo_count", 0))} public repos',
+        f'member since {since:%B %Y}',
+        f'{data["hackathon_wins"]} hackathon wins',
+    ]
+    return (
+        "Stats: " + "; ".join(parts) + ". Top languages: "
+        + ", ".join(name for name, _ in languages) + "."
+    )
+
+
+def city_alt(calendar):
+    total = sum(count for _, count in calendar)
+    busiest = max(calendar, key=lambda item: item[1]) if calendar else None
+    text = (
+        "Contribution city: an isometric night skyline with one building per day of the last year. "
+        f"{total:,} contributions"
+    )
+    if busiest and busiest[1]:
+        day = datetime.date.fromisoformat(busiest[0])
+        text += f", busiest day {day:%B} {day.day} with {busiest[1]}"
+    return text + "."
+
+
+def stack_alt():
+    from render import STACK
+
+    return "Tech stack. " + " ".join(
+        f"{category}: {', '.join(items)}." for category, items in STACK
+    )
+
+
+def main():
+    stats = json.loads((DATA / "stats.json").read_text())
+    calendar = json.loads((DATA / "calendar.json").read_text())
+    merged = json.loads((DATA / "merged.json").read_text())
+
+    rows = []
+    rows.append(
+        f'<img src="./assets/header.svg" width="100%" align="top" alt="{esc("Prakhar Gupta — backend and security tooling in TypeScript and Python. Open to software engineering internships, any term. 13 merged pull requests in OWASP cve-lite-cli.")}">'
+    )
+    rows.append('<img src="./assets/links.svg" width="100%" align="top" alt="Links">')
+    buttons = []
+    for key, label, handle, url in LINKS:
+        buttons.append(
+            f'<a href="{esc(url)}"><img src="./assets/links/{key}.svg" width="25%" align="top" alt="{esc(label + ": " + handle)}"></a>'
+        )
+    rows.append("".join(buttons))
+    rows.append(
+        f'<img src="./assets/stats.svg" width="100%" align="top" alt="{esc(stats_alt(stats))}">'
+    )
+    rows.append(
+        f'<img src="./assets/contribution-city.svg" width="100%" align="top" alt="{esc(city_alt(calendar))}">'
+    )
+    rows.append('<img src="./assets/projects.svg" width="100%" align="top" alt="Projects">')
+    cards = []
+    for project in PROJECTS:
+        alt = (
+            f'{project["name"]} — {project["tag"]}. {project["desc"]} '
+            f'Built with {project["stack"].replace(" · ", ", ")}. {project["stat"]}.'
+        )
+        cards.append(
+            f'<a href="{esc(project["url"])}"><img src="./assets/card-{project["slug"]}.svg" width="50%" align="top" alt="{esc(alt)}"></a>'
+        )
+    rows.append("".join(cards))
+    rows.append('<img src="./assets/merged.svg" width="100%" align="top" alt="Merged upstream">')
+    for index, pr in enumerate(merged[:5], 1):
+        repo = "OWASP" if pr["owner"] == "OWASP" else "Sugar Labs"
+        alt = f'{repo} #{pr["number"]}: {pr["title"]}. Merged {pr["date"]}.'
+        rows.append(
+            f'<a href="{esc(pr["url"])}"><img src="./assets/merged/{index}.svg" width="100%" align="top" alt="{esc(alt)}"></a>'
+        )
+    rows.append(
+        f'<a href="{esc(MERGE_SEARCH)}"><img src="./assets/merged/all.svg" width="100%" align="top" alt="All merged pull requests"></a>'
+    )
+    rows.append(
+        f'<img src="./assets/stack.svg" width="100%" align="top" alt="{esc(stack_alt())}">'
+    )
+    rows.append('<img src="./assets/footer.svg" width="100%" align="top" alt="Connection closed.">')
+
+    readme = (
+        "<!-- Generated by `python scripts/console/fetch.py && python scripts/console/render.py && python scripts/console/readme.py`. -->\n"
+        '<p align="center">\n'
+        + "\n".join(rows)
+        + "\n</p>\n\n"
+        + f'<p align="center"><sub>Regenerated daily from live GitHub data. {CREDIT}</sub></p>\n'
+    )
+    README.write_text(readme)
+    print("README.md updated")
+
+
+if __name__ == "__main__":
+    main()
