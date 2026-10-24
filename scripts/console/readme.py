@@ -1,6 +1,7 @@
 """Writes README.md as the console's image stack, with alt text carrying the data.
 
-Adapted from Giorgi Kobaidze's readme.py (MIT; see LICENSE and NOTICE).
+Every slice has a light-theme variant in assets/light/, swapped in with
+<picture>. Adapted from Giorgi Kobaidze's readme.py (MIT; see LICENSE and NOTICE).
 """
 
 import datetime
@@ -8,15 +9,25 @@ import html
 import json
 import pathlib
 
-from render import LINKS, OWASP_MERGED, PROJECTS, SUGAR_MERGED
+from render import LINKS, OWASP_MERGED, PROJECTS, QUOTE, SUGAR_MERGED
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 DATA = HERE / "data"
 README = ROOT / "README.md"
+RAW = "https://github.com/prx-my/prx-my/raw/main/assets"
+
 
 def esc(value):
     return html.escape(str(value), quote=True)
+
+
+def pic(rel, width, alt, href=None):
+    image = (
+        f'<picture><source media="(prefers-color-scheme: light)" srcset="{RAW}/light/{rel}">'
+        f'<img src="./assets/{rel}" width="{width}" align="top" alt="{esc(alt)}"></picture>'
+    )
+    return f'<a href="{esc(href)}">{image}</a>' if href else image
 
 
 def stats_alt(data):
@@ -42,7 +53,7 @@ def city_alt(calendar):
     total = sum(count for _, count in calendar)
     busiest = max(calendar, key=lambda item: item[1]) if calendar else None
     text = (
-        "Contribution city: an isometric night skyline with one building per day of the last year. "
+        "Contribution city: an isometric skyline with one building per day of the last year. "
         f"{total:,} contributions"
     )
     if busiest and busiest[1]:
@@ -59,6 +70,22 @@ def stack_alt():
     )
 
 
+def milestones_alt(data):
+    since = datetime.date.fromisoformat(data["created_at"][:10])
+    first = (
+        datetime.date.fromisoformat(data["first_merged"])
+        if data.get("first_merged")
+        else None
+    )
+    rows = [
+        f"joined GitHub {since:%B %Y}",
+        f"first upstream merge {first:%B %Y}" if first else "first upstream merge",
+        "3 hackathon wins",
+        f'{data.get("upstream_merged", 0)} merged upstream',
+    ]
+    return "Milestones. " + "; ".join(rows) + "."
+
+
 def main():
     stats = json.loads((DATA / "stats.json").read_text())
     calendar = json.loads((DATA / "calendar.json").read_text())
@@ -66,47 +93,48 @@ def main():
 
     rows = []
     rows.append(
-        f'<img src="./assets/header.svg" width="100%" align="top" alt="{esc("Prakhar Gupta — backend and security tooling in TypeScript and Python. Open to software engineering internships, any term. 13 merged pull requests in OWASP cve-lite-cli.")}">'
+        pic(
+            "header.svg",
+            "100%",
+            "Prakhar Gupta — backend and security tooling in TypeScript and Python. Open to software engineering internships, any term. 13 merged pull requests in OWASP cve-lite-cli.",
+        )
     )
-    rows.append('<img src="./assets/links.svg" width="100%" align="top" alt="Links">')
+    rows.append(pic("links.svg", "100%", "Links"))
     buttons = []
     for key, label, handle, url in LINKS:
-        buttons.append(
-            f'<a href="{esc(url)}"><img src="./assets/links/{key}.svg" width="25%" align="top" alt="{esc(label + ": " + handle)}"></a>'
-        )
+        buttons.append(pic(f"links/{key}.svg", "25%", f"{label}: {handle}", url))
     rows.append("".join(buttons))
-    rows.append(
-        f'<img src="./assets/stats.svg" width="100%" align="top" alt="{esc(stats_alt(stats))}">'
-    )
-    rows.append(
-        f'<img src="./assets/contribution-city.svg" width="100%" align="top" alt="{esc(city_alt(calendar))}">'
-    )
-    rows.append('<img src="./assets/projects.svg" width="100%" align="top" alt="Projects">')
+    rows.append(pic("stats.svg", "100%", stats_alt(stats)))
+    rows.append(pic("contribution-city.svg", "100%", city_alt(calendar)))
+    rows.append(pic("projects.svg", "100%", "Projects"))
     cards = []
     for project in PROJECTS:
         alt = (
             f'{project["name"]} — {project["tag"]}. {project["desc"]} '
             f'Built with {project["stack"].replace(" · ", ", ")}. {project["stat"]}.'
         )
-        cards.append(
-            f'<a href="{esc(project["url"])}"><img src="./assets/card-{project["slug"]}.svg" width="50%" align="top" alt="{esc(alt)}"></a>'
-        )
+        cards.append(pic(f'card-{project["slug"]}.svg', "50%", alt, project["url"]))
     rows.append("".join(cards))
-    rows.append('<img src="./assets/merged.svg" width="100%" align="top" alt="Merged upstream">')
+    rows.append(
+        pic(
+            "quote.svg",
+            "100%",
+            f'On {QUOTE["on"]}: "{QUOTE["text"]}" — {QUOTE["who"]}, {QUOTE["role"]}.',
+            QUOTE["url"],
+        )
+    )
+    rows.append(pic("merged.svg", "100%", "Merged upstream"))
     for index, pr in enumerate(merged[:5], 1):
         repo = "OWASP" if pr["owner"] == "OWASP" else "Sugar Labs"
         alt = f'{repo} #{pr["number"]}: {pr["title"]}. Merged {pr["date"]}.'
-        rows.append(
-            f'<a href="{esc(pr["url"])}"><img src="./assets/merged/{index}.svg" width="100%" align="top" alt="{esc(alt)}"></a>'
-        )
+        rows.append(pic(f"merged/{index}.svg", "100%", alt, pr["url"]))
     rows.append(
-        f'<a href="{esc(OWASP_MERGED)}"><img src="./assets/merged/owasp.svg" width="50%" align="top" alt="All OWASP merged pull requests"></a>'
-        f'<a href="{esc(SUGAR_MERGED)}"><img src="./assets/merged/sugar.svg" width="50%" align="top" alt="All Sugar Labs merged pull requests"></a>'
+        pic("merged/owasp.svg", "50%", "All OWASP merged pull requests", OWASP_MERGED)
+        + pic("merged/sugar.svg", "50%", "All Sugar Labs merged pull requests", SUGAR_MERGED)
     )
-    rows.append(
-        f'<img src="./assets/stack.svg" width="100%" align="top" alt="{esc(stack_alt())}">'
-    )
-    rows.append('<img src="./assets/footer.svg" width="100%" align="top" alt="Connection closed.">')
+    rows.append(pic("milestones.svg", "100%", milestones_alt(stats)))
+    rows.append(pic("stack.svg", "100%", stack_alt()))
+    rows.append(pic("footer.svg", "100%", "Connection closed."))
 
     readme = (
         "<!-- Generated by `python scripts/console/fetch.py && python scripts/console/render.py && python scripts/console/readme.py`. -->\n"

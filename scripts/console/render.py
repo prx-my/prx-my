@@ -18,6 +18,43 @@ DATA = HERE / "data"
 OUT = ROOT / "assets"
 FONT_DIR = HERE / "fonts"
 CYAN, MAGENTA, GREEN = "#00d9ff", "#ff2bd6", "#3fb950"
+
+# A light-theme recolor of the same console. Applied as a post-render string
+# remap so the drawing code stays in one place.
+LIGHT = {
+    "#03040a": "#f6f8fa",
+    "#c9d1d9": "#24292f",
+    "#8b949e": "#57606a",
+    "#f0fbff": "#0d1117",
+    "#6e7681": "#57606a",
+    "#484f58": "#6e7781",
+    "#11161d": "#eaeef2",
+    "#161b22": "#eaeef2",
+    "#0d1117": "#d0d7de",
+    "#1a2440": "#d7e3f4",
+    "#111831": "#c2d1e6",
+    "#0c2d6b": "#b6d2ff",
+    "#1554c0": "#8ab4ff",
+    "#2f81f7": "#5b9bff",
+    "#1fd5ff": "#0aa2c0",
+    "#7df9ff": "#0aa2c0",
+    "#4cc9f0": "#0088a8",
+    "#111827": "#d8dee4",
+    "#e6edf3": "#f6e05e",
+    "#f0f6fc": "#f6e05e",
+    "#e3b341": "#9a6700",
+    "#bc8cff": "#8250df",
+    "#00d9ff": "#0969da",
+    "#ff2bd6": "#b5179e",
+    "#3fb950": "#1a7f37",
+    "#ff7b72": "#cf222e",
+}
+
+
+def remap(svg, mapping):
+    for src, dst in mapping.items():
+        svg = svg.replace(src, dst)
+    return svg
 W, M = 880, 16            # slice width, transparent side margin (room for the glow)
 FL, FR = M, W - M         # frame left / right
 X = 52                    # text left edge
@@ -371,7 +408,7 @@ STACK = [
 
 
 def build_stack():
-    parts = [heading(44, "stack", "// 06"),
+    parts = [heading(44, "stack", "// 08"),
              f'<g class="ln" style="animation-delay:.15s"><text x="{X}" y="96" class="dim"><tspan class="gr">$</tspan> scan --loadout --top-level</text></g>']
     y, rowh = 126, 44
     cw = 0.6 * 13          # char advance at 13px
@@ -389,7 +426,7 @@ def build_stack():
         parts.append("</g>")
         y += rowh
     h = up40(y + 10)
-    text = "~/stack// 06$ scan --loadout --top-level›" + "".join(c + "".join(i) for c, i in STACK)
+    text = "~/stack// 08$ scan --loadout --top-level›" + "".join(c + "".join(i) for c, i in STACK)
     desc = "Tech stack. " + " ".join(f"{c}: {', '.join(i)}." for c, i in STACK)
     return slice_svg(h, "\n".join(parts), title="Tech stack", desc=desc, text=text)
 
@@ -400,10 +437,10 @@ SUGAR_MERGED = "https://github.com/sugarlabs/musicblocks-v4/pulls?q=is%3Apr+auth
 
 
 def build_merged_head():
-    body = heading(44, "merged", "// 05") + f'''
+    body = heading(44, "merged", "// 06") + f'''
 <g class="ln" style="animation-delay:.15s"><text x="{X}" y="96" class="dim"><tspan class="gr">$</tspan> gh pr list --author prx-my --state merged <tspan fill="#484f58"># reviewed upstream</tspan></text></g>'''
     return slice_svg(120, body, title="Merged upstream", desc="Merged pull requests",
-                     text="~/merged// 05$ gh pr list --author prx-my --state merged # reviewed upstream")
+                     text="~/merged// 06$ gh pr list --author prx-my --state merged # reviewed upstream")
 
 
 def build_merged_row(pr, i):
@@ -439,6 +476,75 @@ def build_merged_more(side):
     return half_slice(40, side, body, title=f"All {repo} merged PRs",
                       desc=f"All merged pull requests in {repo}",
                       text=f">> all {repo} merged")
+
+
+# ─────────────────────────────── quote ────────────────────────────────
+QUOTE = dict(
+    text="the bug it fixes is the worst output this tool can produce",
+    who="sonukapoor",
+    role="OWASP collaborator",
+    on="PR #1202",
+    url="https://github.com/OWASP/cve-lite-cli/pull/1202",
+)
+
+
+def build_quote():
+    h = 200
+    body = heading(44, "quote", "// 05") + f'''
+<g class="ln" style="animation-delay:.15s"><text x="{X}" y="96" class="dim"><tspan class="gr">$</tspan> cat maintainer-review.md</text></g>
+<g class="ln" style="animation-delay:.25s">
+<path d="M{X} 112H{FR}V156H{X}" fill="{CYAN}" fill-opacity=".04"/>
+<path d="M{X} 112H{FR}V156H{X}" fill="none" stroke="{CYAN}" stroke-opacity=".35"/>
+<path d="M{X} 112V104H{X+8}" fill="none" stroke="{CYAN}" stroke-width="2"/>
+<text x="{X+20}" y="140" class="wh" style="font-size:15px">“{QUOTE['text']}”</text>
+<text x="{X+20}" y="176" fill="{MAGENTA}" style="font-size:12px">— {QUOTE['who']} <tspan class="dim">· {QUOTE['role']} · on {QUOTE['on']}</tspan></text>
+</g>'''
+    return slice_svg(h, body, title="Maintainer quote",
+                     desc=f'On {QUOTE["on"]}: "{QUOTE["text"]}" — {QUOTE["who"]}, {QUOTE["role"]}.',
+                     text=f'$ cat maintainer-review.md“{QUOTE["text"]}”— {QUOTE["who"]} · {QUOTE["role"]} · on {QUOTE["on"]}')
+
+
+# ───────────────────────────── milestones ─────────────────────────────
+def build_milestones(data):
+    since = datetime.date.fromisoformat(data["created_at"][:10])
+    first = (
+        datetime.date.fromisoformat(data["first_merged"])
+        if data.get("first_merged")
+        else None
+    )
+    rows = [
+        (f"{since:%b %Y}".upper(), "joined GitHub"),
+        (
+            f"{first:%b %Y}".upper() if first else "—",
+            "first upstream merge · Sugar Labs musicblocks-v4",
+        ),
+        ("2026", "hackathon wins · LeafLine · Claude Impact Labs · India Innovate"),
+        (
+            str(data.get("year", "")),
+            f"{data.get('upstream_merged', 0)} merged upstream · {data.get('upstream_owasp', 0)} OWASP · {data.get('upstream_sugar', 0)} Sugar Labs",
+        ),
+    ]
+    parts = [
+        heading(44, "milestones", "// 07"),
+        f'<g class="ln" style="animation-delay:.15s"><text x="{X}" y="96" class="dim"><tspan class="gr">$</tspan> history --milestones</text></g>',
+    ]
+    y = 128
+    for i, (when, what) in enumerate(rows):
+        parts.append(
+            f'<g class="ln" style="animation-delay:{.25 + i*.08:.2f}s">'
+            f'<text x="{X}" y="{y}" fill="{CYAN}" style="font-size:13px">{e(when)}</text>'
+            f'<text x="{X+130}" y="{y}" class="fg" style="font-size:13px">{e(what)}</text>'
+            f"</g>"
+        )
+        y += 26
+    h = up40(y + 10)
+    text = "~/milestones// 07$ history --milestones" + "".join(w + t for w, t in rows)
+    desc = (
+        "Milestones. "
+        + "; ".join(f"{when}: {what}" for when, what in rows)
+        + "."
+    )
+    return slice_svg(h, "\n".join(parts), title="Milestones", desc=desc, text=text)
 
 
 # ──────────────────────────────── links ───────────────────────────────
@@ -682,13 +788,25 @@ def main():
     write("projects.svg", build_projects_head())
     for i, project in enumerate(PROJECTS):
         write(f"card-{project['slug']}.svg", build_card(project, "L" if i % 2 == 0 else "R", 0.3 + i * 0.12))
+    write("quote.svg", build_quote())
     write("merged.svg", build_merged_head())
     for i, pr in enumerate(merged[:5]):
         write(f"merged/{i+1}.svg", build_merged_row(pr, i))
     write("merged/owasp.svg", build_merged_more("L"))
     write("merged/sugar.svg", build_merged_more("R"))
+    write("milestones.svg", build_milestones(stats))
     write("stack.svg", build_stack())
     write("footer.svg", build_footer())
+
+    # Light-theme variants live in assets/light/ and are swapped in via <picture>.
+    for path in sorted(OUT.rglob("*.svg")):
+        rel = path.relative_to(OUT)
+        if rel.parts[0] == "light":
+            continue
+        target = OUT / "light" / rel
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(remap(path.read_text(), LIGHT))
+
     print("rendered", len(list(OUT.rglob("*.svg"))), "SVGs into", OUT)
 
 

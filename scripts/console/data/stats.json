@@ -1,8 +1,8 @@
 {
   "created_at": "2025-06-28T04:35:57Z",
   "followers": 40,
-  "prs": 237,
-  "prs_merged": 212,
+  "prs": 238,
+  "prs_merged": 213,
   "stars": 1,
   "forks": 1,
   "repo_count": 19,
@@ -52,5 +52,8 @@
   "hackathon_wins": 3,
   "updated": "2026-10-24",
   "public_repos": 37,
-  "upstream_merged": 18
+  "upstream_merged": 18,
+  "first_merged": "2026-06-28",
+  "upstream_owasp": 13,
+  "upstream_sugar": 5
 }

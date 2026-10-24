@@ -188,14 +188,21 @@ def clean_title(title):
 def fetch_merged(token):
     items = []
     total = 0
+    owasp_total = 0
+    sugar_total = 0
     for repo in REPOS:
         query = urllib.parse.quote(f"repo:{repo} is:pr is:merged author:{USER}")
         payload = http_json(
-            f"https://api.github.com/search/issues?q={query}&per_page=20&sort=updated&order=desc",
+            f"https://api.github.com/search/issues?q={query}&per_page=100&sort=updated&order=desc",
             headers={"Authorization": f"bearer {token}"},
         )
         owner, name = repo.split("/")
-        total += payload.get("total_count", 0)
+        count = payload.get("total_count", 0)
+        total += count
+        if owner == "OWASP":
+            owasp_total = count
+        else:
+            sugar_total = count
         for item in payload.get("items", []):
             items.append(
                 {
@@ -209,7 +216,8 @@ def fetch_merged(token):
             )
     items = [item for item in items if item["date"]]
     items.sort(key=lambda item: item["date"], reverse=True)
-    return items[:6], total
+    first_merged = min(item["date"] for item in items)
+    return items[:6], total, first_merged, owasp_total, sugar_total
 
 
 def main():
@@ -234,7 +242,10 @@ def main():
         warn(f"GitHub fetch failed, keeping previous stats: {error}")
 
     try:
-        merged, upstream = fetch_merged(token)
+        merged, upstream, first_merged, owasp_total, sugar_total = fetch_merged(token)
+        stats["first_merged"] = first_merged
+        stats["upstream_owasp"] = owasp_total
+        stats["upstream_sugar"] = sugar_total
         print(f"merged: {len(merged)} pull requests, {upstream} upstream")
     except Exception as error:  # noqa: BLE001
         warn(f"Merged PR fetch failed, keeping previous list: {error}")
