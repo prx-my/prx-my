@@ -55,6 +55,17 @@ def remap(svg, mapping):
     for src, dst in mapping.items():
         svg = svg.replace(src, dst)
     return svg
+
+
+def light_cleanup(svg):
+    # Drop the neon glow halos and the chromatic glitch name; on a light
+    # background they read as noise. Keep the flat, crisp console.
+    for filt in ("tglow", "sglow", "glow", "g"):
+        svg = svg.replace(f'filter="url(#{filt})"', "")
+    svg = svg.replace('fill="#0969da" opacity=".55"', 'fill="#0969da" opacity="0"')
+    svg = svg.replace('fill="#b5179e" opacity=".75"', 'fill="#b5179e" opacity="0"')
+    svg = svg.replace('fill="#0969da" opacity=".85"', 'fill="#0969da" opacity="0"')
+    return svg
 W, M = 880, 16            # slice width, transparent side margin (room for the glow)
 FL, FR = M, W - M         # frame left / right
 X = 52                    # text left edge
@@ -805,7 +816,7 @@ def main():
             continue
         target = OUT / "light" / rel
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(remap(path.read_text(), LIGHT))
+        target.write_text(light_cleanup(remap(path.read_text(), LIGHT)))
 
     print("rendered", len(list(OUT.rglob("*.svg"))), "SVGs into", OUT)
 
