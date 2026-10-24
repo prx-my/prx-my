@@ -13,7 +13,7 @@
 <a href="https://github.com/OWASP/cve-lite-cli/pull/1269"><img src="./assets/merged/3.svg" width="100%" align="top" alt="OWASP #1269: cover positionAgainstRange&#x27;s MAX_SAFE_INTEGER boundary. Merged 2026-10-16."></a>
 <a href="https://github.com/OWASP/cve-lite-cli/pull/1273"><img src="./assets/merged/4.svg" width="100%" align="top" alt="OWASP #1273: ignore .claude/ so the rule travels with the repo. Merged 2026-10-11."></a>
 <a href="https://github.com/OWASP/cve-lite-cli/pull/1271"><img src="./assets/merged/5.svg" width="100%" align="top" alt="OWASP #1271: emit HTML override fix commands relative to the scanned project. Merged 2026-10-09."></a>
-<a href="https://github.com/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="./assets/merged/all.svg" width="100%" align="top" alt="All merged pull requests"></a>
+<a href="https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="./assets/merged/owasp.svg" width="50%" align="top" alt="All OWASP merged pull requests"></a><a href="https://github.com/sugarlabs/musicblocks-v4/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"><img src="./assets/merged/sugar.svg" width="50%" align="top" alt="All Sugar Labs merged pull requests"></a>
 <img src="./assets/stack.svg" width="100%" align="top" alt="Tech stack. languages: Python, TypeScript, JavaScript, SQL. backend: Node.js, FastAPI, PostgreSQL, Redis. front-end: React, Next.js, Tailwind CSS. cloud: AWS, Docker, Linux, GitHub Actions. security: SARIF, CVE triage, semver.">
 <img src="./assets/footer.svg" width="100%" align="top" alt="Connection closed.">
 </p>

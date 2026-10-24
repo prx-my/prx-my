@@ -8,7 +8,7 @@ import html
 import json
 import pathlib
 
-from render import LINKS, MERGE_SEARCH, PROJECTS
+from render import LINKS, OWASP_MERGED, PROJECTS, SUGAR_MERGED
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -100,7 +100,8 @@ def main():
             f'<a href="{esc(pr["url"])}"><img src="./assets/merged/{index}.svg" width="100%" align="top" alt="{esc(alt)}"></a>'
         )
     rows.append(
-        f'<a href="{esc(MERGE_SEARCH)}"><img src="./assets/merged/all.svg" width="100%" align="top" alt="All merged pull requests"></a>'
+        f'<a href="{esc(OWASP_MERGED)}"><img src="./assets/merged/owasp.svg" width="50%" align="top" alt="All OWASP merged pull requests"></a>'
+        f'<a href="{esc(SUGAR_MERGED)}"><img src="./assets/merged/sugar.svg" width="50%" align="top" alt="All Sugar Labs merged pull requests"></a>'
     )
     rows.append(
         f'<img src="./assets/stack.svg" width="100%" align="top" alt="{esc(stack_alt())}">'

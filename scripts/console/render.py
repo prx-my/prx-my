@@ -395,7 +395,8 @@ def build_stack():
 
 
 # ─────────────────────────── merged upstream ──────────────────────────
-MERGE_SEARCH = "https://github.com/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"
+OWASP_MERGED = "https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"
+SUGAR_MERGED = "https://github.com/sugarlabs/musicblocks-v4/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged"
 
 
 def build_merged_head():
@@ -427,13 +428,17 @@ def build_merged_row(pr, i):
                      desc=f'{repo} #{pr["number"]}: {title}. Merged {date}.', text=text)
 
 
-def build_merged_more():
+def build_merged_more(side):
+    repo = "OWASP" if side == "L" else "Sugar Labs"
+    color = MAGENTA if side == "L" else GREEN
+    arrow_x = HW - 36
     body = f'''<g class="ln" style="animation-delay:.7s">
-<text x="{X}" y="26" style="font-size:13px"><tspan class="gr">&gt;&gt;</tspan><tspan class="cy"> all merged pull requests</tspan></text>
-<path d="M{X+276} 26l8-8M{X+278} 18h6v6" fill="none" stroke="{CYAN}" stroke-width="1.5"/>
+<text x="{X}" y="26" style="font-size:13px"><tspan class="gr">&gt;&gt;</tspan><tspan fill="{color}"> all {repo} merged</tspan></text>
+<path d="M{arrow_x} 26l8-8M{arrow_x+2} 18h6v6" fill="none" stroke="{color}" stroke-width="1.5"/>
 </g>'''
-    return slice_svg(40, body, title="All merged PRs", desc="All merged pull requests",
-                     text=">> all merged pull requests")
+    return half_slice(40, side, body, title=f"All {repo} merged PRs",
+                      desc=f"All merged pull requests in {repo}",
+                      text=f">> all {repo} merged")
 
 
 # ──────────────────────────────── links ───────────────────────────────
@@ -680,7 +685,8 @@ def main():
     write("merged.svg", build_merged_head())
     for i, pr in enumerate(merged[:5]):
         write(f"merged/{i+1}.svg", build_merged_row(pr, i))
-    write("merged/all.svg", build_merged_more())
+    write("merged/owasp.svg", build_merged_more("L"))
+    write("merged/sugar.svg", build_merged_more("R"))
     write("stack.svg", build_stack())
     write("footer.svg", build_footer())
     print("rendered", len(list(OUT.rglob("*.svg"))), "SVGs into", OUT)
