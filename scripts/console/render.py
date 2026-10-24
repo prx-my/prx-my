@@ -28,18 +28,18 @@ LIGHT = {
     "#f0fbff": "#0d1117",
     "#6e7681": "#57606a",
     "#484f58": "#6e7781",
-    "#11161d": "#eaeef2",
-    "#161b22": "#eaeef2",
+    "#11161d": "#e6ebf1",
+    "#161b22": "#e6ebf1",
     "#0d1117": "#d0d7de",
-    "#1a2440": "#d7e3f4",
-    "#111831": "#c2d1e6",
-    "#0c2d6b": "#b6d2ff",
-    "#1554c0": "#8ab4ff",
-    "#2f81f7": "#5b9bff",
-    "#1fd5ff": "#0aa2c0",
-    "#7df9ff": "#0aa2c0",
-    "#4cc9f0": "#0088a8",
-    "#111827": "#d8dee4",
+    "#1a2440": "#c3d4e8",
+    "#111831": "#a9bed8",
+    "#0c2d6b": "#9dc0f5",
+    "#1554c0": "#6f9fe8",
+    "#2f81f7": "#4a86d8",
+    "#1fd5ff": "#0b6e99",
+    "#7df9ff": "#0b6e99",
+    "#4cc9f0": "#0a5a7a",
+    "#111827": "#eef1f5",
     "#e6edf3": "#f6e05e",
     "#f0f6fc": "#f6e05e",
     "#e3b341": "#9a6700",
@@ -65,6 +65,7 @@ def light_cleanup(svg):
     svg = svg.replace('fill="#0969da" opacity=".55"', 'fill="#0969da" opacity="0"')
     svg = svg.replace('fill="#b5179e" opacity=".75"', 'fill="#b5179e" opacity="0"')
     svg = svg.replace('fill="#0969da" opacity=".85"', 'fill="#0969da" opacity="0"')
+    svg = svg.replace('fill="#000" fill-opacity=".2"', 'fill="#000" fill-opacity=".05"')
     return svg
 W, M = 880, 16            # slice width, transparent side margin (room for the glow)
 FL, FR = M, W - M         # frame left / right
@@ -816,7 +817,10 @@ def main():
             continue
         target = OUT / "light" / rel
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(light_cleanup(remap(path.read_text(), LIGHT)))
+        svg = light_cleanup(remap(path.read_text(), LIGHT))
+        if rel.name == "contribution-city.svg":
+            svg = svg.replace('fill="#24292f"', 'fill="#d0d7de"')
+        target.write_text(svg)
 
     print("rendered", len(list(OUT.rglob("*.svg"))), "SVGs into", OUT)
 
