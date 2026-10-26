@@ -1,5 +1,13 @@
 [
   {
+    "number": 1365,
+    "title": "test the declared Node floor on every push",
+    "date": "2026-10-26",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1365"
+  },
+  {
     "number": 1284,
     "title": "replace the trailing positional parameters with an options object",
     "date": "2026-10-19",
@@ -38,13 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1271"
-  },
-  {
-    "number": 942,
-    "title": "#936 | refactor(masonry): share the drag trailing-click suppression guard",
-    "date": "2026-10-08",
-    "repo": "musicblocks-v4",
-    "owner": "sugarlabs",
-    "url": "https://github.com/sugarlabs/musicblocks-v4/pull/942"
   }
 ]
