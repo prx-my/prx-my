@@ -1,11 +1,11 @@
 {
   "created_at": "2025-06-28T04:35:57Z",
-  "followers": 45,
-  "prs": 249,
-  "prs_merged": 226,
+  "followers": 44,
+  "prs": 251,
+  "prs_merged": 229,
   "stars": 1,
   "forks": 1,
-  "repo_count": 20,
+  "repo_count": 21,
   "repo_stars": {
     "Samadhaan-setu": 0,
     "aidwatch-chain": 0,
@@ -26,7 +26,8 @@
     "nptel-quiz": 1,
     "oracle-academy": 0,
     "prxmy.in": 0,
-    "clarity-sms": 0
+    "clarity-sms": 0,
+    "electricity-billing-system": 0
   },
   "languages": {
     "TypeScript": 3883242,
@@ -35,6 +36,7 @@
     "JavaScript": 414748,
     "Astro": 236652,
     "CSS": 223494,
+    "Java": 35695,
     "Shell": 18454,
     "PLpgSQL": 7826,
     "Jupyter Notebook": 7616,
@@ -43,17 +45,17 @@
     "Swift": 1638
   },
   "year": 2026,
-  "commits_year": 1261,
-  "commits_all": 1331,
-  "contributions_year": 1823,
-  "contributions_all": 1898,
-  "streak_current": 119,
-  "streak_longest": 119,
+  "commits_year": 1271,
+  "commits_all": 1341,
+  "contributions_year": 1838,
+  "contributions_all": 1913,
+  "streak_current": 122,
+  "streak_longest": 122,
   "hackathon_wins": 3,
-  "updated": "2026-11-03",
-  "public_repos": 39,
-  "upstream_merged": 25,
+  "updated": "2026-11-05",
+  "public_repos": 40,
+  "upstream_merged": 26,
   "first_merged": "2026-06-28",
-  "upstream_owasp": 20,
+  "upstream_owasp": 21,
   "upstream_sugar": 5
 }
