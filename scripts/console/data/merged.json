@@ -1,5 +1,13 @@
 [
   {
+    "number": 1451,
+    "title": "fail the test type-check when a source change breaks an unchanged test",
+    "date": "2026-11-05",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1451"
+  },
+  {
     "number": 1392,
     "title": "reject missing values for threshold and size flags",
     "date": "2026-11-03",
@@ -38,13 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1369"
-  },
-  {
-    "number": 1366,
-    "title": "type-check the test files a pull request changes",
-    "date": "2026-10-27",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1366"
   }
 ]
