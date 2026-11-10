@@ -1,5 +1,13 @@
 [
   {
+    "number": 1559,
+    "title": "type the npm-advisory mocks and range events (part of #1491)",
+    "date": "2026-11-09",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1559"
+  },
+  {
     "number": 1451,
     "title": "fail the test type-check when a source change breaks an unchanged test",
     "date": "2026-11-05",
@@ -38,13 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1370"
-  },
-  {
-    "number": 1369,
-    "title": "reflect shipped SARIF output",
-    "date": "2026-10-27",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1369"
   }
 ]
