@@ -141,6 +141,7 @@ def main():
         '<p align="center">\n'
         + "\n".join(rows)
         + "\n</p>\n"
+        + "\nBackend and security tooling in TypeScript and Python. Every panel above is drawn from live GitHub data by [`scripts/console`](scripts/console) and refreshed nightly; the text is also carried in each image's alt text.\n"
     )
     README.write_text(readme)
     print("README.md updated")

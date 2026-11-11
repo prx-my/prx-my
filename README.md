@@ -19,3 +19,5 @@
 <picture><source media="(prefers-color-scheme: light)" srcset="https://github.com/prx-my/prx-my/raw/main/assets/light/stack.svg"><img src="./assets/stack.svg" width="100%" align="top" alt="Tech stack. languages: Python, TypeScript, JavaScript, SQL. backend: Node.js, FastAPI, PostgreSQL, Redis. front-end: React, Next.js, Tailwind CSS. cloud: AWS, Docker, Linux, GitHub Actions. security: SARIF, CVE triage, semver."></picture>
 <picture><source media="(prefers-color-scheme: light)" srcset="https://github.com/prx-my/prx-my/raw/main/assets/light/footer.svg"><img src="./assets/footer.svg" width="100%" align="top" alt="Connection closed."></picture>
 </p>
+
+Backend and security tooling in TypeScript and Python. Every panel above is drawn from live GitHub data by [`scripts/console`](scripts/console) and refreshed nightly; the text is also carried in each image's alt text.
