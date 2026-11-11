@@ -1,5 +1,13 @@
 [
   {
+    "number": 1564,
+    "title": "type the CLI, JSON-output and usage fixtures (part of #1491)",
+    "date": "2026-11-10",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1564"
+  },
+  {
     "number": 1559,
     "title": "type the npm-advisory mocks and range events (part of #1491)",
     "date": "2026-11-09",
@@ -38,13 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1371"
-  },
-  {
-    "number": 1370,
-    "title": "point repository links at OWASP org",
-    "date": "2026-10-28",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1370"
   }
 ]
