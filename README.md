@@ -20,4 +20,4 @@
 <picture><source media="(prefers-color-scheme: light)" srcset="https://github.com/prx-my/prx-my/raw/main/assets/light/footer.svg"><img src="./assets/footer.svg" width="100%" align="top" alt="Connection closed."></picture>
 </p>
 
-Backend and security tooling in TypeScript and Python. Every panel above is drawn from live GitHub data by [`scripts/console`](scripts/console) and refreshed nightly; the text is also carried in each image's alt text.
+Backend and security tooling in TypeScript and Python. Every panel above is drawn from live GitHub data by [`scripts/console`](scripts/console) and refreshed nightly; the text is also carried in each image's alt text. `fetch.py` pulls the data, `render.py` draws each SVG slice, and `readme.py` writes this file, so the numbers stay in sync with the GitHub API.

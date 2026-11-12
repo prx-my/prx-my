@@ -141,7 +141,7 @@ def main():
         '<p align="center">\n'
         + "\n".join(rows)
         + "\n</p>\n"
-        + "\nBackend and security tooling in TypeScript and Python. Every panel above is drawn from live GitHub data by [`scripts/console`](scripts/console) and refreshed nightly; the text is also carried in each image's alt text.\n"
+        + "\nBackend and security tooling in TypeScript and Python. Every panel above is drawn from live GitHub data by [`scripts/console`](scripts/console) and refreshed nightly; the text is also carried in each image's alt text. `fetch.py` pulls the data, `render.py` draws each SVG slice, and `readme.py` writes this file, so the numbers stay in sync with the GitHub API.\n"
     )
     README.write_text(readme)
     print("README.md updated")
