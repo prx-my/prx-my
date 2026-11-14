@@ -1,5 +1,13 @@
 [
   {
+    "number": 1565,
+    "title": "complete the override context fixtures (part of #1491)",
+    "date": "2026-11-14",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1565"
+  },
+  {
     "number": 1564,
     "title": "type the CLI, JSON-output and usage fixtures (part of #1491)",
     "date": "2026-11-10",
@@ -38,13 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1372"
-  },
-  {
-    "number": 1371,
-    "title": "fix broken case study logos",
-    "date": "2026-10-28",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1371"
   }
 ]
