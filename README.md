@@ -46,6 +46,10 @@ I work in TypeScript and Python and am open to software engineering internships.
 
 <!-- open-source:end -->
 
+## Tech stack
+
+<img src="profile-assets/stack/processor.png" width="100%" alt="Tech stack: TypeScript and Python. Backend and data: Node.js, FastAPI, PostgreSQL, PostGIS, and Redis. Frontend: React and Next.js. Infrastructure: AWS, Docker, and GitHub Actions.">
+
 <a href="https://github.com/prx-my#contributions">
   <picture>
     <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity-mobile.svg">
