@@ -18,3 +18,10 @@ I work in TypeScript and Python and am open to software engineering internships.
 - **[OWASP CVE Lite CLI](https://github.com/OWASP/cve-lite-cli/pull/1202)** — I fixed a scan limit that could silently hide vulnerability findings when using `--only-used`. [My merged contributions](https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged)
 - **[EcoAudit](https://github.com/AWS-env/environmental-hacks)** — I wrote 45 detectors for avoidable compute waste and built the AWS API that runs repository scans.
 - **[JanSamadhan](https://github.com/prx-my/ps-crmdev1)** — A civic reporting platform for Delhi that checks for duplicates within 20 metres using PostGIS and escalates overdue complaints in PostgreSQL. [Demo](https://youtu.be/JvkJd1MAV3M)
+
+<a href="https://github.com/prx-my#contributions">
+  <picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity-mobile.svg">
+    <img src="profile-assets/activity.svg" alt="GitHub contribution calendar over 52 weeks. Each four-blade fan represents a day. Color and blade angle show the contribution range: 0, 1–2, 3–8, 9–24, or 25+.">
+  </picture>
+</a>

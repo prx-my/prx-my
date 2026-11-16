@@ -49,11 +49,14 @@ jobs:
       - name: Render profile metrics
         run: python scripts/console/metrics.py
 
+      - name: Render the contribution calendar
+        run: python scripts/console/activity.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets profile-assets/metrics scripts/console/data
+          git add assets profile-assets/metrics profile-assets/activity.svg profile-assets/activity-mobile.svg scripts/console/data
           if git diff --staged --quiet; then
             echo "Profile already up to date."
             exit 0
