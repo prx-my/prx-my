@@ -7,7 +7,6 @@ from pathlib import Path
 
 ART = Path(__file__).resolve().parent / "art"
 HEIGHT = 724
-PANEL_WIDTHS = (38, 26, 36)
 
 
 @dataclass(frozen=True)
@@ -27,6 +26,12 @@ PANELS = (
     Panel("sugar-labs", 565, 281, 157, 5, 942, 279, 72),
     Panel("ecoaudit", 782, 266, 157, 99, 563, 263, 77),
 )
+
+TOTAL_WIDTH = sum(panel.width for panel in PANELS)
+
+
+def panel_width_percent(index):
+    return 100 * PANELS[index].width / TOTAL_WIDTH
 
 
 def updated_count(panel, count):
