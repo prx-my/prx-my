@@ -38,6 +38,14 @@ I work in TypeScript and Python and am open to software engineering internships.
 
 [Project notes](projects.md) · [More of my work ↗](https://prxmy.in/#projects) · [All my OWASP merges](https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged) · [JanSamadhan source](https://github.com/prx-my/ps-crmdev1)
 
+## Open source contributions
+
+<!-- open-source:start -->
+
+<p><a href="open-source/owasp.md"><img src="profile-assets/open-source/owasp.svg" width="38%" align="top" alt="OWASP CVE Lite CLI: 27 merged PRs. Latest merge: #1636. Open the full contribution history."></a><a href="open-source/sugar-labs.md"><img src="profile-assets/open-source/sugar-labs.svg" width="26%" align="top" alt="Sugar Labs Music Blocks: 5 merged PRs. Latest merge: #942. Open the full contribution history."></a><a href="open-source/ecoaudit.md"><img src="profile-assets/open-source/ecoaudit.svg" width="36%" align="top" alt="EcoAudit: 99 merged PRs. Latest merge: #563. Open the full contribution history."></a></p>
+
+<!-- open-source:end -->
+
 <a href="https://github.com/prx-my#contributions">
   <picture>
     <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity-mobile.svg">
