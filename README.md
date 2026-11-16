@@ -1,8 +1,8 @@
 <div>
-  <picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/titles/status-mobile.svg?v=3ab1d7ec5d">
-    <img src="profile-assets/titles/status.svg?v=cb63281050" width="100%" align="top" alt="Open to opportunities. Backend &amp; full-stack · Software engineering internships · Onsite/Remote.">
-  </picture>
+  <a href="https://prxmy.in/resume"><picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/titles/status-mobile.svg?v=038cb612ea">
+    <img src="profile-assets/titles/status.svg?v=232af2c592" width="100%" align="top" alt="Open to opportunities. Backend &amp; full-stack · Software engineering internships · Onsite/Remote. Open my resume.">
+  </picture></a>
 </div>
 <div>
   <picture>
@@ -83,5 +83,5 @@
   </picture>
 </div>
 <div>
-  <a href="https://prxmy.in/"><img src="profile-assets/contact/portfolio.svg?v=dfe50f5ee7" width="26.20396601%" align="top" alt="Portfolio · prxmy.in"></a><a href="https://x.com/_prxmy"><img src="profile-assets/contact/x.svg?v=c7def37d3d" width="23.79603399%" align="top" alt="X · @_prxmy"></a><a href="https://www.linkedin.com/in/prxmy/"><img src="profile-assets/contact/linkedin.svg?v=e715bbcfbf" width="23.79603399%" align="top" alt="LinkedIn · Prakhar Gupta"></a><a href="mailto:Prakhar06.work@gmail.com"><img src="profile-assets/contact/email.svg?v=24a51ae9d9" width="26.20396601%" align="top" alt="Email · Prakhar06.work@gmail.com"></a>
+  <a href="https://prxmy.in/"><img src="profile-assets/contact/portfolio.svg?v=e1a0df556a" width="21.16704805%" align="top" alt="Portfolio · prxmy.in"></a><a href="https://prxmy.in/resume"><img src="profile-assets/contact/resume.svg?v=5815b560a2" width="19.22196796%" align="top" alt="Resume · prxmy.in/resume"></a><a href="https://x.com/_prxmy"><img src="profile-assets/contact/x.svg?v=05f634d8df" width="19.22196796%" align="top" alt="X · @_prxmy"></a><a href="https://www.linkedin.com/in/prxmy/"><img src="profile-assets/contact/linkedin.svg?v=6c7bdb5f22" width="19.22196796%" align="top" alt="LinkedIn · Prakhar Gupta"></a><a href="mailto:Prakhar06.work@gmail.com"><img src="profile-assets/contact/email.svg?v=108dda36d5" width="21.16704805%" align="top" alt="Email · Prakhar06.work@gmail.com"></a>
 </div>

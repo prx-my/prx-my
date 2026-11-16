@@ -52,6 +52,21 @@ def render(title, bottom, mobile):
 '''
 
 
+def resume_tag(right, middle, size):
+    """A navy tag with a lime label, like the section badges, marking the line as the resume link."""
+    label = 3.89 * size  # "Resume" in Arial Bold is 3.89em wide
+    pad, arrow = size * .8, size * .62
+    width, height = pad * 2 + label + size * .5 + arrow, size * 2
+    x, y = right - width, middle - height / 2
+    ax, ay = x + pad + label + size * .5, middle + arrow / 2
+    return (
+        f'<rect x="{x:g}" y="{y:g}" width="{width:g}" height="{height:g}" rx="{size * .3:g}" fill="{INK}"/>'
+        f'<text x="{x + pad:g}" y="{middle:g}" dy=".36em" fill="{LIME}" font-size="{size}" font-weight="700">Resume</text>'
+        f'<path d="M{ax:g} {ay:g}l{arrow:g}-{arrow:g}m-{arrow * .7:g} 0h{arrow * .7:g}v{arrow * .7:g}" fill="none" stroke="{LIME}" '
+        f'stroke-width="{size * .14:g}" stroke-linecap="round" stroke-linejoin="round"/>'
+    ), width
+
+
 def render_status(mobile):
     """The availability line above the hero; the hero's own top paper fades in under it so they join."""
     s = LAYOUT[mobile]
@@ -61,16 +76,18 @@ def render_status(mobile):
     edge = b64encode((HERE / "art" / "hero-top-edge.png").read_bytes()).decode("ascii")
     title, detail = html.escape(STATUS), html.escape(STATUS_DETAIL)
     if mobile:
+        tag, _ = resume_tag(width - x, 26, 12)
         text = (
             f'<text x="{x}" y="26" dy=".36em" font-size="16" font-weight="700">{title}</text>'
-            f'<text x="{x}" y="50" dy=".36em" font-size="13">{html.escape(STATUS_DETAIL_MOBILE)}</text>'
+            f'<text x="{x}" y="50" dy=".36em" font-size="13">{html.escape(STATUS_DETAIL_MOBILE)}</text>{tag}'
         )
     else:
+        tag, tag_width = resume_tag(width - x, 32, 15)
         text = (
             f'<text x="{x}" y="32" dy=".36em" font-size="19" font-weight="700">{title}</text>'
-            f'<text x="{width - x}" y="32" dy=".36em" text-anchor="end" font-size="15">{detail}</text>'
+            f'<text x="{width - x - tag_width - 16:g}" y="32" dy=".36em" text-anchor="end" font-size="14">{detail}</text>{tag}'
         )
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{title}. {detail}.">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="{title}. {detail}. Resume.">
   <defs>
     <linearGradient id="fade" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff"/></linearGradient>
     <mask id="edge"><rect y="{height - edge_height:g}" width="{width}" height="{edge_height:g}" fill="url(#fade)"/></mask>
