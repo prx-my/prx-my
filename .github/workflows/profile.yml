@@ -12,6 +12,7 @@ on:
     branches: ["main"]
     paths:
       - "scripts/console/**"
+      - "projects.md"
       - ".github/workflows/profile.yml"
 
 permissions:
@@ -52,11 +53,14 @@ jobs:
       - name: Render the contribution calendar
         run: python scripts/console/activity.py
 
+      - name: Render selected work
+        run: python scripts/console/work.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets profile-assets/metrics profile-assets/activity.svg profile-assets/activity-mobile.svg scripts/console/data
+          git add assets profile-assets/metrics profile-assets/activity.svg profile-assets/activity-mobile.svg profile-assets/work scripts/console/data
           if git diff --staged --quiet; then
             echo "Profile already up to date."
             exit 0

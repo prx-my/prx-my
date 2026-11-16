@@ -19,9 +19,24 @@ I work in TypeScript and Python and am open to software engineering internships.
 
 ## Selected work
 
-- **[OWASP CVE Lite CLI](https://github.com/OWASP/cve-lite-cli/pull/1202)** — I fixed a scan limit that could silently hide vulnerability findings when using `--only-used`. [My merged contributions](https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged)
-- **[EcoAudit](https://github.com/AWS-env/environmental-hacks)** — I wrote 45 detectors for avoidable compute waste and built the AWS API that runs repository scans.
-- **[JanSamadhan](https://github.com/prx-my/ps-crmdev1)** — A civic reporting platform for Delhi that checks for duplicates within 20 metres using PostGIS and escalates overdue complaints in PostgreSQL. [Demo](https://youtu.be/JvkJd1MAV3M)
+<p><a href="https://github.com/OWASP/cve-lite-cli/pull/1202"><picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/owasp-mobile.svg">
+  <img src="profile-assets/work/owasp.svg" width="100%" align="top" alt="OWASP CVE Lite CLI. I fixed a scan limit that could silently hide vulnerability findings when using --only-used. Read PR #1202.">
+</picture></a><a href="https://github.com/AWS-env/environmental-hacks"><picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/ecoaudit-mobile.svg">
+  <img src="profile-assets/work/ecoaudit.svg" width="100%" align="top" alt="EcoAudit. I wrote 45 detectors for avoidable compute waste and built the AWS API that runs repository scans. View source.">
+</picture></a><a href="https://youtu.be/JvkJd1MAV3M"><picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/jansamadhan-mobile.svg">
+  <img src="profile-assets/work/jansamadhan.svg" width="100%" align="top" alt="JanSamadhan. A civic reporting platform for Delhi that checks for duplicates within 20 metres using PostGIS and escalates overdue complaints in PostgreSQL. Watch demo.">
+</picture></a><a href="https://github.com/AWS-env/sarthi"><picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/sarthi-mobile.svg">
+  <img src="profile-assets/work/sarthi.svg" width="100%" align="top" alt="Sarthi. I built the ElevenLabs voice agent webhook for a tool that answers building-rule questions with page citations. View source.">
+</picture></a><a href="https://github.com/prx-my/railmind"><picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/railmind-mobile.svg">
+  <img src="profile-assets/work/railmind.svg" width="100%" align="top" alt="RailMind. A rail dispatch simulator that uses beam search to plan train conflicts on the Delhi–Kanpur corridor. View source.">
+</picture></a></p>
+
+[Project notes](projects.md) · [More of my work ↗](https://prxmy.in/#projects) · [All my OWASP merges](https://github.com/OWASP/cve-lite-cli/pulls?q=is%3Apr+author%3Aprx-my+is%3Amerged) · [JanSamadhan source](https://github.com/prx-my/ps-crmdev1)
 
 <a href="https://github.com/prx-my#contributions">
   <picture>
