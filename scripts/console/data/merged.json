@@ -1,5 +1,13 @@
 [
   {
+    "number": 1636,
+    "title": "OA005 --fix removes only the flagged nested pin",
+    "date": "2026-11-16",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1636"
+  },
+  {
     "number": 1566,
     "title": "clear the remaining scattered test type errors (part of #1491)",
     "date": "2026-11-15",
@@ -38,13 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1451"
-  },
-  {
-    "number": 1392,
-    "title": "reject missing values for threshold and size flags",
-    "date": "2026-11-03",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1392"
   }
 ]
