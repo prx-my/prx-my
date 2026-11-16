@@ -2,7 +2,7 @@
   <title id="title">EcoAudit</title>
   <desc id="detail">Finds avoidable compute waste. Wrote 45 detectors and built the AWS repository scan API. View source.</desc>
   <style>
-    @media (prefers-reduced-motion: no-preference) {
+    @media not all {
       .activity { animation: activity-blip 1.85s ease-in-out -0.27s infinite; }
       .heartbeat { animation: heartbeat 3.9s ease-in-out -0.68s infinite; }
       .packet { animation: packet-travel 12s linear var(--delay) infinite; }

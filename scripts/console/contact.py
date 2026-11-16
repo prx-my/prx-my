@@ -48,9 +48,13 @@ def render(name, stretch):
     svg = re.sub(r'(<svg[^>]* )height="\d+" viewBox="0 0 (\d+) \d+"', rf'\1height="{height}" viewBox="0 0 \2 {height}"', svg, count=1)
     svg = re.sub(r'<rect width="(\d+)" height="\d+" fill="#f9e6cc"/>', rf'<rect width="\1" height="{height}" fill="#f9e6cc"/>', svg, count=1)
     rng = random.Random(f"contact-{name}")
-    grain = "".join(f'<circle cx="{rng.randrange(width)}" cy="{rng.randrange(height)}" r="{rng.choice((.35, .5, .75))}"/>'
-                    for _ in range(width * height // 260))
-    svg = re.sub(r'<g fill="#12249e" opacity="\.14">.*?</g>', f'<g fill="#12249e" opacity=".14">{grain}</g>', svg, count=1, flags=re.S)
+    dots = "".join(f'<circle cx="{rng.randrange(60)}" cy="{rng.randrange(60)}" r="{rng.choice((.35, .5, .75))}"/>' for _ in range(14))
+    grain = (f'<pattern id="paper-grain" width="60" height="60" patternUnits="userSpaceOnUse">'
+             f'<g fill="#12249e" opacity=".14">{dots}</g></pattern><rect width="{width}" height="{height}" fill="url(#paper-grain)"/>')
+    svg = re.sub(r'<g fill="#12249e" opacity="\.14">.*?</g>', grain, svg, count=1, flags=re.S)
+    # Phones show each module under ~90px wide: keep the light bar still there, and tile the grain
+    # as a pattern so desktop frames don't redraw hundreds of separate dots.
+    svg = svg.replace("@media (prefers-reduced-motion: no-preference) {", "@media (prefers-reduced-motion: no-preference) and (min-width: 120px) {")
     svg = svg.replace(f"scale(1 {OLD_STRETCH})", f"scale(1 {stretch:g})")
     assert svg.count(TEXT) == 1, name
     svg = svg.replace(TEXT, TEXT.replace('transform="scale(1 .7751938)"', f'transform="translate(0 {lift:.4f}) scale(1 {1 / stretch:.6f})"'))

@@ -2,7 +2,7 @@
   <title id="title">OWASP CVE Lite CLI</title>
   <desc id="detail">Dependency vulnerability scanner. Fixed a scan limit that could silently hide vulnerability findings. Read PR #1202.</desc>
   <style>
-    @media (prefers-reduced-motion: no-preference) {
+    @media not all {
       .activity { animation: activity-blip 1.15s ease-in-out 0.00s infinite; }
       .heartbeat { animation: heartbeat 4.8s ease-in-out 0.00s infinite; }
       .packet { animation: packet-travel 12s linear var(--delay) infinite; }

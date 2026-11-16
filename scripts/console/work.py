@@ -146,13 +146,14 @@ def render(project, index, total, mobile):
         for x in (15, width - 15) for y in (24, height - 24)
     )
     slots = "".join(f'<rect x="35" y="{y}" width="14" height="5" rx="2.5"/>' for y in range(31, 78, 10))
+    motion = "not all" if mobile else "(prefers-reduced-motion: no-preference)"  # phones get a still rack: animating SVGs redraw every frame
     activity_period = ACTIVITY_PERIODS[index % len(ACTIVITY_PERIODS)]
     heartbeat_period = HEARTBEAT_PERIODS[index % len(HEARTBEAT_PERIODS)]
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{outer}" height="{height + foot}" viewBox="0 0 {outer} {height + foot}" role="img" aria-labelledby="title detail">
   <title id="title">{html.escape(project.name)}</title>
   <desc id="detail">{html.escape(". ".join([project.summary.rstrip("."), *[bullet.rstrip(".") for bullet in project.bullets], action]))}.</desc>
   <style>
-    @media (prefers-reduced-motion: no-preference) {{
+    @media {motion} {{
       .activity {{ animation: activity-blip {activity_period:g}s ease-in-out {-index * .27:.2f}s infinite; }}
       .heartbeat {{ animation: heartbeat {heartbeat_period:g}s ease-in-out {-index * .68:.2f}s infinite; }}
       .packet {{ animation: packet-travel 12s linear var(--delay) infinite; }}

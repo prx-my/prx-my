@@ -21,23 +21,23 @@
 </div>
 <div>
   <a href="https://github.com/OWASP/cve-lite-cli/pull/1202"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/owasp-mobile.svg?v=19ea22721d">
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/owasp-mobile.svg?v=4dc9d68443">
     <img src="profile-assets/work/owasp.svg?v=3a1321b676" width="100%" align="top" alt="OWASP CVE Lite CLI. I fixed a scan limit that could silently hide vulnerability findings when using --only-used. Read PR #1202.">
   </picture></a>
   <a href="https://github.com/AWS-env/environmental-hacks"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/ecoaudit-mobile.svg?v=34eb6caa4f">
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/ecoaudit-mobile.svg?v=161b4b0675">
     <img src="profile-assets/work/ecoaudit.svg?v=16a35be285" width="100%" align="top" alt="EcoAudit. I wrote 45 detectors for avoidable compute waste and built the AWS API that runs repository scans. View source.">
   </picture></a>
   <a href="https://youtu.be/JvkJd1MAV3M"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/jansamadhan-mobile.svg?v=a9ee510b9a">
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/jansamadhan-mobile.svg?v=22008b5d13">
     <img src="profile-assets/work/jansamadhan.svg?v=2c38e7cf05" width="100%" align="top" alt="JanSamadhan. A civic reporting platform for Delhi that checks for duplicates within 20 metres using PostGIS and escalates overdue complaints in PostgreSQL. Watch demo.">
   </picture></a>
   <a href="https://github.com/AWS-env/sarthi"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/sarthi-mobile.svg?v=4c49dd3c6d">
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/sarthi-mobile.svg?v=b88a153fbc">
     <img src="profile-assets/work/sarthi.svg?v=863e5cb623" width="100%" align="top" alt="Sarthi. I built the ElevenLabs voice agent webhook for a tool that answers building-rule questions with page citations. View source.">
   </picture></a>
   <a href="https://github.com/prx-my/railmind"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/railmind-mobile.svg?v=496d955278">
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/work/railmind-mobile.svg?v=058c6111e0">
     <img src="profile-assets/work/railmind.svg?v=1f9caad5be" width="100%" align="top" alt="RailMind. A rail dispatch simulator that uses beam search to plan train conflicts on the Delhi–Kanpur corridor. View source.">
   </picture></a>
 </div>
@@ -48,7 +48,7 @@
   </picture>
 </div>
 <div id="open-source-contributions">
-  <a href="open-source/owasp.md"><img src="profile-assets/open-source/owasp.svg?v=aa8755426d" width="37.98342541%" align="top" alt="OWASP CVE Lite CLI: 27 merged PRs. Latest merge: #1636. Open the full contribution history."></a><a href="open-source/sugar-labs.md"><img src="profile-assets/open-source/sugar-labs.svg?v=e694d600f3" width="26.01289134%" align="top" alt="Sugar Labs Music Blocks: 5 merged PRs. Latest merge: #942. Open the full contribution history."></a><a href="open-source/ecoaudit.md"><img src="profile-assets/open-source/ecoaudit.svg?v=c695080bc6" width="36.00368324%" align="top" alt="EcoAudit: 99 merged PRs. Latest merge: #563. Open the full contribution history."></a>
+  <a href="open-source/owasp.md"><img src="profile-assets/open-source/owasp.svg?v=f3b527bf2d" width="37.98342541%" align="top" alt="OWASP CVE Lite CLI: 27 merged PRs. Latest merge: #1636. Open the full contribution history."></a><a href="open-source/sugar-labs.md"><img src="profile-assets/open-source/sugar-labs.svg?v=981ed217c6" width="26.01289134%" align="top" alt="Sugar Labs Music Blocks: 5 merged PRs. Latest merge: #942. Open the full contribution history."></a><a href="open-source/ecoaudit.md"><img src="profile-assets/open-source/ecoaudit.svg?v=a50c7d49d1" width="36.00368324%" align="top" alt="EcoAudit: 99 merged PRs. Latest merge: #563. Open the full contribution history."></a>
 </div>
 <div>
   <picture>
@@ -71,7 +71,7 @@
 <div>
   <a href="https://github.com/prx-my#contributions">
     <picture>
-      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity-mobile.svg?v=f0bc3b649f">
+      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity-mobile.svg?v=5126de9826">
       <img width="100%" align="top" src="profile-assets/activity.svg?v=6bd59a8147" alt="GitHub contribution calendar over 52 weeks. Each four-blade fan represents a day. Color and blade angle show the contribution range: 0, 1–2, 3–8, 9–24, or 25+.">
     </picture>
   </a>
@@ -83,5 +83,5 @@
   </picture>
 </div>
 <div>
-  <a href="https://prxmy.in/"><img src="profile-assets/contact/portfolio.svg?v=e1a0df556a" width="21.16704805%" align="top" alt="Portfolio · prxmy.in"></a><a href="https://prxmy.in/resume"><img src="profile-assets/contact/resume.svg?v=5815b560a2" width="19.22196796%" align="top" alt="Resume · prxmy.in/resume"></a><a href="https://x.com/_prxmy"><img src="profile-assets/contact/x.svg?v=05f634d8df" width="19.22196796%" align="top" alt="X · @_prxmy"></a><a href="https://www.linkedin.com/in/prxmy/"><img src="profile-assets/contact/linkedin.svg?v=6c7bdb5f22" width="19.22196796%" align="top" alt="LinkedIn · Prakhar Gupta"></a><a href="mailto:Prakhar06.work@gmail.com"><img src="profile-assets/contact/email.svg?v=108dda36d5" width="21.16704805%" align="top" alt="Email · Prakhar06.work@gmail.com"></a>
+  <a href="https://prxmy.in/"><img src="profile-assets/contact/portfolio.svg?v=d7238c4f36" width="21.16704805%" align="top" alt="Portfolio · prxmy.in"></a><a href="https://prxmy.in/resume"><img src="profile-assets/contact/resume.svg?v=59b9ab37a8" width="19.22196796%" align="top" alt="Resume · prxmy.in/resume"></a><a href="https://x.com/_prxmy"><img src="profile-assets/contact/x.svg?v=175a35d5b2" width="19.22196796%" align="top" alt="X · @_prxmy"></a><a href="https://www.linkedin.com/in/prxmy/"><img src="profile-assets/contact/linkedin.svg?v=e3c9bac89b" width="19.22196796%" align="top" alt="LinkedIn · Prakhar Gupta"></a><a href="mailto:Prakhar06.work@gmail.com"><img src="profile-assets/contact/email.svg?v=72ecece099" width="21.16704805%" align="top" alt="Email · Prakhar06.work@gmail.com"></a>
 </div>
