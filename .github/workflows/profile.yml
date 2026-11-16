@@ -2,8 +2,12 @@ name: Profile
 
 on:
   schedule:
-    - cron: "17 3 * * *"
+    - cron: "7,37 * * * *"
   workflow_dispatch:
+  pull_request_target:
+    types: [closed]
+  repository_dispatch:
+    types: [profile-pr-merged]
   push:
     branches: ["main"]
     paths:
@@ -15,13 +19,17 @@ permissions:
 
 concurrency:
   group: profile
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   render:
+    if: github.event_name != 'pull_request_target' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Always render from the trusted profile branch, including for fork PR events.
+          ref: ${{ github.event.repository.default_branch }}
 
       - uses: actions/setup-python@v5
         with:
@@ -38,11 +46,14 @@ jobs:
       - name: Render console slices
         run: python scripts/console/render.py
 
+      - name: Render profile metrics
+        run: python scripts/console/metrics.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets scripts/console/data
+          git add assets profile-assets/metrics scripts/console/data
           if git diff --staged --quiet; then
             echo "Profile already up to date."
             exit 0

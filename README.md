@@ -1,4 +1,13 @@
-![Prakhar Gupta — backend systems and security tooling. A risograph illustration of a terminal, a folded map, and a server stack.](assets/prxmy-risograph.gif)
+<picture>
+  <source media="(prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/prxmy-risograph.gif">
+  <img src="profile-assets/prxmy-risograph.png" alt="Prakhar Gupta — backend systems and security tooling. A risograph illustration of a terminal, a folded map, and a server stack.">
+</picture>
+
+<p>
+  <a href="https://github.com/prx-my#contributions"><img src="profile-assets/metrics/streak.svg" width="240" alt="Current GitHub contribution streak in consecutive days"></a>
+  <a href="https://github.com/OWASP/cve-lite-cli/pull/1202"><img src="profile-assets/metrics/featured-fix.svg" width="240" alt="5,000-file scan limit surfaced in OWASP CVE Lite CLI. Read the pull request."></a>
+  <a href="https://github.com/search?q=is%3Apr+is%3Amerged+author%3Aprx-my&amp;type=pullrequests"><img src="profile-assets/metrics/merged.svg" width="240" alt="Pull requests merged across GitHub repositories. Browse public merged pull requests."></a>
+</p>
 
 I work in TypeScript and Python and am open to software engineering internships.
 
