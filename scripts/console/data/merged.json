@@ -1,5 +1,13 @@
 [
   {
+    "number": 1566,
+    "title": "clear the remaining scattered test type errors (part of #1491)",
+    "date": "2026-11-15",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1566"
+  },
+  {
     "number": 1565,
     "title": "complete the override context fixtures (part of #1491)",
     "date": "2026-11-14",
@@ -38,13 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1392"
-  },
-  {
-    "number": 1372,
-    "title": "include Bun in getting started lockfile list",
-    "date": "2026-10-28",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1372"
   }
 ]
