@@ -6,12 +6,12 @@ import os
 from pathlib import Path
 
 from fetch import USER, graphql, load, save, warn
-from gpu import PANEL_WIDTHS, render_gpu
+from gpu import panel_width_percent, render_gpu
 
 ROOT = Path(__file__).resolve().parents[2]
 DATASET = "upstream.json"
-START = "<!-- open-source:start -->"
-END = "<!-- open-source:end -->"
+GPU_ROW = '<div id="open-source-contributions">\n'
+ROW_END = "\n</div>"
 REPOS = (
     ("OWASP/cve-lite-cli", "OWASP", "OWASP CVE Lite CLI",
      "I worked on scanner correctness, dependency version matching, and the commands developers use to fix findings."),
@@ -79,10 +79,10 @@ def render_history(repo, title, summary, entries):
 def write_assets(history):
     readme = ROOT / "README.md"
     old = readme.read_text(encoding="utf-8")
-    if old.count(START) != 1 or old.count(END) != 1 or old.index(START) >= old.index(END):
-        raise ValueError("README must contain one ordered pair of open-source markers")
-    intro, content = old.split(START, 1)
-    _, rest = content.split(END, 1)
+    intro, start, panel = old.partition(GPU_ROW)
+    previous, end, rest = panel.partition(ROW_END)
+    if not start or not end or GPU_ROW in rest or not previous.strip().startswith('<a href="open-source/'):
+        raise ValueError("README must contain one GPU row with links to the contribution histories")
     assets = ROOT / "profile-assets" / "open-source"
     histories = ROOT / "open-source"
     assets.mkdir(parents=True, exist_ok=True)
@@ -101,9 +101,9 @@ def write_assets(history):
         alt = html.escape(f"{title}: {count:,} merged {unit}.{latest} Open the full contribution history.")
         links.append(
             f'<a href="open-source/{slug}.md"><img src="profile-assets/open-source/{slug}.svg" '
-            f'width="{PANEL_WIDTHS[index]}%" align="top" alt="{alt}"></a>'
+            f'width="{panel_width_percent(index):.8f}%" align="top" alt="{alt}"></a>'
         )
-    updated = intro + START + "\n\n<p>" + "".join(links) + "</p>\n\n" + END + rest
+    updated = intro + GPU_ROW + "  " + "".join(links) + ROW_END + rest
     readme.write_text(updated, encoding="utf-8")
 
 
