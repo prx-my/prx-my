@@ -13,7 +13,7 @@ I work in TypeScript and Python and am open to software engineering internships.
 
 ## Connections
 
-<p><a href="https://prxmy.in/"><img src="profile-assets/contact/portfolio.svg" width="168" alt="Portfolio · prxmy.in"></a><a href="https://x.com/_prxmy"><img src="profile-assets/contact/x.svg" width="168" alt="X · @_prxmy"></a><a href="https://www.linkedin.com/in/prxmy/"><img src="profile-assets/contact/linkedin.svg" width="168" alt="LinkedIn · Prakhar Gupta"></a><a href="mailto:Prakhar06.work@gmail.com"><img src="profile-assets/contact/email.svg" width="168" alt="Email · Prakhar06.work@gmail.com"></a></p>
+<p><a href="https://prxmy.in/"><img src="profile-assets/contact/portfolio.svg" width="25%" alt="Portfolio · prxmy.in"></a><a href="https://x.com/_prxmy"><img src="profile-assets/contact/x.svg" width="25%" alt="X · @_prxmy"></a><a href="https://www.linkedin.com/in/prxmy/"><img src="profile-assets/contact/linkedin.svg" width="25%" alt="LinkedIn · Prakhar Gupta"></a><a href="mailto:Prakhar06.work@gmail.com"><img src="profile-assets/contact/email.svg" width="25%" alt="Email · Prakhar06.work@gmail.com"></a></p>
 
 [View résumé](https://prxmy.in/resume)
 

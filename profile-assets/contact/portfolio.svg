@@ -39,8 +39,8 @@
     <path d="M0 45H336M0 118H336" stroke="#fff0ce" stroke-opacity=".83"/>
 
     <g fill="#12249e" font-family="Arial, Helvetica, sans-serif" transform="scale(1 .7751938)">
-      <text x="43" y="97" font-size="31" font-weight="700">Portfolio</text>
-      <text x="43" y="128" font-size="19">prxmy.in</text>
+      <text x="43" y="97" font-size="35" font-weight="700">Portfolio</text>
+      <text x="43" y="128" font-size="20">prxmy.in</text>
     </g>
     <path d="M270 79l16-16m-12 0h12v12" fill="none" stroke="#12249e"
       stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -30,8 +30,8 @@
     <path d="M188 8h18l-23 30a8 8 0 0 1-6 3h-4z" fill="#18296f"/><path d="M183 33h9" stroke="#9eaadb" stroke-width="2"/><path d="M260 8h18l-23 30a8 8 0 0 1-6 3h-4z" fill="#18296f"/><path d="M255 33h9" stroke="#9eaadb" stroke-width="2"/>
 
     <g fill="#12249e" font-family="Arial, Helvetica, sans-serif" transform="scale(1 .7751938)">
-      <text x="43" y="97" font-size="31" font-weight="700">LinkedIn</text>
-      <text x="43" y="128" font-size="19">/in/prxmy</text>
+      <text x="43" y="97" font-size="35" font-weight="700">LinkedIn</text>
+      <text x="43" y="128" font-size="20">/in/prxmy</text>
     </g>
     <path d="M270 79l16-16m-12 0h12v12" fill="none" stroke="#12249e"
       stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
