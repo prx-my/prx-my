@@ -4,7 +4,7 @@
   <desc id="description">1,941 GitHub contributions from Nov 23, 2025 through Nov 16, 2026.
     Each fan represents a day. Color and blade angle show the contribution range: 0, 1–2, 3–8, 9–24, or 25+.</desc>
   <style>
-    @media (prefers-reduced-motion: no-preference) {
+    @media not all {
       @keyframes spin-contribution-fan { to { transform: rotate(360deg); } }
       .fan-rotor {
         transform-origin: 0 0;

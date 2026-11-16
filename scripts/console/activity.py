@@ -71,6 +71,7 @@ def render(weeks, mobile=False):
     # The section title now lives in profile-assets/titles, so the log starts at its summary line.
     height = 125 + len(sections) * 183
     pad = 21 if mobile else 29  # 12px/20px gutter once GitHub scales the SVG to the README width
+    motion = "not all" if mobile else "(prefers-reduced-motion: no-preference)"  # 208 spinning fans are too heavy for phones
     first = weeks[0][0][0]
     last = max(day for week in weeks for day, count in week if count is not None)
     total = sum(count or 0 for week in weeks for _, count in week)
@@ -101,7 +102,7 @@ def render(weeks, mobile=False):
   <desc id="description">{total:,} GitHub contributions from {first:%b %d, %Y} through {last:%b %d, %Y}.
     Each fan represents a day. Color and blade angle show the contribution range: 0, 1–2, 3–8, 9–24, or 25+.</desc>
   <style>
-    @media (prefers-reduced-motion: no-preference) {{
+    @media {motion} {{
       @keyframes spin-contribution-fan {{ to {{ transform: rotate(360deg); }} }}
       .fan-rotor {{
         transform-origin: 0 0;

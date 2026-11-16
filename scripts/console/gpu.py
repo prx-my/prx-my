@@ -7,10 +7,7 @@ from pathlib import Path
 
 ART = Path(__file__).resolve().parent / "art"
 HEIGHT = 724
-CARD = "#f9e6cc"
-# The artwork was printed on lighter stock (#fdf2db); multiplying moves it onto the profile's shared paper.
-PAPER_TINT = "0.9842 0 0 0 0  0 0.9504 0 0 0  0 0 0.9315 0 0  0 0 0 1 0"
-FRAME = 8  # the artwork's own border, painted out so the GPU row joins the paper above and below
+# The artwork is pre-tinted onto the profile's shared paper with its frame painted out (see git history).
 
 
 @dataclass(frozen=True)
@@ -64,11 +61,6 @@ def render_gpu(repo, index):
     panel = PANELS[index]
     artwork = b64encode((ART / f"gpu-{panel.slug}.webp").read_bytes()).decode("ascii")
     direction = "reverse" if index == 1 else "normal"
-    frame = f"M0 0H{panel.width}V{FRAME}H0ZM0 {HEIGHT - FRAME}H{panel.width}V{HEIGHT}H0Z"
-    if index == 0:
-        frame += f"M0 0H{FRAME}V{HEIGHT}H0Z"
-    if index == len(PANELS) - 1:
-        frame += f"M{panel.width - FRAME} 0H{panel.width}V{HEIGHT}H{panel.width - FRAME}Z"
     period = 12 if index == 1 else 8
     changes = "\n  ".join(filter(None, (updated_count(panel, count), updated_pr(panel, latest))))
     overlay = f'  <g font-family="Arial, Helvetica, sans-serif" font-weight="700">\n  {changes}\n  </g>\n' if changes else ""
@@ -78,17 +70,14 @@ def render_gpu(repo, index):
   <desc id="description">{count:,} merged pull requests.</desc>
   <style>
     .animated-fan {{ display: none; }}
-    @media (prefers-reduced-motion: no-preference) {{
+    @media (prefers-reduced-motion: no-preference) and (min-width: 180px) {{
       .animated-fan {{ display: inline; }}
       .rotor {{ transform-origin: 0 0; animation: gpu-rotate {period}s linear infinite {direction}; }}
     }}
     @keyframes gpu-rotate {{ to {{ transform: rotate(360deg); }} }}
   </style>
   <defs>
-    <filter id="paper-tint" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
-      <feColorMatrix type="matrix" values="{PAPER_TINT}"/>
-    </filter>
-    <image id="art" width="{panel.width}" height="{HEIGHT}" filter="url(#paper-tint)" href="data:image/webp;base64,{artwork}"/>
+    <image id="art" width="{panel.width}" height="{HEIGHT}" href="data:image/webp;base64,{artwork}"/>
     <clipPath id="rotor-opening"><circle cx="{panel.center}" cy="339" r="{panel.rotor_radius}"/></clipPath>
     <clipPath id="hub"><circle cx="{panel.center}" cy="339" r="54"/></clipPath>
     <clipPath id="hub-interior"><circle cx="{panel.center}" cy="339" r="45"/></clipPath>
@@ -103,6 +92,5 @@ def render_gpu(repo, index):
     </g>
     <g clip-path="url(#hub)"><use href="#art"/></g>
   </g>
-  <path d="{frame}" fill="{CARD}"/>
 {overlay}</svg>
 """

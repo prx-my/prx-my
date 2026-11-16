@@ -2,7 +2,7 @@
   <title id="title">JanSamadhan</title>
   <desc id="detail">Civic reporting for Delhi. Uses PostGIS to detect duplicate reports and PostgreSQL to escalate overdue complaints. Watch demo.</desc>
   <style>
-    @media (prefers-reduced-motion: no-preference) {
+    @media not all {
       .activity { animation: activity-blip 1.3s ease-in-out -0.54s infinite; }
       .heartbeat { animation: heartbeat 5.4s ease-in-out -1.36s infinite; }
       .packet { animation: packet-travel 12s linear var(--delay) infinite; }

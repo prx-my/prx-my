@@ -2,7 +2,7 @@
   <title id="title">RailMind</title>
   <desc id="detail">Rail dispatch simulator. Uses beam search to plan train conflicts on the simulated Delhi–Kanpur corridor. View source.</desc>
   <style>
-    @media (prefers-reduced-motion: no-preference) {
+    @media not all {
       .activity { animation: activity-blip 1.55s ease-in-out -1.08s infinite; }
       .heartbeat { animation: heartbeat 5.1s ease-in-out -2.72s infinite; }
       .packet { animation: packet-travel 12s linear var(--delay) infinite; }
