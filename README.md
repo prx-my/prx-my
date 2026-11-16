@@ -5,16 +5,7 @@
   </picture>
 </div>
 <div>
-  <a href="https://github.com/prx-my#contributions"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/streak-mobile.svg">
-    <img src="profile-assets/metrics/streak.svg" width="33.33333%" align="top" alt="Current GitHub contribution streak in consecutive days">
-  </picture></a><a href="https://github.com/OWASP/cve-lite-cli/pull/1202"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/featured-fix-mobile.svg">
-    <img src="profile-assets/metrics/featured-fix.svg" width="33.33333%" align="top" alt="5,000-file scan limit surfaced in OWASP CVE Lite CLI. Read the pull request.">
-  </picture></a><a href="https://github.com/search?q=is%3Apr+is%3Amerged+author%3Aprx-my&amp;type=pullrequests"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/merged-mobile.svg">
-    <img src="profile-assets/metrics/merged.svg" width="33.33333%" align="top" alt="Pull requests merged across GitHub repositories. Browse public merged pull requests.">
-  </picture></a>
+  <a href="https://github.com/prx-my#contributions"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/streak-mobile.svg"><img src="profile-assets/metrics/streak.svg" width="33.33333%" align="top" alt="Current GitHub contribution streak in consecutive days"></picture></a><a href="https://github.com/OWASP/cve-lite-cli/pull/1202"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/featured-fix-mobile.svg"><img src="profile-assets/metrics/featured-fix.svg" width="33.33333%" align="top" alt="5,000-file scan limit surfaced in OWASP CVE Lite CLI. Read the pull request."></picture></a><a href="https://github.com/search?q=is%3Apr+is%3Amerged+author%3Aprx-my&amp;type=pullrequests"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/merged-mobile.svg"><img src="profile-assets/metrics/merged.svg" width="33.33333%" align="top" alt="Pull requests merged across GitHub repositories. Browse public merged pull requests."></picture></a>
 </div>
 <div>
   <a href="https://github.com/OWASP/cve-lite-cli/pull/1202"><picture>
