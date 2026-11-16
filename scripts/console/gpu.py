@@ -62,7 +62,7 @@ def updated_pr(panel, latest):
 def render_gpu(repo, index):
     name, count, latest = repo
     panel = PANELS[index]
-    artwork = b64encode((ART / f"gpu-{panel.slug}.png").read_bytes()).decode("ascii")
+    artwork = b64encode((ART / f"gpu-{panel.slug}.webp").read_bytes()).decode("ascii")
     direction = "reverse" if index == 1 else "normal"
     frame = f"M0 0H{panel.width}V{FRAME}H0ZM0 {HEIGHT - FRAME}H{panel.width}V{HEIGHT}H0Z"
     if index == 0:
@@ -88,7 +88,7 @@ def render_gpu(repo, index):
     <filter id="paper-tint" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
       <feColorMatrix type="matrix" values="{PAPER_TINT}"/>
     </filter>
-    <image id="art" width="{panel.width}" height="{HEIGHT}" filter="url(#paper-tint)" href="data:image/png;base64,{artwork}"/>
+    <image id="art" width="{panel.width}" height="{HEIGHT}" filter="url(#paper-tint)" href="data:image/webp;base64,{artwork}"/>
     <clipPath id="rotor-opening"><circle cx="{panel.center}" cy="339" r="{panel.rotor_radius}"/></clipPath>
     <clipPath id="hub"><circle cx="{panel.center}" cy="339" r="54"/></clipPath>
     <clipPath id="hub-interior"><circle cx="{panel.center}" cy="339" r="45"/></clipPath>

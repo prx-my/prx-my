@@ -61,6 +61,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/console/upstream.py --fetch
 
+      # Runs last: earlier steps rewrite README image links.
+      - name: Version image links
+        run: python scripts/console/stamp.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
