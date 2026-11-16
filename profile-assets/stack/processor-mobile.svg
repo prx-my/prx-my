@@ -8,7 +8,7 @@
       <path d="M0 .5h5" stroke="#6688eb" stroke-opacity=".18"/>
     </pattern>
   </defs>
-  <rect x=".65" y=".65" width="436.7" height="282.7" fill="#fcf1da" stroke="#182785" stroke-width="1.3"/>
+  <rect width="438" height="284" fill="#f9e6cc"/>
   <rect width="438" height="284" fill="url(#paper)"/>
   <path d="M79 250h212v18H79z" fill="#101b53"/>
   <g fill="#efbc71"><rect x="84" y="258" width="5.5" height="12" rx=".6"/><rect x="93" y="258" width="5.5" height="12" rx=".6"/><rect x="102" y="258" width="5.5" height="12" rx=".6"/><rect x="111" y="258" width="5.5" height="12" rx=".6"/><rect x="120" y="258" width="5.5" height="12" rx=".6"/><rect x="129" y="258" width="5.5" height="12" rx=".6"/><rect x="138" y="258" width="5.5" height="12" rx=".6"/><rect x="147" y="258" width="5.5" height="12" rx=".6"/><rect x="156" y="258" width="5.5" height="12" rx=".6"/><rect x="165" y="258" width="5.5" height="12" rx=".6"/><rect x="174" y="258" width="5.5" height="12" rx=".6"/><rect x="195" y="258" width="5.5" height="12" rx=".6"/><rect x="204" y="258" width="5.5" height="12" rx=".6"/><rect x="213" y="258" width="5.5" height="12" rx=".6"/><rect x="222" y="258" width="5.5" height="12" rx=".6"/><rect x="231" y="258" width="5.5" height="12" rx=".6"/><rect x="240" y="258" width="5.5" height="12" rx=".6"/><rect x="249" y="258" width="5.5" height="12" rx=".6"/><rect x="258" y="258" width="5.5" height="12" rx=".6"/><rect x="267" y="258" width="5.5" height="12" rx=".6"/><rect x="276" y="258" width="5.5" height="12" rx=".6"/><rect x="285" y="258" width="5.5" height="12" rx=".6"/></g>

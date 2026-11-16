@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[2]
 INK = "#12249e"
 DARK = "#0d1a6b"
 PAPER = "#f9e9cb"
+CARD = "#f9e6cc"  # the profile's shared paper, matched to the hero print
+CABINET = "#0b1240"
 LIME = "#d2ed45"
 LED_COLORS = ("#ff6658", "#74df70", "#76a6ff", "#ffdc55")
 PATCH_COLORS = ("#9ab7ff", "#eabd70", "#aabafa", "#d7e477")
@@ -123,6 +125,10 @@ def patch_cables(index, total, height, mobile):
 def render(project, index, total, mobile):
     bullets, extra_height = bullet_rows(project, mobile)
     width = 460 if mobile else 820
+    # The rack sits inside the shared paper with the same 12px/20px gutter as every other slice.
+    margin = 17 if mobile else 21
+    outer = width + 2 * margin
+    foot = (17 if mobile else 19) if index == total - 1 else 0  # paper under the rack before the next section
     height = (132 if mobile else 110) + extra_height
     label_right = 358 if mobile else 562
     label_bottom = height - (42 if mobile else 15)
@@ -142,7 +148,7 @@ def render(project, index, total, mobile):
     slots = "".join(f'<rect x="35" y="{y}" width="14" height="5" rx="2.5"/>' for y in range(31, 78, 10))
     activity_period = ACTIVITY_PERIODS[index % len(ACTIVITY_PERIODS)]
     heartbeat_period = HEARTBEAT_PERIODS[index % len(HEARTBEAT_PERIODS)]
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title detail">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{outer}" height="{height + foot}" viewBox="0 0 {outer} {height + foot}" role="img" aria-labelledby="title detail">
   <title id="title">{html.escape(project.name)}</title>
   <desc id="detail">{html.escape(". ".join([project.summary.rstrip("."), *[bullet.rstrip(".") for bullet in project.bullets], action]))}.</desc>
   <style>
@@ -169,6 +175,10 @@ def render(project, index, total, mobile):
     <pattern id="grain" width="93" height="61" patternUnits="userSpaceOnUse"><g fill="{INK}" opacity=".22">{grain()}</g></pattern>
     <clipPath id="chassis"><rect x="7" y="4" width="{width-14}" height="{height-8}" rx="5"/></clipPath>
   </defs>
+  <rect width="{outer}" height="{height + foot}" fill="{CARD}"/>
+  <rect width="{outer}" height="{height + foot}" fill="url(#grain)" opacity=".6"/>
+  <rect x="{margin}" width="{width}" height="{height}" fill="{CABINET}"/>
+  <g transform="translate({margin} 0)">
   <g clip-path="url(#chassis)">
     <rect width="{width}" height="{height}" fill="{DARK}"/>
     <rect x="24" y="7" width="{width-48}" height="{height-14}" rx="5" fill="{INK}"/>
@@ -197,6 +207,7 @@ def render(project, index, total, mobile):
   <path d="{rails}" fill="none" stroke="#7083d1" stroke-width="2"/>
   <g aria-hidden="true" fill="none" stroke-linejoin="round">
     {patch_cables(index, total, height, mobile)}
+  </g>
   </g>
 </svg>
 '''

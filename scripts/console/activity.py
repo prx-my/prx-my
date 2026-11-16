@@ -10,6 +10,7 @@ HERE = Path(__file__).resolve().parent
 OUT = HERE.parents[1] / "profile-assets"
 WEEKS = 52
 PAPER = "#f9e9cb"
+CARD = "#f9e6cc"  # the profile's shared paper, matched to the hero print
 COBALT = "#12249e"
 LIME = "#d2ed45"
 LEVELS = ("#e9dcc2", "#b8bce5", "#828fe0", "#4e61c3", "#152ba3")
@@ -67,7 +68,9 @@ def panel(weeks, width, top):
 def render(weeks, mobile=False):
     width = 620 if mobile else 1200
     sections = [weeks[:26], weeks[26:]] if mobile else [weeks]
-    height = 185 + len(sections) * 183
+    # The section title now lives in profile-assets/titles, so the log starts at its summary line.
+    height = 125 + len(sections) * 183
+    pad = 21 if mobile else 29  # 12px/20px gutter once GitHub scales the SVG to the README width
     first = weeks[0][0][0]
     last = max(day for week in weeks for day, count in week if count is not None)
     total = sum(count or 0 for week in weeks for _, count in week)
@@ -76,9 +79,9 @@ def render(weeks, mobile=False):
         f'<circle cx="{rng.randrange(96)}" cy="{rng.randrange(80)}" r="{rng.choice((.4, .6, .75))}"/>'
         for _ in range(160)
     )
-    plots = "\n".join(panel(section, width, 136 + index * 183) for index, section in enumerate(sections))
+    plots = "\n".join(panel(section, width, 76 + index * 183) for index, section in enumerate(sections))
     labels = ("0", "1–2", "3–8", "9–24", "25+")
-    positions = (218, 278, 354, 430, 526)
+    positions = tuple(x + pad - 27 for x in (218, 278, 354, 430, 526))
     legend = "".join(
         fan_tile(x, height - 41, index, animate=True)
         + f'<text x="{x + 22}" y="{height - 28}">{label}</text>'
@@ -115,16 +118,13 @@ def render(weeks, mobile=False):
       <g fill="{COBALT}" opacity=".13">{grain}</g>
     </pattern>
   </defs>
-  <rect x="1" y="1" width="{width - 2}" height="{height - 2}" fill="{PAPER}" stroke="{COBALT}" stroke-width="2"/>
-  <rect x="2" y="2" width="{width - 4}" height="{height - 4}" fill="url(#grain)"/>
-  <rect x="1" y="1" width="{width - 2}" height="60" fill="{COBALT}"/>
+  <rect width="{width}" height="{height}" fill="{CARD}"/>
+  <rect width="{width}" height="{height}" fill="url(#grain)"/>
   <g fill="{COBALT}" font-family="Arial, Helvetica, sans-serif" font-size="18">
-    <text x="27" y="39" fill="{LIME}" font-family="monospace" font-size="28" font-weight="700">&gt;_</text>
-    <text x="83" y="39" fill="{PAPER}" font-size="27" font-weight="700">Contribution log</text>
-    <text x="27" y="94" font-size="21">{total:,} GitHub contributions · {first:%b %Y} to {last:%b %Y}</text>
+    <text x="{pad}" y="34" font-size="21">{total:,} GitHub contributions · {first:%b %Y} to {last:%b %Y}</text>
     {plots}
-    <path d="M27 {height - 62}H{width - 27}" stroke="{COBALT}" stroke-opacity=".35"/>
-    <text x="27" y="{height - 28}">Contributions per day</text>
+    <path d="M{pad} {height - 62}H{width - pad}" stroke="{COBALT}" stroke-opacity=".35"/>
+    <text x="{pad}" y="{height - 28}">Contributions per day</text>
     {legend}
   </g>
 </svg>
