@@ -34,7 +34,7 @@
   "languages": {
     "TypeScript": 3824608,
     "HTML": 2157095,
-    "Python": 1032368,
+    "Python": 1040244,
     "JavaScript": 415040,
     "Astro": 294728,
     "CSS": 231910,
@@ -48,10 +48,10 @@
     "Swift": 1638
   },
   "year": 2026,
-  "commits_year": 1328,
-  "commits_all": 1398,
-  "contributions_year": 1936,
-  "contributions_all": 2011,
+  "commits_year": 1332,
+  "commits_all": 1402,
+  "contributions_year": 1940,
+  "contributions_all": 2015,
   "streak_current": 133,
   "streak_longest": 133,
   "hackathon_wins": 3,
