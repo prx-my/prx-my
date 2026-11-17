@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1774 887" width="1774" height="887" class="hero" aria-labelledby="hero-title hero-description">
   <title id="hero-title">Prakhar Gupta</title>
-  <desc id="hero-description">Open for internship and freelance opportunities onsite or remote. Tux sits by the terminal, with a cheering Clawd on the server rack.</desc>
+  <desc id="hero-description">Open for internship and freelance opportunities onsite or remote. Tux sits by the terminal, with a blinking Clawd on the server rack.</desc>
   <style>
     text { user-select: none; }
     .terminal { font-family: "Courier Prime", "Courier New", monospace; font-weight: 700; fill: #fff0d3; }
@@ -11,22 +11,16 @@
     .face { fill: #281c27; }
     .face-alt { opacity: 0; }
     @media (prefers-reduced-motion: no-preference) {
-      .flag { transform-origin: 0 0; animation: wave 1.2s ease-in-out infinite; }
       .cheer-open { animation: cheer 2.4s step-end infinite; }
       .cheer-shut { animation: blink 2.4s step-end infinite; }
       .type { transform-box: fill-box; transform-origin: left; animation: type var(--speed) steps(var(--letters), end) var(--wait) both; }
     }
-    @keyframes wave { 0%, 100% { transform: rotate(-22deg); } 50% { transform: rotate(23deg); } }
     @keyframes cheer { 0%, 100% { opacity: 1; } 72% { opacity: 0; } 88% { opacity: 1; } }
     @keyframes blink { 0%, 100% { opacity: 0; } 72% { opacity: 1; } 88% { opacity: 0; } }
 
     @keyframes type { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   </style>
   <defs>
-    <pattern id="checkers" width="4" height="4" patternUnits="userSpaceOnUse">
-      <path fill="#fff0d3" d="M0 0h4v4H0z"/>
-      <path fill="#281c27" d="M0 0h2v2H0zM2 2h2v2H2z"/>
-    </pattern>
     <path id="caret-eye" d="M0 3h1V2h1V1h2v1h1v1h1v1H4V3H2v1H0z"/>
     <path id="dash-eye" d="M0 2h6v2H0z"/>
     <clipPath id="type-1"><rect class="type" x="-2" y="-35" width="411" height="42" style="--speed:.68s;--letters:19;--wait:.15s"/></clipPath>
@@ -55,12 +49,6 @@
 
   <g id="rack-clawd" transform="translate(1489 389) scale(5)" class="pixel">
     <ellipse cx="16" cy="24" rx="14" ry="2.1" fill="#132497" opacity=".22"/>
-    <g transform="translate(25 6)">
-      <g class="flag">
-        <path d="M0 1V-25" stroke="#281c27" stroke-width="1.5"/>
-        <path d="M0-25H-7v2h-5v2h-3v8h3v-2h5v-2h7z" fill="url(#checkers)"/>
-      </g>
-    </g>
     <path d="M5 6h18V2h4v22h-3v-5h-3v5h-3v-5h-6v5H9v-5H7v5H4v-8H0v-5h5z" fill="#d47759"/>
     <g class="face cheer-open">
       <use href="#caret-eye" x="7" y="9"/>

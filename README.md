@@ -6,8 +6,8 @@
 </div>
 <div>
   <a href="#user-content-profile-contact"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero-mobile.webp?v=da55e28fca">
-    <source media="(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero.motion.svg?v=ef9a7627df"><img src="profile-assets/hero.webp?v=d7316a69b6" width="100%" align="top" alt="Prakhar Gupta. I like to ask my claude to make no mistake. Open for Internship and Freelance Opportunities, OnSite or Remote. Tux sits by the terminal and Clawd waves a flag from the server rack. Jump to contact.">
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero-mobile.webp?v=f25cf57aba">
+    <source media="(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero.motion.svg?v=3cda3cc2ba"><img src="profile-assets/hero.webp?v=1caa126587" width="100%" align="top" alt="Prakhar Gupta. I like to ask my claude to make no mistake. Open for Internship and Freelance Opportunities, OnSite or Remote. Tux sits by the terminal and Clawd blinks from the server rack. Jump to contact.">
   </picture></a>
 </div>
 <div>
