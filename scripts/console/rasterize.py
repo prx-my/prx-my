@@ -28,12 +28,27 @@ def capture_svg(context, svg, *, viewport=None):
 
 def render_hero(context):
     hero = ROOT / "profile-assets" / "hero.motion.svg"
-    screenshot = capture_svg(context, hero.read_bytes(), viewport={"width": 1774, "height": 887})
+    source = hero.read_bytes()
+    # GitHub links the two halves independently. Both use the same artwork and
+    # exactly half its width so the picture stays continuous across the seam.
+    contact = source.replace(
+        b'viewBox="0 0 1774 887" width="1774"',
+        b'viewBox="887 0 887 887" width="887"',
+        1,
+    )
+    if contact == source:
+        raise ValueError("Expected a 1774 × 887 hero to split into equal halves")
+    hero.with_name("hero-contact.motion.svg").write_bytes(contact)
+
+    screenshot = capture_svg(context, source, viewport={"width": 1774, "height": 887})
     with Image.open(BytesIO(screenshot)) as pixels:
         for suffix, size in (("", (1440, 720)), ("-mobile", (800, 400))):
-            pixels.resize(size, Image.Resampling.LANCZOS).save(
-                hero.with_name(f"hero{suffix}.webp"), quality=88, method=6
-            )
+            scaled = pixels.resize(size, Image.Resampling.LANCZOS)
+            half = size[0] // 2
+            for area, left in (("resume", 0), ("contact", half)):
+                scaled.crop((left, 0, left + half, size[1])).save(
+                    hero.with_name(f"hero-{area}{suffix}.webp"), quality=88, method=6
+                )
 
 
 def render_svg(context, source, texture):
@@ -52,7 +67,7 @@ def render_svg(context, source, texture):
 
 def rasterize(text, context, texture):
     rendered = set()
-    animated = {Path("profile-assets/hero.webp"): Path("profile-assets/hero.motion.svg")}
+    animated = {Path("profile-assets/hero-contact.webp"): Path("profile-assets/hero-contact.motion.svg")}
 
     def replace(match):
         url, relative_path = match[2], match[3]
