@@ -1,5 +1,21 @@
 [
   {
+    "number": 1674,
+    "title": "check pull requests against the contribution rules",
+    "date": "2026-11-17",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1674"
+  },
+  {
+    "number": 1672,
+    "title": "add /assign-me issue claiming",
+    "date": "2026-11-17",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1672"
+  },
+  {
     "number": 1637,
     "title": "stop expanding Bun paths past the per-package cap",
     "date": "2026-11-17",
@@ -30,21 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1565"
-  },
-  {
-    "number": 1564,
-    "title": "type the CLI, JSON-output and usage fixtures (part of #1491)",
-    "date": "2026-11-10",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1564"
-  },
-  {
-    "number": 1559,
-    "title": "type the npm-advisory mocks and range events (part of #1491)",
-    "date": "2026-11-09",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1559"
   }
 ]

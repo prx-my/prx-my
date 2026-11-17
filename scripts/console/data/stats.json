@@ -1,8 +1,8 @@
 {
   "created_at": "2025-06-28T04:35:57Z",
   "followers": 47,
-  "prs": 283,
-  "prs_merged": 254,
+  "prs": 290,
+  "prs_merged": 256,
   "stars": 1,
   "forks": 1,
   "repo_count": 23,
@@ -34,7 +34,7 @@
   "languages": {
     "TypeScript": 3824608,
     "HTML": 2157095,
-    "Python": 1090863,
+    "Python": 1093629,
     "JavaScript": 415040,
     "Astro": 294728,
     "CSS": 231910,
@@ -48,17 +48,17 @@
     "Swift": 1638
   },
   "year": 2026,
-  "commits_year": 1360,
-  "commits_all": 1430,
-  "contributions_year": 1981,
-  "contributions_all": 2056,
+  "commits_year": 1364,
+  "commits_all": 1434,
+  "contributions_year": 2005,
+  "contributions_all": 2080,
   "streak_current": 134,
   "streak_longest": 134,
   "hackathon_wins": 2,
   "updated": "2026-11-17",
   "public_repos": 44,
-  "upstream_merged": 33,
+  "upstream_merged": 35,
   "first_merged": "2026-06-28",
-  "upstream_owasp": 28,
+  "upstream_owasp": 30,
   "upstream_sugar": 5
 }

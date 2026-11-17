@@ -1,6 +1,18 @@
 {
   "OWASP/cve-lite-cli": [
     {
+      "number": 1674,
+      "title": "ci: check pull requests against the contribution rules (#1669)",
+      "url": "https://github.com/OWASP/cve-lite-cli/pull/1674",
+      "mergedAt": "2026-11-17T17:21:45Z"
+    },
+    {
+      "number": 1672,
+      "title": "ci: add /assign-me issue claiming (#1669)",
+      "url": "https://github.com/OWASP/cve-lite-cli/pull/1672",
+      "mergedAt": "2026-11-17T14:00:03Z"
+    },
+    {
       "number": 1637,
       "title": "perf(parsers): stop expanding Bun paths past the per-package cap (#1635)",
       "url": "https://github.com/OWASP/cve-lite-cli/pull/1637",
