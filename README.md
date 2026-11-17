@@ -5,7 +5,7 @@
   </picture></a>
 </div>
 <div>
-  <a href="#profile-contact"><picture>
+  <a href="#user-content-profile-contact"><picture>
     <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero-mobile.webp?v=712061aa16">
     <source media="(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero.motion.svg?v=ef9a7627df"><img src="profile-assets/hero.webp?v=dcfe96bf55" width="100%" align="top" alt="Prakhar Gupta. I like to ask my claude to make no mistake. Open for Internship and Freelance Opportunities, OnSite or Remote. Tux sits by the terminal and Clawd waves a flag from the server rack. Jump to contact.">
   </picture></a>
