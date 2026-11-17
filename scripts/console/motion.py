@@ -12,7 +12,13 @@ xml.register_namespace("", SVG[1:-1])
 
 DESKTOP_MOTION = "(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)"
 RAW = "https://raw.githubusercontent.com/prx-my/prx-my/main/"
-MOTION_SOURCE = re.compile(rf'<source media="{re.escape(DESKTOP_MOTION)}" srcset="[^"]+">\s*')
+MOBILE_MOTION = (
+    "(max-width: 600px) and (prefers-reduced-motion: no-preference), "
+    "(pointer: coarse) and (prefers-reduced-motion: no-preference)"
+)
+MOTION_SOURCE = re.compile(
+    rf'<source media="(?:{re.escape(DESKTOP_MOTION)}|{re.escape(MOBILE_MOTION)})" srcset="[^"]+">'
+)
 IMAGE = re.compile(r"<picture>.*?</picture>|<img\b[^>]*>", re.DOTALL)
 MOTION_CLASSES = {
     "work": {"activity", "heartbeat", "packet", "port-glow"},
@@ -72,17 +78,22 @@ def strip_sources(text):
     return MOTION_SOURCE.sub("", text)
 
 
-def add_sources(text, animated):
+def add_sources(text, animated, mobile):
     def add(match):
         markup = match[0]
         start = markup.index("<img")
         image = LINK.search(markup, start)
-        asset = animated.get(Path(image[3])) if image else None
-        if asset is None:
+        asset = Path(image[3]) if image else None
+        sources = "".join(
+            f'<source media="{media}" srcset="{RAW}{variants[asset].as_posix()}">'
+            for media, variants in ((MOBILE_MOTION, mobile), (DESKTOP_MOTION, animated))
+            if asset in variants
+        )
+        if not sources:
             return markup
-        source = f'<source media="{DESKTOP_MOTION}" srcset="{RAW}{asset.as_posix()}">'
         if start:
-            return markup[:start] + source + markup[start:]
-        return f"<picture>{source}{markup}</picture>"
+            # Mobile animation must precede the static phone-sized source.
+            return markup[:len("<picture>")] + sources + markup[len("<picture>"):]
+        return f"<picture>{sources}{markup}</picture>"
 
     return IMAGE.sub(add, text)

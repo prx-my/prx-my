@@ -8,6 +8,7 @@ from io import BytesIO
 from PIL import Image
 from playwright.sync_api import sync_playwright
 
+from mobile_motion import render_mobile
 from motion import add_sources, build_motion, strip_sources
 from print_texture import apply_print_texture, paper_tile
 from stamp import LINK, README, ROOT
@@ -86,7 +87,7 @@ def rasterize(text, context, texture):
         return f'{match[1]}{url.removesuffix(path.suffix)}.webp"'
 
     still = LINK.sub(replace, strip_sources(text))
-    return add_sources(still, animated)
+    return still, animated
 
 
 def main():
@@ -108,7 +109,9 @@ def main():
         )
         context = browser.new_context(viewport={"width": 1440, "height": 900}, reduced_motion="reduce")
         render_hero(context)
-        updated = rasterize(readme, context, texture)
+        still, animated = rasterize(readme, context, texture)
+        motion_context = browser.new_context(reduced_motion="no-preference")
+        updated = add_sources(still, animated, render_mobile(motion_context, animated))
         browser.close()
     README.write_text(updated, encoding="utf-8")
 
