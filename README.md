@@ -11,7 +11,7 @@
   </picture>
 </div>
 <div>
-  <a href="https://github.com/prx-my#contributions"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/streak-mobile.svg?v=4bf32b9609"><img src="profile-assets/metrics/streak.svg?v=7d804dda4c" width="33.33333%" align="top" alt="Current GitHub contribution streak in consecutive days"></picture></a><a href="https://github.com/OWASP/cve-lite-cli/pull/1202"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/featured-fix-mobile.svg?v=f93db5759c"><img src="profile-assets/metrics/featured-fix.svg?v=4216b0c209" width="33.33333%" align="top" alt="5,000-file scan limit surfaced in OWASP CVE Lite CLI. Read the pull request."></picture></a><a href="https://github.com/search?q=is%3Apr+is%3Amerged+author%3Aprx-my&amp;type=pullrequests"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/merged-mobile.svg?v=f01183f2e9"><img src="profile-assets/metrics/merged.svg?v=557691085d" width="33.33333%" align="top" alt="Pull requests merged across GitHub repositories. Browse public merged pull requests."></picture></a>
+  <a href="https://github.com/prx-my#contributions"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/streak-mobile.svg?v=ae0e965cc6"><img src="profile-assets/metrics/streak.svg?v=5b4ea6829f" width="33.33333%" align="top" alt="Current GitHub contribution streak in consecutive days"></picture></a><a href="https://github.com/OWASP/cve-lite-cli/pull/1202"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/featured-fix-mobile.svg?v=f93db5759c"><img src="profile-assets/metrics/featured-fix.svg?v=4216b0c209" width="33.33333%" align="top" alt="5,000-file scan limit surfaced in OWASP CVE Lite CLI. Read the pull request."></picture></a><a href="https://github.com/search?q=is%3Apr+is%3Amerged+author%3Aprx-my&amp;type=pullrequests"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/merged-mobile.svg?v=f01183f2e9"><img src="profile-assets/metrics/merged.svg?v=557691085d" width="33.33333%" align="top" alt="Pull requests merged across GitHub repositories. Browse public merged pull requests."></picture></a>
 </div>
 <div>
   <picture>
@@ -71,8 +71,8 @@
 <div>
   <a href="https://github.com/prx-my#contributions">
     <picture>
-      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity-mobile.svg?v=5126de9826">
-      <img width="100%" align="top" src="profile-assets/activity.svg?v=6bd59a8147" alt="GitHub contribution calendar over 52 weeks. Each four-blade fan represents a day. Color and blade angle show the contribution range: 0, 1–2, 3–8, 9–24, or 25+.">
+      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity-mobile.svg?v=45baca6af0">
+      <img width="100%" align="top" src="profile-assets/activity.svg?v=6426c39b6a" alt="GitHub contribution calendar over 52 weeks. Each four-blade fan represents a day. Color and blade angle show the contribution range: 0, 1–2, 3–8, 9–24, or 25+.">
     </picture>
   </a>
 </div>
