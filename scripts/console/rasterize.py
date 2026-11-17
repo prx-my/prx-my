@@ -10,22 +10,18 @@ from playwright.sync_api import sync_playwright
 from stamp import LINK, README, ROOT
 
 
-def render_svg(page, source):
-    # Load the SVG as an image, matching how GitHub displays it.
+def render_svg(context, source):
+    # Render the SVG document directly so reduced motion applies within its styles.
     encoded = b64encode(source.read_bytes()).decode("ascii")
-    page.set_content(
-        '<style>body { margin: 0; } img { display: block; }</style>'
-        f'<img src="data:image/svg+xml;base64,{encoded}">',
-        wait_until="load",
-    )
-    image = page.locator("img")
-    image.evaluate("(image) => image.decode()")
-    screenshot = image.screenshot(omit_background=True, animations="disabled")
+    page = context.new_page()
+    page.goto(f"data:image/svg+xml;base64,{encoded}", wait_until="load")
+    screenshot = page.locator(":root").screenshot(omit_background=True, animations="disabled")
+    page.close()
     with Image.open(BytesIO(screenshot)) as pixels:
         pixels.save(source.with_suffix(".webp"), quality=90, method=6)
 
 
-def rasterize(text, page):
+def rasterize(text, context):
     rendered = set()
 
     def replace(match):
@@ -38,7 +34,7 @@ def rasterize(text, page):
         if path.suffix == ".webp" and not source.is_file():
             return match[0]
         if source not in rendered:
-            render_svg(page, source)
+            render_svg(context, source)
             rendered.add(source)
         return f'{match[1]}{url.removesuffix(path.suffix)}.webp"'
 
@@ -54,9 +50,11 @@ def main():
 
     readme = README.read_text(encoding="utf-8")
     with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(executable_path=os.environ.get("PROFILE_CHROMIUM"))
-        page = browser.new_page(viewport={"width": 1440, "height": 900}, reduced_motion="reduce")
-        updated = rasterize(readme, page)
+        browser = playwright.chromium.launch(
+            executable_path=os.environ.get("PROFILE_CHROMIUM"), args=["--disable-gpu"]
+        )
+        context = browser.new_context(viewport={"width": 1440, "height": 900}, reduced_motion="reduce")
+        updated = rasterize(readme, context)
         browser.close()
     README.write_text(updated, encoding="utf-8")
 
