@@ -4,8 +4,9 @@ I worked on scanner correctness, dependency version matching, and the commands d
 
 [Upstream repository](https://github.com/OWASP/cve-lite-cli) · [Back to profile](../README.md#open-source-contributions)
 
-## 27 merged PRs
+## 28 merged PRs
 
+- <a href="https://github.com/OWASP/cve-lite-cli/pull/1637">#1637 perf(parsers): stop expanding Bun paths past the per-package cap (#1635)</a> · 2026-11-17
 - <a href="https://github.com/OWASP/cve-lite-cli/pull/1636">#1636 fix(overrides): OA005 --fix removes only the flagged nested pin</a> · 2026-11-16
 - <a href="https://github.com/OWASP/cve-lite-cli/pull/1566">#1566 test: clear the remaining scattered test type errors (part of #1491)</a> · 2026-11-15
 - <a href="https://github.com/OWASP/cve-lite-cli/pull/1565">#1565 test: complete the override context fixtures (part of #1491)</a> · 2026-11-14

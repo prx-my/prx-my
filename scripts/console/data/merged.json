@@ -1,5 +1,13 @@
 [
   {
+    "number": 1637,
+    "title": "stop expanding Bun paths past the per-package cap",
+    "date": "2026-11-17",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1637"
+  },
+  {
     "number": 1636,
     "title": "OA005 --fix removes only the flagged nested pin",
     "date": "2026-11-16",
@@ -38,13 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1559"
-  },
-  {
-    "number": 1451,
-    "title": "fail the test type-check when a source change breaks an unchanged test",
-    "date": "2026-11-05",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1451"
   }
 ]

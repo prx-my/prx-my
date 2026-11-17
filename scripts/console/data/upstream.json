@@ -1,6 +1,12 @@
 {
   "OWASP/cve-lite-cli": [
     {
+      "number": 1637,
+      "title": "perf(parsers): stop expanding Bun paths past the per-package cap (#1635)",
+      "url": "https://github.com/OWASP/cve-lite-cli/pull/1637",
+      "mergedAt": "2026-11-17T12:55:39Z"
+    },
+    {
       "number": 1636,
       "title": "fix(overrides): OA005 --fix removes only the flagged nested pin",
       "url": "https://github.com/OWASP/cve-lite-cli/pull/1636",
