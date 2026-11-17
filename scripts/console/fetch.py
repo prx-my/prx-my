@@ -19,8 +19,9 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+from profile_records import count_entries
+
 USER = "prx-my"
-HACKATHON_WINS = 3
 REPOS = ["OWASP/cve-lite-cli", "sugarlabs/musicblocks-v4"]
 DATA = pathlib.Path(__file__).resolve().parent / "data"
 UA = "prx-my-profile-updater"
@@ -254,7 +255,7 @@ def main():
         print("error: GitHub fetch failed", file=sys.stderr)
         sys.exit(1)
 
-    stats["hackathon_wins"] = HACKATHON_WINS
+    stats["hackathon_wins"] = count_entries("hackthons.md", "win")
     stats["upstream_merged"] = upstream
     stats["updated"] = today.isoformat()
     save("stats.json", stats)

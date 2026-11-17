@@ -13,6 +13,8 @@ on:
     paths:
       - "scripts/console/**"
       - "projects.md"
+      - "hackthons.md"
+      - "client.md"
       - "profile-assets/hero.motion.svg"
       - ".github/workflows/profile.yml"
 
