@@ -5,10 +5,10 @@
   </picture></a>
 </div>
 <div>
-  <picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/prxmy-risograph-mobile.webp?v=7a9c2922a0">
-    <source media="(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/prxmy-risograph.gif?v=ac305ef1c8"><img width="100%" align="top" src="profile-assets/prxmy-risograph.webp?v=4b06ad3d1c" alt="Prakhar Gupta — backend systems and security tooling. A risograph illustration of a terminal, a folded map, and a server stack.">
-  </picture>
+  <a href="#profile-contact"><picture>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero-mobile.webp?v=712061aa16">
+    <source media="(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero.motion.svg?v=ef9a7627df"><img src="profile-assets/hero.webp?v=dcfe96bf55" width="100%" align="top" alt="Prakhar Gupta. I like to ask my claude to make no mistake. Open for Internship and Freelance Opportunities, OnSite or Remote. Tux sits by the terminal and Clawd waves a flag from the server rack. Jump to contact.">
+  </picture></a>
 </div>
 <div>
   <a href="https://github.com/prx-my#contributions"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/streak-mobile.webp?v=6e62af66f3"><img src="profile-assets/metrics/streak.webp?v=15489ac1d4" width="33.33333%" align="top" alt="Current GitHub contribution streak in consecutive days"></picture></a><a href="https://github.com/OWASP/cve-lite-cli/pull/1202"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/featured-fix-mobile.webp?v=4b6877fc62"><img src="profile-assets/metrics/featured-fix.webp?v=c98a624b76" width="33.33333%" align="top" alt="5,000-file scan limit surfaced in OWASP CVE Lite CLI. Read the pull request."></picture></a><a href="https://github.com/search?q=is%3Apr+is%3Amerged+author%3Aprx-my&amp;type=pullrequests"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/metrics/merged-mobile.webp?v=aecb31ed00"><img src="profile-assets/metrics/merged.webp?v=4675dbd553" width="33.33333%" align="top" alt="Pull requests merged across GitHub repositories. Browse public merged pull requests."></picture></a>
@@ -76,6 +76,8 @@
     </picture>
   </a>
 </div>
+<a name="profile-contact"></a>
+
 <div>
   <picture>
     <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/titles/contact-mobile.webp?v=57dc3573c9">
