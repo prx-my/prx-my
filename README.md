@@ -6,8 +6,8 @@
 </div>
 <div>
   <a href="#user-content-profile-contact"><picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero-mobile.webp?v=f25cf57aba">
-    <source media="(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero.motion.svg?v=3cda3cc2ba"><img src="profile-assets/hero.webp?v=1caa126587" width="100%" align="top" alt="Prakhar Gupta. I like to ask my claude to make no mistake. Open for Internship and Freelance Opportunities, OnSite or Remote. Tux sits by the terminal and Clawd blinks from the server rack. Jump to contact.">
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero-mobile.webp?v=6d24bdb13d">
+    <source media="(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/hero.motion.svg?v=3cda3cc2ba"><img src="profile-assets/hero.webp?v=6d9a4fb551" width="100%" align="top" alt="Prakhar Gupta. I like to ask my claude to make no mistake. Open for Internship and Freelance Opportunities, OnSite or Remote. Tux sits by the terminal and Clawd blinks from the server rack. Jump to contact.">
   </picture></a>
 </div>
 <div>
@@ -71,8 +71,8 @@
 <div>
   <a href="https://github.com/prx-my#contributions">
     <picture>
-      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity-mobile.webp?v=418c31f86e">
-      <source media="(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity.motion.svg?v=06cc45baf4"><img width="100%" align="top" src="profile-assets/activity.webp?v=c79c6ed310" alt="GitHub contribution calendar over 52 weeks. Each four-blade fan represents a day. Color and blade angle show the contribution range: 0, 1–2, 3–8, 9–24, or 25+.">
+      <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity-mobile.webp?v=16d181ac77">
+      <source media="(min-width: 601px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)" srcset="https://raw.githubusercontent.com/prx-my/prx-my/main/profile-assets/activity.motion.svg?v=afd2eb91f7"><img width="100%" align="top" src="profile-assets/activity.webp?v=665eebaa11" alt="GitHub contribution calendar over 52 weeks. Each four-blade fan represents a day. Color and blade angle show the contribution range: 0, 1–2, 3–8, 9–24, or 25+.">
     </picture>
   </a>
 </div>
