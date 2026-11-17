@@ -35,19 +35,19 @@ def render_card(value, label, detail, edge, *, compact=()):
     edge_height = width * EDGE_HEIGHT
     if compact:
         lines = "\n    ".join(
-            f'<text x="{x:g}" y="{82 + row * 17}" font-size="15" font-weight="700">{html.escape(line)}</text>'
+            f'<text x="{x:g}" y="{29 + row * 16}" font-size="15" font-weight="700">{html.escape(line)}</text>'
             for row, line in enumerate(compact)
         )
         font_size = min(40, 170 / len(value))
-        content = f'''<text x="{x:g}" y="48" font-size="{font_size:g}" font-weight="900">{value}</text>
-    <path d="M{x:g} 60h116" fill="none" stroke="#12249e"/>
-    {lines}
+        content = f'''{lines}
+    <text x="{x:g}" y="91" font-size="{font_size:g}" font-weight="900">{value}</text>
+    <path d="M{x:g} 100h116" fill="none" stroke="#12249e"/>
     <text x="{x}" y="121" font-size="12">{detail}</text>'''
     else:
-        content = f'''<text x="{x}" y="92" font-size="83" font-weight="900">{value}</text>
-    <path d="M{x} 111h350" fill="none" stroke="#12249e" stroke-width="1.5"/>
-    <text x="{x}" y="146" font-size="29" font-weight="700">{html.escape(label)}</text>
-    <text x="{x}" y="177" font-size="23">{detail}</text>'''
+        content = f'''<text x="{x}" y="67" font-size="29" font-weight="700">{html.escape(label)}</text>
+    <text x="{x}" y="138" font-size="83" font-weight="900">{value}</text>
+    <path d="M{x} 153h350" fill="none" stroke="#12249e" stroke-width="1.5"/>
+    <text x="{x}" y="182" font-size="23">{detail}</text>'''
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}"
     viewBox="0 0 {width} {height}" role="img" aria-labelledby="title">
   <title id="title">{title}</title>
@@ -106,10 +106,10 @@ def main():
     cards = [
         ("streak", f'{stats["streak_current"]:,}', "Contribution streak", "I code daily",
          ("Contribution", "streak"), "https://github.com/prx-my#contributions"),
+        ("client-projects", f'{count_entries("client.md", "shipped"):,}', "Client projects",
+         "People can trust me", ("Client projects",), "client.md"),
         ("hackathons", f'{count_entries("hackthons.md", "win"):,}', "Hackathon wins", "I go on stage",
          ("Hackathon", "wins"), "hackthons.md"),
-        ("client-projects", f'{count_entries("client.md", "shipped"):,}', "Client projects shipped",
-         "People can trust me", ("Client projects", "shipped"), "client.md"),
         ("merged", f'{stats["prs_merged"]:,}', "Pull requests merged", "I give back in code",
          ("Pull requests", "merged"), "https://github.com/search?q=is%3Apr+is%3Amerged+author%3Aprx-my&type=pullrequests"),
     ]
