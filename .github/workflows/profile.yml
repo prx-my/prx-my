@@ -37,7 +37,9 @@ jobs:
           python-version: "3.12"
 
       - name: Install renderer
-        run: pip install -r scripts/console/requirements.txt
+        run: |
+          pip install -r scripts/console/requirements.txt
+          python -m playwright install --with-deps chromium
 
       - name: Fetch live data
         env:
@@ -61,7 +63,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/console/upstream.py --fetch
 
-      # Runs last: earlier steps rewrite README image links.
+      - name: Pre-render profile images
+        run: python scripts/console/rasterize.py
+
+      # Runs last: version the final WebP files after rewriting the image links.
       - name: Version image links
         run: python scripts/console/stamp.py
 
@@ -69,7 +74,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets profile-assets/metrics profile-assets/activity.svg profile-assets/activity-mobile.svg profile-assets/work profile-assets/open-source open-source scripts/console/data
+          git add README.md assets profile-assets open-source scripts/console/data
           if git diff --staged --quiet; then
             echo "Profile already up to date."
             exit 0
