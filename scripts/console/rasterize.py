@@ -1,32 +1,40 @@
-"""Bake the profile README's artwork into still WebP images before stamping URLs."""
+"""Bake the profile README's artwork into WebP images and desktop motion layers before stamping URLs."""
 
 import os
+from pathlib import Path
 from base64 import b64encode
 from io import BytesIO
 
 from PIL import Image
 from playwright.sync_api import sync_playwright
 
+from motion import add_sources, build_motion, strip_sources
 from print_texture import apply_print_texture, paper_tile
 from stamp import LINK, README, ROOT
 
 
 def render_svg(context, source, texture):
-    # Render the SVG document directly so reduced motion applies within its styles.
-    encoded = b64encode(source.read_bytes()).decode("ascii")
-    page = context.new_page()
-    page.goto(f"data:image/svg+xml;base64,{encoded}", wait_until="load")
-    screenshot = page.locator(":root").screenshot(omit_background=True, animations="disabled")
-    page.close()
-    with Image.open(BytesIO(screenshot)) as pixels:
-        panel = source.relative_to(ROOT).as_posix()
-        apply_print_texture(pixels, texture, panel).save(
-            source.with_suffix(".webp"), quality=82, method=6
-        )
+    def capture(svg):
+        # Load the SVG directly so reduced motion applies within its styles.
+        encoded = b64encode(svg).decode("ascii")
+        page = context.new_page()
+        page.goto(f"data:image/svg+xml;base64,{encoded}", wait_until="load")
+        screenshot = page.locator(":root").screenshot(omit_background=True, animations="disabled")
+        page.close()
+        with Image.open(BytesIO(screenshot)) as pixels:
+            panel = source.relative_to(ROOT).as_posix()
+            with BytesIO() as output:
+                apply_print_texture(pixels, texture, panel).save(output, format="WEBP", quality=82, method=6)
+                return output.getvalue()
+
+    still = capture(source.read_bytes())
+    source.with_suffix(".webp").write_bytes(still)
+    return build_motion(source, still, capture)
 
 
 def rasterize(text, context, texture):
     rendered = set()
+    animated = {Path("profile-assets/prxmy-risograph.webp"): Path("profile-assets/prxmy-risograph.gif")}
 
     def replace(match):
         url, relative_path = match[2], match[3]
@@ -38,11 +46,14 @@ def rasterize(text, context, texture):
         if path.suffix == ".webp" and not source.is_file():
             return match[0]
         if source not in rendered:
-            render_svg(context, source, texture)
+            motion = render_svg(context, source, texture)
+            if motion:
+                animated[source.with_suffix(".webp").relative_to(ROOT)] = motion.relative_to(ROOT)
             rendered.add(source)
         return f'{match[1]}{url.removesuffix(path.suffix)}.webp"'
 
-    return LINK.sub(replace, text)
+    still = LINK.sub(replace, strip_sources(text))
+    return add_sources(still, animated)
 
 
 def main():
