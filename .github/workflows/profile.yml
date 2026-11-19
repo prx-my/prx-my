@@ -56,6 +56,11 @@ jobs:
       - name: Render profile metrics
         run: python scripts/console/metrics.py
 
+      - name: Render the stats card
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/console/stats_card.py
+
       - name: Render the contribution calendar
         run: python scripts/console/activity.py
 
