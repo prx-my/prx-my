@@ -4,8 +4,9 @@ I worked on scanner correctness, dependency version matching, and the commands d
 
 [Upstream repository](https://github.com/OWASP/cve-lite-cli) · [Back to profile](../README.md#open-source-contributions)
 
-## 30 merged PRs
+## 31 merged PRs
 
+- <a href="https://github.com/OWASP/cve-lite-cli/pull/1715">#1715 ci: let people claim issues they opened (#1669)</a> · 2026-11-20
 - <a href="https://github.com/OWASP/cve-lite-cli/pull/1674">#1674 ci: check pull requests against the contribution rules (#1669)</a> · 2026-11-17
 - <a href="https://github.com/OWASP/cve-lite-cli/pull/1672">#1672 ci: add /assign-me issue claiming (#1669)</a> · 2026-11-17
 - <a href="https://github.com/OWASP/cve-lite-cli/pull/1637">#1637 perf(parsers): stop expanding Bun paths past the per-package cap (#1635)</a> · 2026-11-17

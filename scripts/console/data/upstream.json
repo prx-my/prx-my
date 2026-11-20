@@ -1,6 +1,12 @@
 {
   "OWASP/cve-lite-cli": [
     {
+      "number": 1715,
+      "title": "ci: let people claim issues they opened (#1669)",
+      "url": "https://github.com/OWASP/cve-lite-cli/pull/1715",
+      "mergedAt": "2026-11-20T18:10:07Z"
+    },
+    {
       "number": 1674,
       "title": "ci: check pull requests against the contribution rules (#1669)",
       "url": "https://github.com/OWASP/cve-lite-cli/pull/1674",
