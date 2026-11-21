@@ -1,6 +1,12 @@
 {
   "OWASP/cve-lite-cli": [
     {
+      "number": 1676,
+      "title": "ci: close stale pull requests and unanswered issues (#1669)",
+      "url": "https://github.com/OWASP/cve-lite-cli/pull/1676",
+      "mergedAt": "2026-11-21T14:55:58Z"
+    },
+    {
       "number": 1715,
       "title": "ci: let people claim issues they opened (#1669)",
       "url": "https://github.com/OWASP/cve-lite-cli/pull/1715",
