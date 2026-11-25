@@ -1,5 +1,13 @@
 [
   {
+    "number": 1816,
+    "title": "make the PR rules check fail instead of only warning",
+    "date": "2026-11-25",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1816"
+  },
+  {
     "number": 1676,
     "title": "close stale pull requests and unanswered issues",
     "date": "2026-11-21",
@@ -38,13 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1637"
-  },
-  {
-    "number": 1636,
-    "title": "OA005 --fix removes only the flagged nested pin",
-    "date": "2026-11-16",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1636"
   }
 ]

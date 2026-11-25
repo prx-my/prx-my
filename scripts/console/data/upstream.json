@@ -1,6 +1,12 @@
 {
   "OWASP/cve-lite-cli": [
     {
+      "number": 1816,
+      "title": "ci: make the PR rules check fail instead of only warning (#1669)",
+      "url": "https://github.com/OWASP/cve-lite-cli/pull/1816",
+      "mergedAt": "2026-11-25T18:34:52Z"
+    },
+    {
       "number": 1676,
       "title": "ci: close stale pull requests and unanswered issues (#1669)",
       "url": "https://github.com/OWASP/cve-lite-cli/pull/1676",
