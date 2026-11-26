@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="308"
     viewBox="0 0 1200 308" role="img" aria-labelledby="title description">
   <title id="title">GitHub contribution log</title>
-  <desc id="description">2,191 GitHub contributions from Nov 30, 2025 through Nov 26, 2026.
+  <desc id="description">2,134 GitHub contributions from Nov 30, 2025 through Nov 26, 2026.
     Each fan represents a day. Color and blade angle show the contribution range: 0, 1–2, 3–8, 9–24, or 25+.</desc>
   <style>
     @media (prefers-reduced-motion: no-preference) {
@@ -24,7 +24,7 @@
   <rect width="1200" height="308" fill="#f9e6cc"/>
   <rect width="1200" height="308" fill="url(#grain)"/>
   <g fill="#12249e" font-family="Arial, Helvetica, sans-serif" font-size="18">
-    <text x="29" y="34" font-size="21">2,191 GitHub contributions · Nov 2025 to Nov 2026</text>
+    <text x="29" y="34" font-size="21">2,134 GitHub contributions · Nov 2025 to Nov 2026</text>
     <text x="57" y="110" text-anchor="end">Mon</text>
 <text x="57" y="152" text-anchor="end">Wed</text>
 <text x="57" y="194" text-anchor="end">Fri</text>
@@ -1513,35 +1513,35 @@
     <g transform="translate(970.308 84) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Sep 21, 2026: 6 contributions</title>
+<g><title>Sep 21, 2026: 4 contributions</title>
     <rect x="962.308" y="97" width="16" height="16" rx="2" fill="#828fe0"/>
     <g transform="translate(970.308 105) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
-<g><title>Sep 22, 2026: 8 contributions</title>
+<g><title>Sep 22, 2026: 6 contributions</title>
     <rect x="962.308" y="118" width="16" height="16" rx="2" fill="#828fe0"/>
     <g transform="translate(970.308 126) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
-<g><title>Sep 23, 2026: 5 contributions</title>
+<g><title>Sep 23, 2026: 3 contributions</title>
     <rect x="962.308" y="139" width="16" height="16" rx="2" fill="#828fe0"/>
     <g transform="translate(970.308 147) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
-<g><title>Sep 24, 2026: 11 contributions</title>
-    <rect x="962.308" y="160" width="16" height="16" rx="2" fill="#4e61c3"/>
-    <g transform="translate(970.308 168) rotate(54)">
-      <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
+<g><title>Sep 24, 2026: 7 contributions</title>
+    <rect x="962.308" y="160" width="16" height="16" rx="2" fill="#828fe0"/>
+    <g transform="translate(970.308 168) rotate(33)">
+      <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
 <g><title>Sep 25, 2026: 2 contributions</title>
     <rect x="962.308" y="181" width="16" height="16" rx="2" fill="#b8bce5"/>
     <g transform="translate(970.308 189) rotate(12)">
       <use href="#fan" class="fan-rotor fan-level-1" fill="#12249e" opacity="1"/>
     </g></g>
-<g><title>Sep 26, 2026: 3 contributions</title>
-    <rect x="962.308" y="202" width="16" height="16" rx="2" fill="#828fe0"/>
-    <g transform="translate(970.308 210) rotate(33)">
-      <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
+<g><title>Sep 26, 2026: 1 contributions</title>
+    <rect x="962.308" y="202" width="16" height="16" rx="2" fill="#b8bce5"/>
+    <g transform="translate(970.308 210) rotate(12)">
+      <use href="#fan" class="fan-rotor fan-level-1" fill="#12249e" opacity="1"/>
     </g></g>
 <g><title>Sep 27, 2026: 2 contributions</title>
     <rect x="983.577" y="76" width="16" height="16" rx="2" fill="#b8bce5"/>
@@ -1553,12 +1553,12 @@
     <g transform="translate(991.577 105) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
-<g><title>Sep 29, 2026: 23 contributions</title>
+<g><title>Sep 29, 2026: 21 contributions</title>
     <rect x="983.577" y="118" width="16" height="16" rx="2" fill="#4e61c3"/>
     <g transform="translate(991.577 126) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Sep 30, 2026: 18 contributions</title>
+<g><title>Sep 30, 2026: 16 contributions</title>
     <rect x="983.577" y="139" width="16" height="16" rx="2" fill="#4e61c3"/>
     <g transform="translate(991.577 147) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
@@ -1568,7 +1568,7 @@
     <g transform="translate(991.577 168) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Oct 02, 2026: 20 contributions</title>
+<g><title>Oct 02, 2026: 18 contributions</title>
     <rect x="983.577" y="181" width="16" height="16" rx="2" fill="#4e61c3"/>
     <g transform="translate(991.577 189) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
@@ -1604,7 +1604,7 @@
     <g transform="translate(1012.85 168) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Oct 09, 2026: 38 contributions</title>
+<g><title>Oct 09, 2026: 36 contributions</title>
     <rect x="1004.85" y="181" width="16" height="16" rx="2" fill="#152ba3"/>
     <g transform="translate(1012.85 189) rotate(75)">
       <use href="#fan" class="fan-rotor fan-level-4" fill="#d2ed45" opacity="1"/>
@@ -1619,7 +1619,7 @@
     <g transform="translate(1034.12 84) rotate(75)">
       <use href="#fan" class="fan-rotor fan-level-4" fill="#d2ed45" opacity="1"/>
     </g></g>
-<g><title>Oct 12, 2026: 23 contributions</title>
+<g><title>Oct 12, 2026: 21 contributions</title>
     <rect x="1026.12" y="97" width="16" height="16" rx="2" fill="#4e61c3"/>
     <g transform="translate(1034.12 105) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
@@ -1639,12 +1639,12 @@
     <g transform="translate(1034.12 168) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
-<g><title>Oct 16, 2026: 16 contributions</title>
+<g><title>Oct 16, 2026: 14 contributions</title>
     <rect x="1026.12" y="181" width="16" height="16" rx="2" fill="#4e61c3"/>
     <g transform="translate(1034.12 189) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Oct 17, 2026: 6 contributions</title>
+<g><title>Oct 17, 2026: 4 contributions</title>
     <rect x="1026.12" y="202" width="16" height="16" rx="2" fill="#828fe0"/>
     <g transform="translate(1034.12 210) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
@@ -1654,10 +1654,10 @@
     <g transform="translate(1055.38 84) rotate(12)">
       <use href="#fan" class="fan-rotor fan-level-1" fill="#12249e" opacity="1"/>
     </g></g>
-<g><title>Oct 19, 2026: 4 contributions</title>
-    <rect x="1047.38" y="97" width="16" height="16" rx="2" fill="#828fe0"/>
-    <g transform="translate(1055.38 105) rotate(33)">
-      <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
+<g><title>Oct 19, 2026: 2 contributions</title>
+    <rect x="1047.38" y="97" width="16" height="16" rx="2" fill="#b8bce5"/>
+    <g transform="translate(1055.38 105) rotate(12)">
+      <use href="#fan" class="fan-rotor fan-level-1" fill="#12249e" opacity="1"/>
     </g></g>
 <g><title>Oct 20, 2026: 1 contributions</title>
     <rect x="1047.38" y="118" width="16" height="16" rx="2" fill="#b8bce5"/>
@@ -1689,20 +1689,20 @@
     <g transform="translate(1076.65 84) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Oct 26, 2026: 4 contributions</title>
-    <rect x="1068.65" y="97" width="16" height="16" rx="2" fill="#828fe0"/>
-    <g transform="translate(1076.65 105) rotate(33)">
+<g><title>Oct 26, 2026: 2 contributions</title>
+    <rect x="1068.65" y="97" width="16" height="16" rx="2" fill="#b8bce5"/>
+    <g transform="translate(1076.65 105) rotate(12)">
+      <use href="#fan" class="fan-rotor fan-level-1" fill="#12249e" opacity="1"/>
+    </g></g>
+<g><title>Oct 27, 2026: 5 contributions</title>
+    <rect x="1068.65" y="118" width="16" height="16" rx="2" fill="#828fe0"/>
+    <g transform="translate(1076.65 126) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
-<g><title>Oct 27, 2026: 9 contributions</title>
-    <rect x="1068.65" y="118" width="16" height="16" rx="2" fill="#4e61c3"/>
-    <g transform="translate(1076.65 126) rotate(54)">
+<g><title>Oct 28, 2026: 19 contributions</title>
+    <rect x="1068.65" y="139" width="16" height="16" rx="2" fill="#4e61c3"/>
+    <g transform="translate(1076.65 147) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
-    </g></g>
-<g><title>Oct 28, 2026: 27 contributions</title>
-    <rect x="1068.65" y="139" width="16" height="16" rx="2" fill="#152ba3"/>
-    <g transform="translate(1076.65 147) rotate(75)">
-      <use href="#fan" class="fan-rotor fan-level-4" fill="#d2ed45" opacity="1"/>
     </g></g>
 <g><title>Oct 29, 2026: 2 contributions</title>
     <rect x="1068.65" y="160" width="16" height="16" rx="2" fill="#b8bce5"/>
@@ -1730,7 +1730,7 @@
     <g transform="translate(1097.92 105) rotate(12)">
       <use href="#fan" class="fan-rotor fan-level-1" fill="#12249e" opacity="1"/>
     </g></g>
-<g><title>Nov 03, 2026: 8 contributions</title>
+<g><title>Nov 03, 2026: 6 contributions</title>
     <rect x="1089.92" y="118" width="16" height="16" rx="2" fill="#828fe0"/>
     <g transform="translate(1097.92 126) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
@@ -1740,7 +1740,7 @@
     <g transform="translate(1097.92 147) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Nov 05, 2026: 7 contributions</title>
+<g><title>Nov 05, 2026: 5 contributions</title>
     <rect x="1089.92" y="160" width="16" height="16" rx="2" fill="#828fe0"/>
     <g transform="translate(1097.92 168) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
@@ -1760,15 +1760,15 @@
     <g transform="translate(1119.19 84) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
-<g><title>Nov 09, 2026: 7 contributions</title>
+<g><title>Nov 09, 2026: 5 contributions</title>
     <rect x="1111.19" y="97" width="16" height="16" rx="2" fill="#828fe0"/>
     <g transform="translate(1119.19 105) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
-<g><title>Nov 10, 2026: 3 contributions</title>
-    <rect x="1111.19" y="118" width="16" height="16" rx="2" fill="#828fe0"/>
-    <g transform="translate(1119.19 126) rotate(33)">
-      <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
+<g><title>Nov 10, 2026: 1 contributions</title>
+    <rect x="1111.19" y="118" width="16" height="16" rx="2" fill="#b8bce5"/>
+    <g transform="translate(1119.19 126) rotate(12)">
+      <use href="#fan" class="fan-rotor fan-level-1" fill="#12249e" opacity="1"/>
     </g></g>
 <g><title>Nov 11, 2026: 1 contributions</title>
     <rect x="1111.19" y="139" width="16" height="16" rx="2" fill="#b8bce5"/>
@@ -1785,22 +1785,22 @@
     <g transform="translate(1119.19 189) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Nov 14, 2026: 3 contributions</title>
-    <rect x="1111.19" y="202" width="16" height="16" rx="2" fill="#828fe0"/>
-    <g transform="translate(1119.19 210) rotate(33)">
-      <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
+<g><title>Nov 14, 2026: 1 contributions</title>
+    <rect x="1111.19" y="202" width="16" height="16" rx="2" fill="#b8bce5"/>
+    <g transform="translate(1119.19 210) rotate(12)">
+      <use href="#fan" class="fan-rotor fan-level-1" fill="#12249e" opacity="1"/>
     </g></g>
-<g><title>Nov 15, 2026: 11 contributions</title>
+<g><title>Nov 15, 2026: 9 contributions</title>
     <rect x="1132.46" y="76" width="16" height="16" rx="2" fill="#4e61c3"/>
     <g transform="translate(1140.46 84) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Nov 16, 2026: 30 contributions</title>
+<g><title>Nov 16, 2026: 28 contributions</title>
     <rect x="1132.46" y="97" width="16" height="16" rx="2" fill="#152ba3"/>
     <g transform="translate(1140.46 105) rotate(75)">
       <use href="#fan" class="fan-rotor fan-level-4" fill="#d2ed45" opacity="1"/>
     </g></g>
-<g><title>Nov 17, 2026: 71 contributions</title>
+<g><title>Nov 17, 2026: 65 contributions</title>
     <rect x="1132.46" y="118" width="16" height="16" rx="2" fill="#152ba3"/>
     <g transform="translate(1140.46 126) rotate(75)">
       <use href="#fan" class="fan-rotor fan-level-4" fill="#d2ed45" opacity="1"/>
@@ -1815,12 +1815,12 @@
     <g transform="translate(1140.46 168) rotate(12)">
       <use href="#fan" class="fan-rotor fan-level-1" fill="#12249e" opacity="1"/>
     </g></g>
-<g><title>Nov 20, 2026: 14 contributions</title>
+<g><title>Nov 20, 2026: 12 contributions</title>
     <rect x="1132.46" y="181" width="16" height="16" rx="2" fill="#4e61c3"/>
     <g transform="translate(1140.46 189) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Nov 21, 2026: 6 contributions</title>
+<g><title>Nov 21, 2026: 4 contributions</title>
     <rect x="1132.46" y="202" width="16" height="16" rx="2" fill="#828fe0"/>
     <g transform="translate(1140.46 210) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
@@ -1830,12 +1830,12 @@
     <g transform="translate(1161.73 84) rotate(33)">
       <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
     </g></g>
-<g><title>Nov 23, 2026: 26 contributions</title>
-    <rect x="1153.73" y="97" width="16" height="16" rx="2" fill="#152ba3"/>
-    <g transform="translate(1161.73 105) rotate(75)">
-      <use href="#fan" class="fan-rotor fan-level-4" fill="#d2ed45" opacity="1"/>
+<g><title>Nov 23, 2026: 13 contributions</title>
+    <rect x="1153.73" y="97" width="16" height="16" rx="2" fill="#4e61c3"/>
+    <g transform="translate(1161.73 105) rotate(54)">
+      <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
     </g></g>
-<g><title>Nov 24, 2026: 11 contributions</title>
+<g><title>Nov 24, 2026: 10 contributions</title>
     <rect x="1153.73" y="118" width="16" height="16" rx="2" fill="#4e61c3"/>
     <g transform="translate(1161.73 126) rotate(54)">
       <use href="#fan" class="fan-rotor fan-level-3" fill="#f9e9cb" opacity="1"/>
@@ -1845,10 +1845,10 @@
     <g transform="translate(1161.73 147) rotate(75)">
       <use href="#fan" class="fan-rotor fan-level-4" fill="#d2ed45" opacity="1"/>
     </g></g>
-<g><title>Nov 26, 2026: 4 contributions</title>
-    <rect x="1153.73" y="160" width="16" height="16" rx="2" fill="#828fe0"/>
-    <g transform="translate(1161.73 168) rotate(33)">
-      <use href="#fan" class="fan-rotor fan-level-2" fill="#101d78" opacity="1"/>
+<g><title>Nov 26, 2026: 27 contributions</title>
+    <rect x="1153.73" y="160" width="16" height="16" rx="2" fill="#152ba3"/>
+    <g transform="translate(1161.73 168) rotate(75)">
+      <use href="#fan" class="fan-rotor fan-level-4" fill="#d2ed45" opacity="1"/>
     </g></g>
 <rect x="1153.73" y="181" width="16" height="16" rx="2" fill="none" stroke="#12249e" stroke-opacity=".22"/>
 <rect x="1153.73" y="202" width="16" height="16" rx="2" fill="none" stroke="#12249e" stroke-opacity=".22"/>
