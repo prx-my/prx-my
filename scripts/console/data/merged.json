@@ -1,5 +1,21 @@
 [
   {
+    "number": 1825,
+    "title": "mark contributors' new issues `needs triage`",
+    "date": "2026-11-27",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1825"
+  },
+  {
+    "number": 1767,
+    "title": "offer a PyPI target when an affected window closes at a pre-release",
+    "date": "2026-11-27",
+    "repo": "cve-lite-cli",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/cve-lite-cli/pull/1767"
+  },
+  {
     "number": 1816,
     "title": "make the PR rules check fail instead of only warning",
     "date": "2026-11-25",
@@ -30,21 +46,5 @@
     "repo": "cve-lite-cli",
     "owner": "OWASP",
     "url": "https://github.com/OWASP/cve-lite-cli/pull/1674"
-  },
-  {
-    "number": 1672,
-    "title": "add /assign-me issue claiming",
-    "date": "2026-11-17",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1672"
-  },
-  {
-    "number": 1637,
-    "title": "stop expanding Bun paths past the per-package cap",
-    "date": "2026-11-17",
-    "repo": "cve-lite-cli",
-    "owner": "OWASP",
-    "url": "https://github.com/OWASP/cve-lite-cli/pull/1637"
   }
 ]

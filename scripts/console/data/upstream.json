@@ -1,6 +1,18 @@
 {
   "OWASP/cve-lite-cli": [
     {
+      "number": 1825,
+      "title": "ci: mark contributors' new issues `needs triage` (#1669)",
+      "url": "https://github.com/OWASP/cve-lite-cli/pull/1825",
+      "mergedAt": "2026-11-27T18:16:03Z"
+    },
+    {
+      "number": 1767,
+      "title": "fix(python): offer a PyPI target when an affected window closes at a pre-release",
+      "url": "https://github.com/OWASP/cve-lite-cli/pull/1767",
+      "mergedAt": "2026-11-27T14:12:22Z"
+    },
+    {
       "number": 1816,
       "title": "ci: make the PR rules check fail instead of only warning (#1669)",
       "url": "https://github.com/OWASP/cve-lite-cli/pull/1816",

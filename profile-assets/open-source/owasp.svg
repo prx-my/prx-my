@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="825" height="724"
     viewBox="0 0 825 724" role="img" aria-labelledby="title description">
   <title id="title">OWASP GPU fan</title>
-  <desc id="description">33 merged pull requests.</desc>
+  <desc id="description">35 merged pull requests.</desc>
   <style>
     .animated-fan { display: none; }
     @media (prefers-reduced-motion: no-preference) and (min-width: 180px) {
@@ -30,9 +30,9 @@
   <g clip-path="url(#hub-interior)">
     <circle cx="559" cy="339" r="45" fill="#fff2d1"/>
     <text x="559" y="339" dy=".35em" text-anchor="middle"
-      fill="#11299e" font-size="64">33</text>
+      fill="#11299e" font-size="64">35</text>
   </g>
   <g clip-path="url(#pr-number)"><use href="#art" x="-150"/></g>
-  <text x="551" y="583" fill="#fff2d1" font-size="30">#1816</text>
+  <text x="551" y="583" fill="#fff2d1" font-size="30">#1825</text>
   </g>
 </svg>
